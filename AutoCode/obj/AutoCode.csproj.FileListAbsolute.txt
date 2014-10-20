@@ -1,0 +1,17 @@
+E:\MyProject\AutoCode\AutoCode\bin\Debug\AutoCode.exe.config
+E:\MyProject\AutoCode\AutoCode\bin\Debug\AutoCode.exe
+E:\MyProject\AutoCode\AutoCode\bin\Debug\AutoCode.pdb
+E:\MyProject\AutoCode\AutoCode\bin\Debug\ToolFunction.dll
+E:\MyProject\AutoCode\AutoCode\bin\Debug\ToolFunction.pdb
+E:\MyProject\AutoCode\AutoCode\obj\Debug\ResolveAssemblyReference.cache
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.frmMain.resources
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.Properties.Resources.resources
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.uctlBaseConfig.resources
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.uctlCreateCode.resources
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.csproj.GenerateResource.Cache
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.exe.licenses
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.exe
+E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.pdb
+E:\Github\code\AutoCode\AutoCode\bin\Debug\AutoCode.exe.config
+E:\Github\code\AutoCode\AutoCode\obj\Debug\AutoCode.exe
+E:\Github\code\AutoCode\AutoCode\obj\Debug\AutoCode.pdb

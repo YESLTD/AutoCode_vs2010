@@ -1,0 +1,59 @@
+2014/10/13 13:58:40-----------------------------
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnString() 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 606
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 546
+   在 AutoCode.clsGetAllColumn.getColunm(String tablename) 位置 E:\MyProject\AutoCode\AutoCode\clsGetAllColumn.cs:行号 36
+2014/10/13 14:02:27-----------------------------
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnString() 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 610
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 550
+   在 AutoCode.clsGetAllColumn.getColunm(String tablename) 位置 E:\MyProject\AutoCode\AutoCode\clsGetAllColumn.cs:行号 36
+2014/10/13 14:07:52-----------------------------
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnString() 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 610
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 550
+   在 AutoCode.clsGetAllColumn.getColunm(String tablename) 位置 E:\MyProject\AutoCode\AutoCode\clsGetAllColumn.cs:行号 36
+2014/10/13 14:08:20-----------------------------
+
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnString() 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 610
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 E:\MyProject\AutoCode\ToolFunction\CommonFunction.cs:行号 550
+   在 AutoCode.clsGetAllColumn.getColunm(String tablename) 位置 E:\MyProject\AutoCode\AutoCode\clsGetAllColumn.cs:行号 36
+2014/10/13 16:48:09-----------------------------
+
+System.IO.DirectoryNotFoundException: 未能找到路径“E:\MyProject\AutoCode\AutoCode\bin\Debug\BasePath\POPT_TEMP_FIELD.cs”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 31
+2014/10/13 16:51:00-----------------------------
+
+System.IO.DirectoryNotFoundException: 未能找到路径“E:\MyProject\testPro\testPro\PO\PT_CODE_DETAIL.cs”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 31
+2014/10/13 16:58:28-----------------------------
+
+System.IO.IOException: 文件“E:\MyProject\testPro\testPro\PO\PT_CODE_DETAIL.cs”正由另一进程使用，因此该进程无法访问该文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 40
+2014/10/13 17:22:31-----------------------------
+
+System.IO.IOException: 文件“E:\MyProject\testPro\testPro\PO\PT_CODE_DETAIL.cs”正由另一进程使用，因此该进程无法访问该文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.Delete(String path)
+   在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 38
+2014/10/13 17:26:18-----------------------------
+
+System.IO.IOException: 文件“E:\MyProject\testPro\testPro\PO\PT_CODE_DETAIL.cs”正由另一进程使用，因此该进程无法访问该文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 48
