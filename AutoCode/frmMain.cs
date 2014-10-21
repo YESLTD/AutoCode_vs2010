@@ -28,5 +28,12 @@ namespace AutoCode
             uctlCreateCode ucc = new uctlCreateCode();
             CommonFunction.AddForm3(pl_container, ucc);
         }
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+            
+               
+            
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace AutoCode
         #endregion
         #region IBaseCreateCode 成员
 
-        public void createModel()
+        public void CreateModel()
         {
 
             FileStream fs = null;
@@ -44,13 +44,14 @@ namespace AutoCode
                     File.Delete(path + filename);
                 }
                 fs = new FileStream(path + filename, FileMode.Create, FileAccess.ReadWrite);
-                sw = new StreamWriter(fs);
+                sw = new StreamWriter(fs, Encoding.Default);
                 sw.AutoFlush = true;
-                sw.Write(Settings.Default.UsingDLL + "\n");
-                sw.Write("namespace " + Settings.Default.NameSpace + "{\n");
-                sw.Write(t1 + "public class " + columnproperity[0][0].ToString() + "\n    {\n");
-                sw.Write(t2 + "public " + columnproperity[0][0].ToString() + "(){}\n");
-                sw.Write(t2 + "#region Properity \n");
+                sw.Write(Settings.Default.UsingDLL + "\n" +
+                "namespace " + Settings.Default.NameSpace + "\n{\n" +
+                t1 + "public class " + columnproperity[0][0].ToString() + "\n" +
+                t1 + "{\n" +
+                t2 + "public " + columnproperity[0][0].ToString() + "(){}\n" +
+                t2 + "#region Properity \n");
                 foreach (string[] s in columnproperity)
                 {
                     string property = "private ";
@@ -74,8 +75,9 @@ namespace AutoCode
                     sw.Write(shuxing);
 
                 }
-                sw.Write(t2 + "#endregion\n");
-                sw.Write(t2 + "#region Properity get set method \n");
+                sw.Write(
+                t2 + "#endregion\n" +
+                t2 + "#region Properity get set method \n");
                 foreach (string[] s in columnproperity)
                 {
                     string property = "private ";
@@ -106,9 +108,10 @@ namespace AutoCode
                         t2 + "}\n";
                     sw.Write(setMethod);
                 }
-                sw.Write(t2 + "#endregion \n");
-                sw.Write(t1 + "}\n");
-                sw.Write("}");
+               sw.Write(
+               t2 + "#endregion \n" +
+               t1 + "}\n" +
+               "}");
             }
             catch (Exception e)
             {
@@ -122,8 +125,30 @@ namespace AutoCode
                 }
             }
         }
-
-        public void createDao()
+        public string CreateInsertMethod()
+        {
+            string id = "";
+            string sql = "insert into " + columnproperity[0][0].ToString() + " ({0}) values ({1})";
+            string columns = "";
+            string values = "";
+            foreach (string[] s in columnproperity)
+            {
+                columns += s[1] + ",";
+                if (s[2].ToString().StartsWith("VARCHAR"))
+                {
+                    values += "'@" + s[1] + "',";
+                }
+                else if (s[2].ToString().StartsWith("DATE"))
+                {
+                    values += "@" + s[1] + ",";
+                }
+            }
+            columns = columns.Trim(',');
+            values = values.Trim(',');
+            sql = string.Format(sql, columns, values);
+            return sql;
+        }
+        public void CreateDao()
         {
             FileStream fs = null;
             StreamWriter sw = null;
@@ -148,22 +173,34 @@ namespace AutoCode
                     File.Delete(path + filename);
                 }
                 fs = new FileStream(path + filename, FileMode.Create, FileAccess.ReadWrite);
-                sw = new StreamWriter(fs);
+                sw = new StreamWriter(fs, Encoding.Default);
                 sw.AutoFlush = true;
-                sw.Write(Settings.Default.UsingDLL + "\n");
-                sw.Write("namespace " + Settings.Default.NameSpace + "{\n");
-                sw.Write(t1 + "public interface " + "Dao" + columnproperity[0][0].ToString() + "\n    {\n");
-                sw.Write(t2 + "public " + "Dao" + columnproperity[0][0].ToString() + "Dao" + "(){}\n");
-                //string sqlInsert = "insert into " + columnproperity[0][0].ToString() + "vlaues(" + ")";
-                //string sqlUpdate = "update " + columnproperity[0][0].ToString() + "";
-                //string sqlDeletesql = "";
-                //string sqlQuery = "";
-                foreach (string[] s in columnproperity)
-                {
-
-                }
-                sw.Write(t1 + "}\n");
-                sw.Write("}");
+                sw.Write(Settings.Default.UsingDLL + "\n" +
+                "namespace " + Settings.Default.NameSpace + "\n{\n" +
+                t1 + "public class " + "Dao" + columnproperity[0][0].ToString() + "\n" +
+                t1 + "{\n" +
+                t2 + "public " + "Dao" + columnproperity[0][0].ToString() + "(){}\n" +
+                t2 + "/// <summary> \n" +
+                t2 + "///  数据插入\n" +
+                t2 + "/// <summary> \n" +
+                t2 + "/// <param name=\"dict\">载有对象值的字典</param> \n" +
+                t2 + "/// <returns>主键ID</returns> \n" +
+                t2 + "public string InsertEntity(Dictionary<string, string> dict)\n" +
+                t2 + "{\n" +
+                t3 + "string sql = \"" + CreateInsertMethod() + "\";\n" +
+                t3 + "string id = Guid.NewGuid().ToString();\n" +
+                t3 + "try\n" +
+                t3 + "{\n" +
+                t3 + t1 + "CommonFunction.ExecutenonQuery(sql,dict);\n" +
+                t3 + "}\n" +
+                t3 + "catch(Exception e)\n" +
+                t3 + "{\n" +
+                t3 + t1 + "CommonFunction.WriteErrorLog(e.ToString());\n" +
+                t3 + "}\n" +
+                t3 + "return id;\n" +
+                t2 + "}\n" +
+                t1 + "}\n" +
+                "}");
             }
             catch (Exception e)
             {

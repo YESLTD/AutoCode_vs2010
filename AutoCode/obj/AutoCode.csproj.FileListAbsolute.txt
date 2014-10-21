@@ -15,3 +15,17 @@ E:\MyProject\AutoCode\AutoCode\obj\Debug\AutoCode.pdb
 E:\Github\code\AutoCode\AutoCode\bin\Debug\AutoCode.exe.config
 E:\Github\code\AutoCode\AutoCode\obj\Debug\AutoCode.exe
 E:\Github\code\AutoCode\AutoCode\obj\Debug\AutoCode.pdb
+E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\AutoCode.exe.config
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.exe
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.pdb
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\ResolveAssemblyReference.cache
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.frmMain.resources
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.Properties.Resources.resources
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.uctlBaseConfig.resources
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.uctlCreateCode.resources
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.csproj.GenerateResource.Cache
+E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.exe.licenses
+E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\AutoCode.exe
+E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\AutoCode.pdb
+E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\ToolFunction.dll
+E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\ToolFunction.pdb

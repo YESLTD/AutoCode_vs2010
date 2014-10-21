@@ -6,8 +6,8 @@ namespace AutoCode
 {
     interface IBaseCreateCode
     {
-         void createModel();
-         void createDao();
+         void CreateModel();
+         void CreateDao();
          void createService();
     }
 }

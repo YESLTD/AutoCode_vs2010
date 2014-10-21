@@ -24,8 +24,8 @@ namespace AutoCode
             {
                 clsCreateCode cc = new clsCreateCode();
                 cc.columnproperity = clsGetAllColumn.getColunm(s);
-                cc.createModel();
-                cc.createDao();
+                cc.CreateModel();
+                cc.CreateDao();
             }
         }
         public List<string> getSelectTable()
