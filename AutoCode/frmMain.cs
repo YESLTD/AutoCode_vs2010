@@ -35,5 +35,11 @@ namespace AutoCode
                
             
         }
+
+        private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            uctlAbout ua = new uctlAbout();
+            CommonFunction.AddForm3(pl_container,ua);
+        }
     }
 }

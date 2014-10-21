@@ -98,7 +98,7 @@ namespace ToolFunction
                 throw ex;
             }
         }
-        public static void WriteErrotLog(string mess)
+        public static void WriteErrorLog(string mess)
         {
             StreamWriter sw = null;
             FileStream fs = null;
@@ -341,14 +341,14 @@ namespace ToolFunction
         /// </summary>
         /// <param name="xmlFile">xml文件地址</param>
         /// <returns>dataset对象</returns>
-        public static DataSet ConvertXMLFileToDataSet(string xmlFile)
+        public static DataSet ConvertXMLFileToDataSet(string filepath)
         {
             StringReader stream = null;
             XmlTextReader reader = null;
             try
             {
                 XmlDocument xmld = new XmlDocument();
-                xmld.Load(xmlFile);
+                xmld.Load(filepath);
 
                 DataSet xmlDS = new DataSet();
                 stream = new StringReader(xmld.InnerXml);

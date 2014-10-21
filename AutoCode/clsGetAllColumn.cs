@@ -42,7 +42,7 @@ namespace AutoCode
             }
             catch (Exception e)
             {
-                CommonFunction.WriteErrotLog(e.ToString());
+                CommonFunction.WriteErrorLog(e.ToString());
             }
             return columnlist;
         }

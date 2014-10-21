@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCreateCode.cs" />
+    <Compile Include="clsCreateTable.cs" />
     <Compile Include="clsGetAllColumn.cs" />
     <Compile Include="clsReadProperiy.cs" />
     <Compile Include="frmMain.cs">
@@ -65,6 +66,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctlAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>uctlAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uctlBaseConfig.resx">
       <SubType>Designer</SubType>
@@ -89,6 +94,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="uctlAbout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctlAbout.Designer.cs">
+      <DependentUpon>uctlAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="uctlBaseConfig.cs">
       <SubType>UserControl</SubType>
