@@ -129,7 +129,7 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 3;
-            this.btn_save.Text = "保存";
+            this.btn_save.Text = "保存【s】";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // labelControl2
@@ -185,8 +185,8 @@
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 3;
-            this.btn_close.Text = "关闭";
-            this.btn_close.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_close.Text = "关闭【esc】";
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // uctlBaseConfig
             // 
@@ -211,6 +211,7 @@
             this.Controls.Add(this.btn_savebasepath);
             this.Name = "uctlBaseConfig";
             this.Size = new System.Drawing.Size(453, 646);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uctlBaseConfig_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.te_basepath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.te_modelpath.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.te_daopath.Properties)).EndInit();

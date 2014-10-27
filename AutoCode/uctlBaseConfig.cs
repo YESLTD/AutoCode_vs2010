@@ -36,7 +36,7 @@ namespace AutoCode
             te_namespace.Text = Settings.Default.NameSpace;
             rtb_dll.Text = Settings.Default.UsingDLL;
         }
-        private void btn_save_Click(object sender, EventArgs e)
+        public void savefile()
         {
             Settings.Default.StrConn = te_strconn.Text.Trim();
             Settings.Default.BasePath = te_basepath.Text.Trim();
@@ -48,5 +48,36 @@ namespace AutoCode
             Settings.Default.Save();
             CommonFunction.STRCONN = te_strconn.Text;
         }
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            savefile();
+        }
+
+
+        private void uctlBaseConfig_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control&&e.KeyCode==Keys.S)
+            {
+                Settings.Default.StrConn = te_strconn.Text.Trim();
+                Settings.Default.BasePath = te_basepath.Text.Trim();
+                Settings.Default.ModelClassPath = te_modelpath.Text.Trim();
+                Settings.Default.DaoClassPath = te_daopath.Text.Trim();
+                Settings.Default.ServiceClassPath = te_servicepath.Text.Trim();
+                Settings.Default.NameSpace = te_namespace.Text.Trim();
+                Settings.Default.UsingDLL = rtb_dll.Text.ToString();
+                Settings.Default.Save();
+                CommonFunction.STRCONN = te_strconn.Text;
+            }
+            if (e.KeyCode==Keys.Escape)
+            {
+                this.FindForm().Close();
+            }
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.FindForm().Close();
+        }
+
     }
 }

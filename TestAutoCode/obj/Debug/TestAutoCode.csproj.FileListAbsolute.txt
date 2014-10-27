@@ -1,0 +1,7 @@
+E:\Github\AutoCode_vs2005\TestAutoCode\bin\Debug\TestAutoCode.dll
+E:\Github\AutoCode_vs2005\TestAutoCode\bin\Debug\TestAutoCode.pdb
+E:\Github\AutoCode_vs2005\TestAutoCode\bin\Debug\ToolFunction.dll
+E:\Github\AutoCode_vs2005\TestAutoCode\bin\Debug\ToolFunction.pdb
+E:\Github\AutoCode_vs2005\TestAutoCode\obj\Debug\TestAutoCode.csprojResolveAssemblyReference.cache
+E:\Github\AutoCode_vs2005\TestAutoCode\obj\Debug\TestAutoCode.dll
+E:\Github\AutoCode_vs2005\TestAutoCode\obj\Debug\TestAutoCode.pdb

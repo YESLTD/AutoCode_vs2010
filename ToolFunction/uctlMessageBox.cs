@@ -32,7 +32,7 @@ namespace ToolFunction
         /// </summary>
         /// <param name="dr">所选的项</param>
         /// <param name="message">消息内容</param>
-        public static void frmDisappearShow(DialogResult dr,string message)
+        public static void Show(DialogResult dr,string message)
         {
             if (dr ==DialogResult.Yes)
             {
@@ -48,7 +48,7 @@ namespace ToolFunction
         /// 上一个方法的重载，所选择的项有程序判断，只提供消息内容设置。
         /// </summary>
         /// <param name="message"></param>
-        public static void frmDisappearShow(string message)
+        public static void Show(string message)
         {
             Form f = new Form();
             f.Size = new Size(344, 113);
