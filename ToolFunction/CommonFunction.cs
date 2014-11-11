@@ -807,5 +807,71 @@ namespace ToolFunction
             }
         }
         #endregion
+
+        #region 文本框显示
+        /// <summary>
+        /// 通过选取人本，返回相应值
+        /// </summary>
+        /// <param name="item">显示文本</param>
+        /// <returns>对应值</returns>
+        public static string returnSelectItemValue(string source ,string item)
+        {
+            string result = "";
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"..\..\SELECTITEM.xml");
+            XmlElement root = null;
+            root = doc.DocumentElement;
+            XmlNodeList xmlnodelist = null;
+            xmlnodelist = root.SelectNodes("/dataset/" + source + "[itemtext = '" + item + "']/itemvalue");
+            //xmlnodelist = root.SelectNodes("//itemtext[@name='" + item + "']/itemvalue");
+             if (xmlnodelist.Count == 0)
+            {
+                return "";
+            }
+            result = xmlnodelist[0].InnerText;
+            return result;
+        }
+
+        public static DataTable getComboxDatasource(string item,ComboBox cmb)
+        {
+            DataTable dt = new DataTable();
+            DataColumn dc = new DataColumn("itemtext");
+            dt.Columns.Add(dc);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"..\..\SELECTITEM.xml");
+            XmlElement root = null;
+            root = doc.DocumentElement;
+            XmlNodeList mxlnode = null;
+            mxlnode = root.SelectNodes("/dataset/" + item + "/itemtext");
+            foreach (var value in mxlnode)
+            {
+                DataRow dr = dt.NewRow();
+                dr["itemtext"] = value.ToString();
+                cmb.Items.Add(value.ToString());
+            }
+            return dt;
+        }
+
+        public static DataTable getComboxDatasource(string item)
+        {
+            DataTable dt = new DataTable();
+            DataColumn dc = new DataColumn("itemtext");
+            dt.Columns.Add(dc);
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"..\..\SELECTITEM.xml");
+            XmlElement root = null;
+            root = doc.DocumentElement;
+            XmlNodeList mxlnode = null;
+            mxlnode = root.SelectNodes("/dataset/" + item + "/itemtext");
+            foreach (XmlNode value in mxlnode)
+            {
+                DataRow dr = dt.NewRow();
+                dr["itemtext"] = value.InnerText.ToString();
+                dt.Rows.Add(dr);
+                //uc.Items.Add(value.ToString());
+            }
+            return dt;
+        }
+        #endregion
     }
 }

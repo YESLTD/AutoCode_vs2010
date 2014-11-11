@@ -36,6 +36,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.code_all = new DevExpress.XtraEditors.SimpleButton();
             this.code_selected = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -129,18 +130,18 @@
             // 
             this.code_all.Location = new System.Drawing.Point(229, 11);
             this.code_all.Name = "code_all";
-            this.code_all.Size = new System.Drawing.Size(75, 23);
+            this.code_all.Size = new System.Drawing.Size(90, 23);
             this.code_all.TabIndex = 1;
-            this.code_all.Text = "全部生成";
+            this.code_all.Text = "全部生成【】";
             this.code_all.Click += new System.EventHandler(this.code_all_Click);
             // 
             // code_selected
             // 
-            this.code_selected.Location = new System.Drawing.Point(148, 11);
+            this.code_selected.Location = new System.Drawing.Point(133, 11);
             this.code_selected.Name = "code_selected";
-            this.code_selected.Size = new System.Drawing.Size(75, 23);
+            this.code_selected.Size = new System.Drawing.Size(90, 23);
             this.code_selected.TabIndex = 0;
-            this.code_selected.Text = "生成所选";
+            this.code_selected.Text = "生成【Enter】";
             this.code_selected.Click += new System.EventHandler(this.code_selected_Click);
             // 
             // uctlCreateCode
@@ -152,6 +153,7 @@
             this.Size = new System.Drawing.Size(453, 646);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_talbelist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

@@ -1,0 +1,84 @@
+[33mcommit 5ebed72d950e29de14d9134bd32d16649e3ace34[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Nov 11 09:40:52 2014 +0800
+
+    ignore
+    
+    ignore
+
+[33mcommit 0609e9ba7932ae50c4f2e7e86e1e5453728566bc[m
+Merge: 3b914c4 ca3b53b
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Nov 11 09:34:31 2014 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	AutoCode.suo
+    	AutoCode/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+
+[33mcommit 3b914c4d20c1d08feaec5fbb31daec4b29504ce6[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Nov 11 09:33:41 2014 +0800
+
+    recover uctlcombobox
+    
+    recover uctlcombobox
+
+[33mcommit ca3b53b02dcde3d348b032c96402e47e7dec82d4[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Nov 11 09:15:41 2014 +0800
+
+    Revert "uctlComboBox"
+    
+    This reverts commit 335997af9db4b56f86e92d907ab723ddf1855513.
+
+[33mcommit 335997af9db4b56f86e92d907ab723ddf1855513[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Nov 11 09:06:03 2014 +0800
+
+    uctlComboBox
+    
+    add uctlComboBox and test frm
+
+[33mcommit d09fdc2e941aba0651a47d7fd5852d8b8de47249[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Mon Oct 27 13:30:22 2014 +0800
+
+    public keys
+    
+    add public keys management
+
+[33mcommit 85b8d7a0a19c31b27f4c4a81147c4ca4a321e110[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Mon Oct 27 11:20:56 2014 +0800
+
+    vs05 to vs10
+
+[33mcommit 31c9c00b8c4e1aa8d36f028c52588fa08fc09d0e[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Oct 21 17:41:48 2014 +0800
+
+    del update query
+
+[33mcommit 7feb8b6b5acaead51e1756230204de20b6ff5d5d[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Tue Oct 21 14:47:25 2014 +0800
+
+    add Dao insert method
+    
+    add Dao insert method
+
+[33mcommit a7ed73f726019c456616af020903ec10fac3274d[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Mon Oct 20 14:48:44 2014 +0800
+
+    first commit
+    
+    first commit
+
+[33mcommit ef11e9803917846ffc97ecbd89e80c8b8a77dece[m
+Author: huzuohuyou <1255246777@qq.com>
+Date:   Mon Oct 20 14:48:31 2014 +0800
+
+    :neckbeard: Added .gitattributes & .gitignore files
