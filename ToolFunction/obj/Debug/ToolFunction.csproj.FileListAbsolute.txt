@@ -6,10 +6,11 @@ E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\DevExpress.XtraEditors.v7.2.dll
 E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\DevExpress.Data.v7.2.xml
 E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\DevExpress.Utils.v7.2.xml
 E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\DevExpress.XtraEditors.v7.2.xml
-E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\Office.dll
+E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\office.dll
 E:\Github\AutoCode_vs2005\ToolFunction\bin\Debug\Microsoft.Office.Interop.Excel.dll
 E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.csproj.ResolveComReference.cache
 E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.cEnterOrder.resources
+E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.uctlComboxcs.resources
 E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.pe.resources
 E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.uctlIcon2.resources
 E:\Github\AutoCode_vs2005\ToolFunction\obj\Debug\ToolFunction.uctlMessageBox.resources
