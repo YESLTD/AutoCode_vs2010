@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using ToolFunction;
-using TestAutoCode;
 
 namespace AutoCode
 {
@@ -54,12 +53,6 @@ namespace AutoCode
                 pl_container.Controls.Clear();
             }
             
-        }
-
-        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            frmTest f = new frmTest();
-            f.Show();
         }
     }
 }

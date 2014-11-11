@@ -56,12 +56,6 @@
       <DependentUpon>cEnterOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="clsProperty.cs" />
-    <Compile Include="uctlComboxcs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uctlComboxcs.Designer.cs">
-      <DependentUpon>uctlComboxcs.cs</DependentUpon>
-    </Compile>
     <Compile Include="uctlIcon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,9 +92,6 @@
     <EmbeddedResource Include="cEnterOrder.resx">
       <SubType>Designer</SubType>
       <DependentUpon>cEnterOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uctlComboxcs.resx">
-      <DependentUpon>uctlComboxcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uctlIcon.resx">
       <SubType>Designer</SubType>
