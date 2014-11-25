@@ -12,6 +12,7 @@ using System.Data.OleDb;
 using System.IO;
 using System.Xml;
 using System.Data.OracleClient;
+using MongoDB.Driver;
 
 namespace ToolFunction
 {
@@ -541,6 +542,23 @@ namespace ToolFunction
         #endregion
 
         #region 操作数据库
+
+        public static MongoCursor<object> ExecuteBySQL()
+        {
+            var connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var server = client.GetServer();
+            var database = server.GetDatabase("test"); // WriteConcern defaulted to Acknowledged
+            MongoCollection col = database.GetCollection("blog");
+            MongoCursor<object> obj = null;
+            var p = new QueryDocument{{"title","driver killself"}};
+            var result3 = col.FindAs<IBasePO>(p);
+            var result4 = col.FindAllAs<IBasePO>();
+             //var result5 = col.
+            return obj;
+        }
+
+
 
         /// <summary>
         /// 执行查询操作

@@ -10,7 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ToolFunction</RootNamespace>
     <AssemblyName>ToolFunction</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +41,12 @@
     <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
       <Private>True</Private>
     </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>.\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>.\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
@@ -56,6 +63,7 @@
       <DependentUpon>cEnterOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="clsProperty.cs" />
+    <Compile Include="IBasePO.cs" />
     <Compile Include="uctlComboxcs.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -37,6 +37,12 @@
     <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
     <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
     <Reference Include="DevExpress.XtraNavBar.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\ToolFunction\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\ToolFunction\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
@@ -46,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blog.cs" />
     <Compile Include="clsCreateCode.cs" />
     <Compile Include="clsCreateTable.cs" />
     <Compile Include="clsGetAllColumn.cs" />
@@ -106,7 +113,9 @@
     <EmbeddedResource Include="uctlTemplet.resx">
       <DependentUpon>uctlTemplet.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

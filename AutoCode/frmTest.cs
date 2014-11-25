@@ -54,5 +54,10 @@ namespace TestAutoCode
             CommonFunction.ExecuteTransNonQuery(sql3, dic3);
             CommonFunction.EndTransaction();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CommonFunction.ExecuteBySQL();
+        }
     }
 }

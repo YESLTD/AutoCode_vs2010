@@ -41,12 +41,6 @@
     <Compile Include="PO\PT_CODE_DETAIL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ToolFunction\ToolFunction.csproj">
-      <Project>{F26E3EAB-1187-4C91-A41E-2BE3D0FFE4B7}</Project>
-      <Name>ToolFunction</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

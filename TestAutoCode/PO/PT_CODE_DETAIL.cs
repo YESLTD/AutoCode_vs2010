@@ -13,6 +13,7 @@ namespace TestAutoCode
 		private string CODE_NAME;
 		private string DICT_ID;
 		#endregion
+
 		#region Properity get set method 
 		public string getCODE()
 		{

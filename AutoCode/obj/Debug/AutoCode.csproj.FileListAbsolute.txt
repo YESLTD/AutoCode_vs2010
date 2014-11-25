@@ -14,12 +14,6 @@ E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\ToolFunction.dll
 E:\Github\AutoCode_vs2005\AutoCode\bin\Debug\ToolFunction.pdb
 E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.exe
 E:\Github\AutoCode_vs2005\AutoCode\obj\Debug\AutoCode.pdb
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe.config
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.pdb
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.dll
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.pdb
-E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csprojResolveAssemblyReference.cache
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.frmMain.resources
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\TestAutoCode.frmTest.resources
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.Properties.Resources.resources
@@ -29,5 +23,13 @@ E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlCreateCode.resources
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlTemplet.resources
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csproj.GenerateResource.Cache
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe.licenses
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe.config
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.pdb
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\MongoDB.Bson.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\MongoDB.Driver.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.pdb
+E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csprojResolveAssemblyReference.cache
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
