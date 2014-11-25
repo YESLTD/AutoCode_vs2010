@@ -2,19 +2,19 @@
 
 <dataset>
   <number>
-    <itemtext name ="一">一</itemtext>
+    <itemtext >一</itemtext>
     <itemvalue>1</itemvalue>
   </number>
   <number>
-    <itemtext name ="二">二</itemtext>
+    <itemtext >二</itemtext>
     <itemvalue>2</itemvalue>
   </number>
   <number>
-    <itemtext name ="三">三</itemtext>
+    <itemtext >三</itemtext>
     <itemvalue>3</itemvalue>
   </number>
   <number>
-    <itemtext name ="四">四</itemtext>
+    <itemtext >四</itemtext>
     <itemvalue>4</itemvalue>
   </number>
 </dataset>

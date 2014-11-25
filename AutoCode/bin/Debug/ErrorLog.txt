@@ -57,3 +57,9 @@ System.IO.IOException: 文件“E:\MyProject\testPro\testPro\PO\PT_CODE_DETAIL.c
    在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
    在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
    在 AutoCode.clsCreateCode.createModel() 位置 E:\MyProject\AutoCode\AutoCode\clsCreateCode.cs:行号 48
+2014/11/24 17:10:07-----------------------------
+
+System.InvalidOperationException: 此 OracleTransaction 已完成；不再可用。
+   在 System.Data.OracleClient.OracleTransaction.AssertNotCompleted()
+   在 System.Data.OracleClient.OracleTransaction.Commit()
+   在 ToolFunction.CommonFunction.EndTransaction() 位置 E:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 607

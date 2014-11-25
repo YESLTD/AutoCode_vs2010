@@ -36,21 +36,21 @@
             // 
             this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(0, 0);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(55, 22);
+            this.comboBox1.Size = new System.Drawing.Size(55, 20);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(1, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(35, 16);
+            this.textBox1.Size = new System.Drawing.Size(35, 14);
             this.textBox1.TabIndex = 1;
             // 
             // uctlComboxcs
@@ -60,8 +60,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
+            this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "uctlComboxcs";
-            this.Size = new System.Drawing.Size(55, 22);
+            this.Size = new System.Drawing.Size(55, 21);
+            this.Load += new System.EventHandler(this.uctlComboxcs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

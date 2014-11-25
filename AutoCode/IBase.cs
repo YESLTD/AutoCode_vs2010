@@ -6,7 +6,7 @@ namespace TestAutoCode
 {
     interface IBase
     {
-        
-         void InitControls();
+
+        void InitializeDataSources();
     }
 }

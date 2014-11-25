@@ -24,6 +24,9 @@ namespace ToolFunction
         public static string ErrorLogPath = null;
         public static Dictionary<string, TabPage> dicpage = new Dictionary<string, TabPage>();
         public static string STRCONN = "";
+        public static OracleConnection conn = null;
+        public static OracleCommand cmd = null;
+        public static OracleTransaction oratra = null;
         #endregion
 
         #region 构造函数
@@ -552,7 +555,7 @@ namespace ToolFunction
             //OleDbConnection conn = new OleDbConnection(GetConnString());
             //OleDbCommand cmd = conn.CreateCommand();
             OracleConnection conn = new OracleConnection(GetConnString());
-            OracleCommand cmd =  conn.CreateCommand();
+            OracleCommand cmd = conn.CreateCommand();
             conn.Open();
             DataTable table = new DataTable(tablename);
             ChangeSelectCommand(sql, dictionary, ref cmd);
@@ -574,6 +577,97 @@ namespace ToolFunction
             }
 
             return table;
+        }
+
+        /// <summary>
+        /// 开启事务
+        /// </summary>
+        public static void BeginTransaction()
+        {
+            try
+            {
+                conn = new OracleConnection(GetConnString());
+                conn.Open();
+                cmd = conn.CreateCommand();
+                oratra = conn.BeginTransaction();
+                cmd.Transaction = oratra;
+            }
+            catch (Exception ex)
+            {
+                CommonFunction.WriteErrorLog(ex.ToString());
+            }
+           
+        }
+
+        /// <summary>
+        /// 停止事务
+        /// </summary>
+        public static void EndTransaction()
+        {
+            try
+            {
+                if (conn!=null)
+                {
+                    oratra.Commit();
+                }
+            }
+            catch (Exception ex)
+            {
+                CommonFunction.WriteErrorLog(ex.ToString());
+            }
+            
+        }
+        /// <summary>
+        /// 在方法外部声明事务，作为参数传入。当任务完成手动提交事务(测试中)
+        /// </summary>
+        /// <param name="sql">执行的sql</param>
+        /// <param name="dictionary">参数字典</param>
+        /// <returns>影响的结果条数</returns>
+        static public int ExecuteTransNonQuery(string sql, Dictionary<string, string> dictionary)
+        {
+            if (conn==null)
+            {
+                return 0;
+            }
+            if (cmd == null)
+            {
+                return 0;
+            }
+            int n = 0;
+            ChangeSelectCommand(sql, dictionary, ref cmd);
+            try
+            {
+                n = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                if (conn != null && oratra != null)
+                {
+                    oratra.Rollback();
+                }
+                if (conn != null)
+                {
+                    conn.Dispose();
+                    conn = null;
+                }
+                if (cmd != null)
+                {
+                    cmd.Dispose();
+                    cmd = null;
+                }
+                if (oratra != null)
+                {
+                    oratra.Dispose();
+                    //oratra = null;
+                }
+                
+                n = 0;
+            }
+            finally
+            {
+                
+            }
+            return n;
         }
 
         /// <summary>
@@ -614,7 +708,7 @@ namespace ToolFunction
         private static string GetConnString()
         {
             //string strconn = System.Configuration.ConfigurationSettings.AppSettings["StrConn"].ToString();
-            
+
             return STRCONN;
         }
 
@@ -630,37 +724,40 @@ namespace ToolFunction
 
             cmd.Parameters.Clear();
             string sqltxt = sql;
-            int nIndex = sqltxt.IndexOf('@');
+            int nIndex = sqltxt.IndexOf(':');
             while (-1 != nIndex)
             {
                 if (nIndex > -1)
                 {
                     foreach (object obj in dictionary.Keys)
                     {
-                        string strParm = "@" + obj.ToString();
+                        string strParm = ":" + obj.ToString();
+                        int n = sqltxt.IndexOf(strParm);
                         if (nIndex == sqltxt.IndexOf(strParm, nIndex))
                         {
                             string values;
                             dictionary.TryGetValue(obj.ToString(), out values);
-                            cmd.Parameters.Add(nIndex.ToString(), OleDbType.VarChar).Value = values;
+                            //cmd.Parameters.Add(nIndex.ToString(), OleDbType.VarChar).Value = values;
+                            cmd.Parameters.Add(new OracleParameter(strParm, values));
+                            
                         }
                     }
                 }
                 if (sqltxt.Length > nIndex)
                 {
-                    nIndex = sqltxt.IndexOf('@', nIndex + 1);
+                    nIndex = sqltxt.IndexOf(':', nIndex + 1);
                 }
                 else
                     nIndex = -1;
             }
-            if (dictionary != null)
-            {
-                foreach (object obj in dictionary.Keys)
-                {
-                    string strParm = "@" + obj.ToString();
-                    sqltxt = sqltxt.Replace(strParm, "?");
-                }
-            }
+            //if (dictionary != null)
+            //{
+            //    foreach (object obj in dictionary.Keys)
+            //    {
+            //        string strParm = ":" + obj.ToString();
+            //        sqltxt = sqltxt.Replace(strParm, "?");
+            //    }
+            //}
             cmd.CommandText = sqltxt;
             return true;
         }
@@ -814,7 +911,7 @@ namespace ToolFunction
         /// </summary>
         /// <param name="item">显示文本</param>
         /// <returns>对应值</returns>
-        public static string returnSelectItemValue(string source ,string item)
+        public static string returnSelectItemValue(string source, string item)
         {
             string result = "";
             XmlDocument doc = new XmlDocument();
@@ -824,7 +921,7 @@ namespace ToolFunction
             XmlNodeList xmlnodelist = null;
             xmlnodelist = root.SelectNodes("/dataset/" + source + "[itemtext = '" + item + "']/itemvalue");
             //xmlnodelist = root.SelectNodes("//itemtext[@name='" + item + "']/itemvalue");
-             if (xmlnodelist.Count == 0)
+            if (xmlnodelist.Count == 0)
             {
                 return "";
             }
@@ -832,7 +929,7 @@ namespace ToolFunction
             return result;
         }
 
-        public static DataTable getComboxDatasource(string item,ComboBox cmb)
+        public static DataTable getComboxDatasource(string item, ComboBox cmb)
         {
             DataTable dt = new DataTable();
             DataColumn dc = new DataColumn("itemtext");
