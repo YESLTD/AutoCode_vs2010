@@ -63,3 +63,119 @@ System.InvalidOperationException: 此 OracleTransaction 已完成；不再可用
    在 System.Data.OracleClient.OracleTransaction.AssertNotCompleted()
    在 System.Data.OracleClient.OracleTransaction.Commit()
    在 ToolFunction.CommonFunction.EndTransaction() 位置 E:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 607
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:09:22-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'title' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:56-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:57-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:57-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 15:10:57-----------------------------
+
+System.Collections.Generic.KeyNotFoundException: Element 'content' not found.
+   在 MongoDB.Bson.BsonDocument.get_Item(String name)
+   在 TestAutoCode.frmTest.button4_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\frmTest.cs:行号 105
+2014/11/28 17:00:07-----------------------------
+
+System.IO.FileFormatException: Expected element name to be '_t', not '_id'.
+   在 MongoDB.Bson.IO.BsonReader.VerifyName(String expectedName)
+   在 MongoDB.Bson.IO.BsonReader.ReadString(String name)
+   在 MongoDB.Bson.Serialization.Serializers.EnumerableSerializer`1.Deserialize(BsonReader bsonReader, Type nominalType, Type actualType, IBsonSerializationOptions options)
+   在 MongoDB.Bson.Serialization.Serializers.BsonBaseSerializer.Deserialize(BsonReader bsonReader, Type nominalType, IBsonSerializationOptions options)
+   在 MongoDB.Bson.Serialization.BsonSerializer.Deserialize(BsonReader bsonReader, Type nominalType, IBsonSerializationOptions options)
+   在 MongoDB.Driver.Internal.MongoReplyMessage`1.ReadFrom(BsonBuffer buffer, IBsonSerializationOptions serializationOptions)
+   在 MongoDB.Driver.Internal.MongoConnection.ReceiveMessage[TDocument](BsonBinaryReaderSettings readerSettings, IBsonSerializationOptions serializationOptions)
+   在 MongoDB.Driver.MongoCursorEnumerator`1.GetReply(MongoConnection connection, MongoRequestMessage message)
+   在 MongoDB.Driver.MongoCursorEnumerator`1.GetFirst()
+   在 MongoDB.Driver.MongoCursorEnumerator`1.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   在 MongoDB.Driver.MongoCollection.FindOneAs[TDocument](IMongoQuery query)
+   在 ToolFunction.CommonFunction.QueryMongoCollection(String collenction, QueryDocument qd) 位置 E:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 588

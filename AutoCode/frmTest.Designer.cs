@@ -28,31 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uctlComboxcs1 = new ToolFunction.uctlComboxcs();
-            this.uctlComboxcs4 = new ToolFunction.uctlComboxcs();
-            this.uctlComboxcs2 = new ToolFunction.uctlComboxcs();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.uctlComboxcs2 = new ToolFunction.uctlComboxcs();
+            this.uctlComboxcs1 = new ToolFunction.uctlComboxcs();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // uctlComboxcs1
+            // button1
             // 
-            this.uctlComboxcs1.BackColor = System.Drawing.Color.White;
-            this.uctlComboxcs1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uctlComboxcs1.Location = new System.Drawing.Point(12, 61);
-            this.uctlComboxcs1.Name = "uctlComboxcs1";
-            this.uctlComboxcs1.Size = new System.Drawing.Size(55, 21);
-            this.uctlComboxcs1.TabIndex = 7;
+            this.button1.Location = new System.Drawing.Point(12, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "测试事务";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // uctlComboxcs4
+            // button2
             // 
-            this.uctlComboxcs4.BackColor = System.Drawing.Color.White;
-            this.uctlComboxcs4.Font = new System.Drawing.Font("Monaco", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uctlComboxcs4.Location = new System.Drawing.Point(12, 105);
-            this.uctlComboxcs4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.uctlComboxcs4.Name = "uctlComboxcs4";
-            this.uctlComboxcs4.Size = new System.Drawing.Size(55, 20);
-            this.uctlComboxcs4.TabIndex = 6;
+            this.button2.Location = new System.Drawing.Point(160, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "InsertCol";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(160, 50);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "UpdateCol";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(160, 88);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "QueryCol";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // uctlComboxcs2
             // 
@@ -63,36 +86,35 @@
             this.uctlComboxcs2.Size = new System.Drawing.Size(101, 21);
             this.uctlComboxcs2.TabIndex = 8;
             // 
-            // button1
+            // uctlComboxcs1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "测试事务";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.uctlComboxcs1.BackColor = System.Drawing.Color.White;
+            this.uctlComboxcs1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uctlComboxcs1.Location = new System.Drawing.Point(12, 50);
+            this.uctlComboxcs1.Name = "uctlComboxcs1";
+            this.uctlComboxcs1.Size = new System.Drawing.Size(101, 21);
+            this.uctlComboxcs1.TabIndex = 7;
             // 
-            // button2
+            // richTextBox1
             // 
-            this.button2.Location = new System.Drawing.Point(12, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Mongo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 135);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(544, 252);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
             // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(568, 399);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.uctlComboxcs2);
             this.Controls.Add(this.uctlComboxcs1);
-            this.Controls.Add(this.uctlComboxcs4);
             this.Name = "frmTest";
             this.Text = "frmTest";
             this.ResumeLayout(false);
@@ -101,11 +123,13 @@
 
         #endregion
 
-        private ToolFunction.uctlComboxcs uctlComboxcs4;
         private ToolFunction.uctlComboxcs uctlComboxcs1;
         private ToolFunction.uctlComboxcs uctlComboxcs2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RichTextBox richTextBox1;
 
     }
 }

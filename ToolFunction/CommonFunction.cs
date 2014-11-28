@@ -13,6 +13,7 @@ using System.IO;
 using System.Xml;
 using System.Data.OracleClient;
 using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace ToolFunction
 {
@@ -543,19 +544,97 @@ namespace ToolFunction
 
         #region 操作数据库
 
-        public static MongoCursor<object> ExecuteBySQL()
+        /// <summary>
+        /// 将MongoCursor转化为DataTable《未实现》
+        /// </summary>
+        /// <param name="mc">输入MongoCursor</param>
+        /// <returns>生成的DataTable</returns>
+        public static DataTable ConverMongoCursorToDataTable(MongoCursor mc)
+        {
+            DataTable dt = new DataTable();
+            //列的初始化
+            foreach (string column in mc)
+            {
+                
+            }
+            //生成行
+            foreach (BsonDocument item in mc)
+            {
+                
+            }
+            return dt;
+        
+        }
+
+        /// <summary>
+        /// 查询MongoDB
+        /// </summary>
+        /// <param name="collenction">集合名称</param>
+        /// <param name="qd">QueryCocument条件</param>
+        /// <returns>返回结果</returns>
+        public static MongoCursor QueryMongoCollection(string collenction,QueryDocument  qd)
+        {
+            MongoCursor<BsonDocument> result = null;
+            var connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var server = client.GetServer();
+            var database = server.GetDatabase("test"); // WriteConcern defaulted to Acknowledged
+            MongoCollection col = database.GetCollection(collenction);
+            try
+            {
+                //查找全部
+                //result = col.FindAllAs<BsonDocument>();
+                //条件查找
+                result = col.FindOneAs<MongoCursor<BsonDocument>>(qd);
+            }
+            catch (Exception ex)
+            {
+                CommonFunction.WriteErrorLog(ex.ToString());
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="collenction"></param>
+        /// <param name="bd"></param>
+        public static void UpdateMongoCollection(string collenction,BsonDocument bd)
         {
             var connectionString = "mongodb://localhost";
             var client = new MongoClient(connectionString);
             var server = client.GetServer();
             var database = server.GetDatabase("test"); // WriteConcern defaulted to Acknowledged
-            MongoCollection col = database.GetCollection("blog");
-            MongoCursor<object> obj = null;
-            var p = new QueryDocument{{"title","driver killself"}};
-            var result3 = col.FindAs<IBasePO>(p);
-            var result4 = col.FindAllAs<IBasePO>();
-             //var result5 = col.
-            return obj;
+            MongoCollection col = database.GetCollection(collenction);
+            //update
+            //col.Update(collenction, (x => x.ID == collenction.ID));
+           
+        }
+
+        /// <summary>
+        /// MongoDb插入数据
+        /// </summary>
+        /// <param name="collenction">集合名称</param>
+        /// <param name="bd">所插入的数据</param>
+        /// <returns>插入数据返回的结果</returns>
+        public static WriteConcernResult InsertMongoCollection(string collenction, BsonDocument bd)
+        {
+            var connectionString = "mongodb://localhost";
+            var client = new MongoClient(connectionString);
+            var server = client.GetServer();
+            var database = server.GetDatabase("test"); // WriteConcern defaulted to Acknowledged
+            MongoCollection col = database.GetCollection(collenction);
+            //insert
+            WriteConcernResult wcr = null;
+            try
+            {
+                wcr = col.Insert(bd);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return wcr;
         }
 
 
@@ -988,5 +1067,6 @@ namespace ToolFunction
             return dt;
         }
         #endregion
+
     }
 }

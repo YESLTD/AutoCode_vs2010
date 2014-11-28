@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using ToolFunction;
 using System.Data.OracleClient;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace TestAutoCode
 {
@@ -24,7 +26,6 @@ namespace TestAutoCode
         /// </summary>
         public void InitializeDataSources()
         {
-            uctlComboxcs4.source = CommonFunction.getComboxDatasource("number");
             uctlComboxcs2.source = CommonFunction.getComboxDatasource("number");
         }
 
@@ -57,7 +58,60 @@ namespace TestAutoCode
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CommonFunction.ExecuteBySQL();
+            DateTime now = DateTime.Now;
+            BsonDocument blog = new BsonDocument 
+            {
+              {"title"," Ernest Hemingway "  },
+              {"content" , " For Whom the Bell Tolls "  },
+              {"date" ,1},
+              {"author","wuhailong"}
+            };
+            WriteConcernResult wcr = CommonFunction.InsertMongoCollection("blog", blog);
+            //if (wcr.Ok )
+            //{
+            //    MessageBox.Show(wcr.ToString()+wcr.Ok+"保存成功");
+            //}
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            QueryDocument query = new QueryDocument();
+            BsonDocument b = new BsonDocument();
+            //b.Add("$gt", "a");
+            //query.Add("title", b);
+            MongoCursor mc = CommonFunction.QueryMongoCollection("blog", query);
+            string mess = "";
+           
+            foreach (BsonDocument item in mc)
+            {
+                //BsonElement bv = null;
+                //item.ToJson();
+                //foreach (string name in item.Names)
+                //{
+                //    mess += name+">>";
+                //}
+                //if (item.TryGetElement("title",bv))
+                //{
+                    
+                //}
+                //GetElement("title").ToString() +"\n";
+                try
+                {
+                    mess += item["date"].ToString() + "\n";
+                }
+                catch (Exception ex)
+                {
+                    CommonFunction.WriteErrorLog(ex.ToString());
+                }
+                
+                //mess += item.Names.ToString() + item.ToString() + ">>>>>>>>" + item.Values.ToString();
+            }
+            richTextBox1.Text = mess;
         }
     }
 }

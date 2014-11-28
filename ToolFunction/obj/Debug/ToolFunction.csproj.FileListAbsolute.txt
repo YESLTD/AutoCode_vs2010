@@ -43,3 +43,4 @@ E:\Github\AutoCode_vs2010\ToolFunction\bin\Debug\Office.dll
 E:\Github\AutoCode_vs2010\ToolFunction\bin\Debug\Microsoft.Office.Interop.Excel.dll
 E:\Github\AutoCode_vs2010\ToolFunction\obj\Debug\ToolFunction.dll
 E:\Github\AutoCode_vs2010\ToolFunction\obj\Debug\ToolFunction.pdb
+E:\Github\AutoCode_vs2010\ToolFunction\obj\Debug\ToolFunction.csprojResolveAssemblyReference.cache
