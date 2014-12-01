@@ -33,3 +33,13 @@ E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.pdb
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csprojResolveAssemblyReference.cache
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.Data.v7.2.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.Utils.v7.2.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraEditors.v7.2.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraGrid.v7.2.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraNavBar.v7.2.dll
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.Data.v7.2.xml
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.Utils.v7.2.xml
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraEditors.v7.2.xml
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraGrid.v7.2.xml
+E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\DevExpress.XtraNavBar.v7.2.xml
