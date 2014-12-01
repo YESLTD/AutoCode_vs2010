@@ -33,3 +33,16 @@ E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\ToolFunction.pdb
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csprojResolveAssemblyReference.cache
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe
 E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
+F:\Github\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe.config
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csprojResolveAssemblyReference.cache
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.frmMain.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\TestAutoCode.frmTest.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.Properties.Resources.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlAbout.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlBaseConfig.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlCreateCode.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlTemplet.resources
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.csproj.GenerateResource.Cache
+F:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe.licenses
