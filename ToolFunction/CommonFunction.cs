@@ -241,7 +241,7 @@ namespace ToolFunction
         public static void AddExcel(string name, DataTable dt)
         {
             string fileName = name + ".xls";
-            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             int rowIndex = 1;
             int colIndex = 0;
             excel.Application.Workbooks.Add(true);
@@ -275,7 +275,7 @@ namespace ToolFunction
             string insertcolumnstring = "";
             string insertvaluestring = "";
             string fileName = name + ".xls";
-            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             excel.Application.Workbooks.Add(true);
             int colIndex = 0;
             foreach (DataColumn col in dt.Columns)
@@ -653,7 +653,15 @@ namespace ToolFunction
             //OleDbCommand cmd = conn.CreateCommand();
             OracleConnection conn = new OracleConnection(GetConnString());
             OracleCommand cmd = conn.CreateCommand();
-            conn.Open();
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                CommonFunction.WriteErrorLog(ex.ToString());
+            }
+            
             DataTable table = new DataTable(tablename);
             ChangeSelectCommand(sql, dictionary, ref cmd);
             try
