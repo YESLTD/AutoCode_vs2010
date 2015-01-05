@@ -179,3 +179,33 @@ System.IO.FileFormatException: Expected element name to be '_t', not '_id'.
    在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
    在 MongoDB.Driver.MongoCollection.FindOneAs[TDocument](IMongoQuery query)
    在 ToolFunction.CommonFunction.QueryMongoCollection(String collenction, QueryDocument qd) 位置 E:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 588
+2014/12/3 21:16:37-----------------------------
+
+System.Exception: System.Data.OracleClient 需要 Oracle 客户端软件 version 8.1.7 或更高版本。
+   在 System.Data.OracleClient.OCI.DetermineClientVersion()
+   在 System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   在 System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OracleClient.OracleConnection.Open()
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 F:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 658
+2014/12/3 21:17:54-----------------------------
+
+System.Exception: System.Data.OracleClient 需要 Oracle 客户端软件 version 8.1.7 或更高版本。
+   在 System.Data.OracleClient.OCI.DetermineClientVersion()
+   在 System.Data.OracleClient.OracleInternalConnection.OpenOnLocalTransaction(String userName, String password, String serverName, Boolean integratedSecurity, Boolean unicode, Boolean omitOracleConnectionName)
+   在 System.Data.OracleClient.OracleInternalConnection..ctor(OracleConnectionString connectionOptions)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OracleClient.OracleConnection.Open()
+   在 ToolFunction.CommonFunction.ExecuteBySQL(String sql, Dictionary`2 dictionary, String tablename) 位置 F:\Github\AutoCode_vs2010\ToolFunction\CommonFunction.cs:行号 658

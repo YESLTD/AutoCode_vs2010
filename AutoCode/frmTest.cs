@@ -9,14 +9,15 @@ using ToolFunction;
 using System.Data.OracleClient;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using AutoCode.ServiceReference1;
 
 namespace TestAutoCode
 {
-    public partial class frmTest : Form,IBase
+    public partial class frmTest : Form, IBase
     {
         public frmTest()
         {
-           
+
             InitializeComponent();
             InitializeDataSources();
         }
@@ -31,19 +32,19 @@ namespace TestAutoCode
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             string sql1 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
             Dictionary<string, string> dic1 = new Dictionary<string, string>();
             dic1.Add("testcontent", "111");
             dic1.Add("patient_id", "A0856200");
             dic1.Add("visit_id", "1");
-           
+
             string sql2 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
             Dictionary<string, string> dic2 = new Dictionary<string, string>();
             dic2.Add("testcontent", "222");
             dic2.Add("patient_id", "A0856200");
             dic2.Add("visit_id", "1");
-           
+
             string sql3 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
             Dictionary<string, string> dic3 = new Dictionary<string, string>();
             dic3.Add("testcontent", "333");
@@ -86,7 +87,7 @@ namespace TestAutoCode
             //query.Add("title", b);
             MongoCursor mc = CommonFunction.QueryMongoCollection("blog", query);
             string mess = "";
-           
+
             foreach (BsonDocument item in mc)
             {
                 //BsonElement bv = null;
@@ -97,7 +98,7 @@ namespace TestAutoCode
                 //}
                 //if (item.TryGetElement("title",bv))
                 //{
-                    
+
                 //}
                 //GetElement("title").ToString() +"\n";
                 try
@@ -108,10 +109,16 @@ namespace TestAutoCode
                 {
                     CommonFunction.WriteErrorLog(ex.ToString());
                 }
-                
+
                 //mess += item.Names.ToString() + item.ToString() + ">>>>>>>>" + item.Values.ToString();
             }
             richTextBox1.Text = mess;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UserClient uc = new UserClient();
+            richTextBox1.Text = uc.ShowName(textBox1.Text);
         }
     }
 }

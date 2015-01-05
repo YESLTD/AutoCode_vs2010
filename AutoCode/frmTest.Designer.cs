@@ -35,6 +35,8 @@
             this.uctlComboxcs2 = new ToolFunction.uctlComboxcs();
             this.uctlComboxcs1 = new ToolFunction.uctlComboxcs();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -103,11 +105,30 @@
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(401, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(101, 23);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "wcf测试";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(295, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 15;
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 399);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -118,6 +139,7 @@
             this.Name = "frmTest";
             this.Text = "frmTest";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -130,6 +152,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
 
     }
 }
