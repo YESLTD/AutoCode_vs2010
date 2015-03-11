@@ -28,7 +28,7 @@ namespace AutoCode
         /// </summary>
         public void initControls()
         {
-            te_strconn.Text = Settings.Default.StrConn;
+            //te_strconn.Text = Settings.Default.StrConn;
             te_basepath.Text = Settings.Default.BasePath;
             te_modelpath.Text = Settings.Default.ModelClassPath;
             te_daopath.Text = Settings.Default.DaoClassPath;
@@ -38,7 +38,7 @@ namespace AutoCode
         }
         public void savefile()
         {
-            Settings.Default.StrConn = te_strconn.Text.Trim();
+            //Settings.Default.StrConn = te_strconn.Text.Trim();
             Settings.Default.BasePath = te_basepath.Text.Trim();
             Settings.Default.ModelClassPath = te_modelpath.Text.Trim();
             Settings.Default.DaoClassPath = te_daopath.Text.Trim();
@@ -46,7 +46,7 @@ namespace AutoCode
             Settings.Default.NameSpace = te_namespace.Text.Trim();
             Settings.Default.UsingDLL = rtb_dll.Text.ToString();
             Settings.Default.Save();
-            CommonFunction.STRCONN = te_strconn.Text;
+            CommonFunction.SetConnectionString();
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -58,7 +58,7 @@ namespace AutoCode
         {
             if (e.Control&&e.KeyCode==Keys.S)
             {
-                Settings.Default.StrConn = te_strconn.Text.Trim();
+                //Settings.Default.StrConn = te_strconn.Text.Trim();
                 Settings.Default.BasePath = te_basepath.Text.Trim();
                 Settings.Default.ModelClassPath = te_modelpath.Text.Trim();
                 Settings.Default.DaoClassPath = te_daopath.Text.Trim();
@@ -66,7 +66,7 @@ namespace AutoCode
                 Settings.Default.NameSpace = te_namespace.Text.Trim();
                 Settings.Default.UsingDLL = rtb_dll.Text.ToString();
                 Settings.Default.Save();
-                CommonFunction.STRCONN = te_strconn.Text;
+                CommonFunction.SetConnectionString();
             }
             if (e.KeyCode==Keys.Escape)
             {

@@ -9,6 +9,7 @@ using ToolFunction;
 using System.Data.OracleClient;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Configuration;
 
 namespace TestAutoCode
 {
@@ -32,28 +33,28 @@ namespace TestAutoCode
         private void button1_Click(object sender, EventArgs e)
         {
             
-            string sql1 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
-            Dictionary<string, string> dic1 = new Dictionary<string, string>();
-            dic1.Add("testcontent", "111");
-            dic1.Add("patient_id", "A0856200");
-            dic1.Add("visit_id", "1");
+            //string sql1 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
+            //Dictionary<string, string> dic1 = new Dictionary<string, string>();
+            //dic1.Add("testcontent", "111");
+            //dic1.Add("patient_id", "A0856200");
+            //dic1.Add("visit_id", "1");
            
-            string sql2 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
-            Dictionary<string, string> dic2 = new Dictionary<string, string>();
-            dic2.Add("testcontent", "222");
-            dic2.Add("patient_id", "A0856200");
-            dic2.Add("visit_id", "1");
+            //string sql2 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
+            //Dictionary<string, string> dic2 = new Dictionary<string, string>();
+            //dic2.Add("testcontent", "222");
+            //dic2.Add("patient_id", "A0856200");
+            //dic2.Add("visit_id", "1");
            
-            string sql3 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
-            Dictionary<string, string> dic3 = new Dictionary<string, string>();
-            dic3.Add("testcontent", "333");
-            dic3.Add("patient_id", "A0856200");
-            dic3.Add("visit_id", "1");
-            CommonFunction.BeginTransaction();
-            CommonFunction.ExecuteTransNonQuery(sql1, dic1);
-            CommonFunction.ExecuteTransNonQuery(sql2, dic3);
-            CommonFunction.ExecuteTransNonQuery(sql3, dic3);
-            CommonFunction.EndTransaction();
+            //string sql3 = "update pat_visit set testcontent =:testcontent where patient_id = :patient_id and visit_id = :visit_id ";
+            //Dictionary<string, string> dic3 = new Dictionary<string, string>();
+            //dic3.Add("testcontent", "333");
+            //dic3.Add("patient_id", "A0856200");
+            //dic3.Add("visit_id", "1");
+            //CommonFunction.BeginTransaction();
+            //CommonFunction.ExecuteTransNonQuery(sql1, dic1);
+            //CommonFunction.ExecuteTransNonQuery(sql2, dic3);
+            //CommonFunction.ExecuteTransNonQuery(sql3, dic3);
+            //CommonFunction.EndTransaction();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -112,6 +113,23 @@ namespace TestAutoCode
                 //mess += item.Names.ToString() + item.ToString() + ">>>>>>>>" + item.Values.ToString();
             }
             richTextBox1.Text = mess;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ConnectionStringSettings sPACS = ConfigurationManager.ConnectionStrings["PacsConnectionString"];
+            string ConnStr = sPACS.ConnectionString;
+            OracleCommand cmd = new OracleCommand();
+            OracleConnection conn = new OracleConnection(ConnStr);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "HisConfirmID";
+            OracleParameter[] parm = new OracleParameter[2];
+            parm[0] = new OracleParameter("INP_NO", OracleType.VarChar, 100);
+            parm[1] = new OracleParameter("icd10", OracleType.VarChar, 100);
+            if (conn.State != ConnectionState.Open)
+                conn.Open();
+            cmd.Connection = conn;
+            int iresult  = cmd.ExecuteNonQuery();
         }
     }
 }

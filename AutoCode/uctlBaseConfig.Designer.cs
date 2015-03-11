@@ -56,7 +56,7 @@
             // 
             // btn_savebasepath
             // 
-            this.btn_savebasepath.Location = new System.Drawing.Point(354, 55);
+            this.btn_savebasepath.Location = new System.Drawing.Point(357, 13);
             this.btn_savebasepath.Name = "btn_savebasepath";
             this.btn_savebasepath.Size = new System.Drawing.Size(75, 23);
             this.btn_savebasepath.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(17, 59);
+            this.labelControl1.Location = new System.Drawing.Point(20, 17);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(50, 14);
             this.labelControl1.TabIndex = 1;
@@ -73,14 +73,14 @@
             // 
             // te_basepath
             // 
-            this.te_basepath.Location = new System.Drawing.Point(116, 56);
+            this.te_basepath.Location = new System.Drawing.Point(119, 14);
             this.te_basepath.Name = "te_basepath";
             this.te_basepath.Size = new System.Drawing.Size(232, 21);
             this.te_basepath.TabIndex = 2;
             // 
             // modellab
             // 
-            this.modellab.Location = new System.Drawing.Point(17, 102);
+            this.modellab.Location = new System.Drawing.Point(20, 60);
             this.modellab.Name = "modellab";
             this.modellab.Size = new System.Drawing.Size(80, 14);
             this.modellab.TabIndex = 1;
@@ -88,14 +88,14 @@
             // 
             // te_modelpath
             // 
-            this.te_modelpath.Location = new System.Drawing.Point(116, 99);
+            this.te_modelpath.Location = new System.Drawing.Point(119, 57);
             this.te_modelpath.Name = "te_modelpath";
             this.te_modelpath.Size = new System.Drawing.Size(313, 21);
             this.te_modelpath.TabIndex = 2;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(17, 145);
+            this.labelControl3.Location = new System.Drawing.Point(20, 103);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(69, 14);
             this.labelControl3.TabIndex = 1;
@@ -103,14 +103,14 @@
             // 
             // te_daopath
             // 
-            this.te_daopath.Location = new System.Drawing.Point(116, 141);
+            this.te_daopath.Location = new System.Drawing.Point(119, 99);
             this.te_daopath.Name = "te_daopath";
             this.te_daopath.Size = new System.Drawing.Size(313, 21);
             this.te_daopath.TabIndex = 2;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(17, 188);
+            this.labelControl4.Location = new System.Drawing.Point(20, 146);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(87, 14);
             this.labelControl4.TabIndex = 1;
@@ -118,7 +118,7 @@
             // 
             // te_servicepath
             // 
-            this.te_servicepath.Location = new System.Drawing.Point(116, 184);
+            this.te_servicepath.Location = new System.Drawing.Point(119, 142);
             this.te_servicepath.Name = "te_servicepath";
             this.te_servicepath.Size = new System.Drawing.Size(313, 21);
             this.te_servicepath.TabIndex = 2;
@@ -129,27 +129,29 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(75, 23);
             this.btn_save.TabIndex = 3;
-            this.btn_save.Text = "保存【s】";
+            this.btn_save.Text = "保存 [s]";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(17, 16);
+            this.labelControl2.Location = new System.Drawing.Point(3, 330);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(93, 14);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "DBConnectString";
+            this.labelControl2.Visible = false;
             // 
             // te_strconn
             // 
-            this.te_strconn.Location = new System.Drawing.Point(116, 13);
+            this.te_strconn.Location = new System.Drawing.Point(32, 327);
             this.te_strconn.Name = "te_strconn";
-            this.te_strconn.Size = new System.Drawing.Size(313, 21);
+            this.te_strconn.Size = new System.Drawing.Size(21, 21);
             this.te_strconn.TabIndex = 5;
+            this.te_strconn.Visible = false;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(17, 231);
+            this.labelControl5.Location = new System.Drawing.Point(20, 189);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(64, 14);
             this.labelControl5.TabIndex = 1;
@@ -157,14 +159,14 @@
             // 
             // te_namespace
             // 
-            this.te_namespace.Location = new System.Drawing.Point(116, 230);
+            this.te_namespace.Location = new System.Drawing.Point(119, 188);
             this.te_namespace.Name = "te_namespace";
             this.te_namespace.Size = new System.Drawing.Size(313, 21);
             this.te_namespace.TabIndex = 2;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(17, 274);
+            this.labelControl6.Location = new System.Drawing.Point(20, 232);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(49, 14);
             this.labelControl6.TabIndex = 1;
@@ -173,9 +175,9 @@
             // rtb_dll
             // 
             this.rtb_dll.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rtb_dll.Location = new System.Drawing.Point(116, 274);
+            this.rtb_dll.Location = new System.Drawing.Point(119, 232);
             this.rtb_dll.Name = "rtb_dll";
-            this.rtb_dll.Size = new System.Drawing.Size(313, 300);
+            this.rtb_dll.Size = new System.Drawing.Size(313, 353);
             this.rtb_dll.TabIndex = 6;
             this.rtb_dll.Text = "";
             // 
@@ -185,7 +187,7 @@
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 23);
             this.btn_close.TabIndex = 3;
-            this.btn_close.Text = "关闭【esc】";
+            this.btn_close.Text = "关闭 [esc]";
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // uctlBaseConfig

@@ -17,7 +17,7 @@ namespace AutoCode
             DataTable tablename = new DataTable();
             string sqlGetTable = "SELECT distinct 0 CHK,T.* FROM USER_TABLES T";
             Dictionary<string, string> dic = new Dictionary<string, string>();
-            tablename = CommonFunction.ExecuteBySQL(sqlGetTable, dic, "");
+            tablename = CommonFunction.OraExecuteBySQL(sqlGetTable, dic, "");
             return tablename;
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace AutoCode
                 Dictionary<string, string> dicColumnProperity = new Dictionary<string, string>();
                 Dictionary<string, string> dic = new Dictionary<string, string>();
                 string sqlGetColumn = string.Format("SELECT * FROM USER_TAB_COLUMNS WHERE TABLE_NAME = '{0}' ORDER BY COLUMN_ID",tablename.ToUpper());
-                colulmnproperity = CommonFunction.ExecuteBySQL(sqlGetColumn, dic, "");
+                colulmnproperity = CommonFunction.OraExecuteBySQL(sqlGetColumn, dic, "");
                 foreach (DataRow dr in colulmnproperity.Rows)
                 {
                     string[] column = { dr["TABLE_NAME"].ToString(), dr["COLUMN_NAME"].ToString(), dr["DATA_TYPE"].ToString(), dr["DATA_LENGTH"].ToString() };

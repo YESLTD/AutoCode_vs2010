@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoCode" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="StrConn" Type="System.String" Scope="User">
-      <Value Profile="(Default)">data source=jhemr;user=emr;password=emr;</Value>
-    </Setting>
     <Setting Name="DaoClassPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">DaoClassPath</Value>
     </Setting>

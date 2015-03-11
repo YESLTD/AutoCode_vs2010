@@ -54,6 +54,7 @@
       <HintPath>..\ToolFunction\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Deployment" />
@@ -126,6 +127,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="App1.config" />
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,13 +158,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ToolFunction\ToolFunction.csproj">
+    <Content Include="SelectItem.xml" />
+    <Content Include="版本升级说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ToolFunction\ToolFunction.csproj">
       <Project>{F26E3EAB-1187-4C91-A41E-2BE3D0FFE4B7}</Project>
       <Name>ToolFunction</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SelectItem.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

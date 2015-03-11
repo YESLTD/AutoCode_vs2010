@@ -18,7 +18,7 @@ namespace AutoCode
         public frmMain()
         {
             InitializeComponent();
-            CommonFunction.STRCONN = Settings.Default.StrConn;
+            CommonFunction.SetConnectionString();
         }
 
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -60,6 +60,13 @@ namespace AutoCode
         {
             frmTest f = new frmTest();
             f.Show();
+        }
+
+        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            stritem = "uctlTemplet";
+            uctlTemplet ubc = new uctlTemplet();
+            CommonFunction.AddForm3(pl_container, ubc);
         }
     }
 }
