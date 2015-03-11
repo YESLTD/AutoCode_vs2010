@@ -2,36 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoCode" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DaoClassPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">DaoClassPath</Value>
-    </Setting>
-    <Setting Name="ModelClassPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PO</Value>
-    </Setting>
-    <Setting Name="ServiceClassPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ServiceClassPath</Value>
-    </Setting>
     <Setting Name="BasePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">E:\MyProject\testPro\testPro</Value>
-    </Setting>
-    <Setting Name="NameSpace" Type="System.String" Scope="User">
-      <Value Profile="(Default)">AutoCode</Value>
-    </Setting>
-    <Setting Name="UsingDLL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Reflection;
-using System.Configuration;
-using System.Threading;
-using System.Data.OleDb;
-using System.IO;
-using System.Xml;
-using System.Data.OracleClient;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

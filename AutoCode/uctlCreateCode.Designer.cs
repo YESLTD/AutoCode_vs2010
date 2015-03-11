@@ -60,7 +60,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.code_all);
             this.splitContainer1.Panel2.Controls.Add(this.code_selected);
-            this.splitContainer1.Size = new System.Drawing.Size(453, 646);
+            this.splitContainer1.Size = new System.Drawing.Size(661, 646);
             this.splitContainer1.SplitterDistance = 597;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -73,7 +73,7 @@
             this.gc_talbelist.Name = "gc_talbelist";
             this.gc_talbelist.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gc_talbelist.Size = new System.Drawing.Size(453, 597);
+            this.gc_talbelist.Size = new System.Drawing.Size(661, 597);
             this.gc_talbelist.TabIndex = 0;
             this.gc_talbelist.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -150,7 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Name = "uctlCreateCode";
-            this.Size = new System.Drawing.Size(453, 646);
+            this.Size = new System.Drawing.Size(661, 646);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

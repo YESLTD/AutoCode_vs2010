@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ToolFunction
+namespace AutoCode
 {
-    public interface IBasePO
+    class PublicProperty
     {
+        public static string FILEPATH = "";
     }
 }

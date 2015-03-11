@@ -18,14 +18,24 @@ namespace AutoCode
             initControl();
         }
 
+        /// <summary>
+        /// 根据表名返回表结构
+        /// </summary>
+        /// <param name="p_strTableName">表名</param>
+        /// <returns>表</returns>
+        public DataTable GetTable(string p_strTableName)
+        {
+            string _strSQL = "select * from " + p_strTableName + " where 1=0";
+            return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+        }
+
         private void code_selected_Click(object sender, EventArgs e)
         {
             foreach (string s in getSelectTable())
             {
-                clsCreateCode cc = new clsCreateCode();
-                cc.columnproperity = clsGetAllColumn.getColunm(s);
-                cc.CreateModel();
-                cc.CreateDao();
+                CreateCode cc = new CreateCode();
+                DataTable _dtTable = GetTable(s);
+                cc.OutPutCode(_dtTable);
             }
         }
         public List<string> getSelectTable()
@@ -46,7 +56,7 @@ namespace AutoCode
         }
         public void initControl()
         {
-            source = clsGetAllColumn.getTable();
+            source = GetAllColumn.getTable();
             gc_talbelist.DataSource = source.DefaultView;
         }
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)

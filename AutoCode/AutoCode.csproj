@@ -64,10 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="blog.cs" />
-    <Compile Include="clsCreateCode.cs" />
-    <Compile Include="clsCreateTable.cs" />
-    <Compile Include="clsGetAllColumn.cs" />
-    <Compile Include="clsReadProperiy.cs" />
+    <Compile Include="CreateCode.cs" />
+    <Compile Include="CreateTable.cs" />
+    <Compile Include="GetAllColumn.cs" />
+    <Compile Include="PublicProperty.cs" />
+    <Compile Include="ReadProperiy.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +128,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="App1.config" />
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -159,10 +159,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SelectItem.xml" />
+    <Content Include="TEMPLET.txt" />
     <Content Include="版本升级说明.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ToolFunction\ToolFunction.csproj">
+    <ProjectReference Include="..\..\ToolFunction\ToolFunction.csproj">
       <Project>{F26E3EAB-1187-4C91-A41E-2BE3D0FFE4B7}</Project>
       <Name>ToolFunction</Name>
     </ProjectReference>

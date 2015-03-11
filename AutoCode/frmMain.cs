@@ -44,7 +44,7 @@ namespace AutoCode
         
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
-            if (stritem =="uctlBaseConfig"&&(e.Control&&e.KeyCode==Keys.S))
+             if (stritem =="uctlBaseConfig"&&(e.Control&&e.KeyCode==Keys.S))
             {
                 ubc.savefile();
                 uctlMessageBox.Show("保存成功！");
@@ -68,5 +68,33 @@ namespace AutoCode
             uctlTemplet ubc = new uctlTemplet();
             CommonFunction.AddForm3(pl_container, ubc);
         }
+
+        private void 连接配置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stritem = "uctlBaseConfig";
+            ubc = new uctlBaseConfig();
+            CommonFunction.ShowForm(ubc);
+        }
+
+        private void 模板编辑ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stritem = "uctlTemplet";
+            uctlTemplet ubc = new uctlTemplet();
+            CommonFunction.AddForm3(pl_container, ubc);
+        }
+
+        private void 数据源选择ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stritem = "uctlCreateCode";
+            ucc = new uctlCreateCode();
+            CommonFunction.AddForm3(pl_container, ucc);
+        }
+
+        private void 软件介绍ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            uctlAbout ua = new uctlAbout();
+            CommonFunction.AddForm3(pl_container, ua);
+        }
+
     }
 }

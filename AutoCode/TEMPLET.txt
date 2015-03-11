@@ -1,0 +1,15 @@
+namespace Œ‚∫£¡˙
+{
+    /// <summary>
+    /// ≤‚ ‘¿‡
+    /// </summary>
+    public class <%=GetClassName(SourceTable)%>
+    {
+
+        <%=InitProperty(SourceTable)%>
+        public bool Update<%=GetClassName(SourceTable)%>()
+        {
+
+        }
+    }
+}

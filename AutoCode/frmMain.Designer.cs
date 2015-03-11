@@ -28,163 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.连接配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.模板编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据源选择ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.软件介绍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pl_container = new System.Windows.Forms.Panel();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // navBarControl1
+            // menuStrip1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.BackColor = System.Drawing.Color.Transparent;
-            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1,
-            this.navBarGroup2,
-            this.navBarGroup3});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem3,
-            this.navBarItem4,
-            this.navBarItem2,
-            this.navBarItem5,
-            this.navBarItem6});
-            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 197;
-            this.navBarControl1.Size = new System.Drawing.Size(145, 646);
-            this.navBarControl1.TabIndex = 0;
-            this.navBarControl1.Text = "navBarControl1";
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.连接配置ToolStripMenuItem,
+            this.模板编辑ToolStripMenuItem,
+            this.数据源选择ToolStripMenuItem,
+            this.软件介绍ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(882, 25);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // navBarGroup1
+            // 连接配置ToolStripMenuItem
             // 
-            this.navBarGroup1.Caption = "基础配置";
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6)});
-            this.navBarGroup1.Name = "navBarGroup1";
+            this.连接配置ToolStripMenuItem.Name = "连接配置ToolStripMenuItem";
+            this.连接配置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.连接配置ToolStripMenuItem.Text = "连接配置";
+            this.连接配置ToolStripMenuItem.Click += new System.EventHandler(this.连接配置ToolStripMenuItem_Click);
             // 
-            // navBarItem1
+            // 模板编辑ToolStripMenuItem
             // 
-            this.navBarItem1.Caption = "连接配置";
-            this.navBarItem1.Name = "navBarItem1";
-            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
+            this.模板编辑ToolStripMenuItem.Name = "模板编辑ToolStripMenuItem";
+            this.模板编辑ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.模板编辑ToolStripMenuItem.Text = "模板编辑";
+            this.模板编辑ToolStripMenuItem.Click += new System.EventHandler(this.模板编辑ToolStripMenuItem_Click);
             // 
-            // navBarGroup2
+            // 数据源选择ToolStripMenuItem
             // 
-            this.navBarGroup2.Caption = "生成代码";
-            this.navBarGroup2.Expanded = true;
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
-            this.navBarGroup2.Name = "navBarGroup2";
+            this.数据源选择ToolStripMenuItem.Name = "数据源选择ToolStripMenuItem";
+            this.数据源选择ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.数据源选择ToolStripMenuItem.Text = "数据源选择";
+            this.数据源选择ToolStripMenuItem.Click += new System.EventHandler(this.数据源选择ToolStripMenuItem_Click);
             // 
-            // navBarItem3
+            // 软件介绍ToolStripMenuItem
             // 
-            this.navBarItem3.Caption = "代码生成";
-            this.navBarItem3.Name = "navBarItem3";
-            this.navBarItem3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem3_LinkClicked);
+            this.软件介绍ToolStripMenuItem.Name = "软件介绍ToolStripMenuItem";
+            this.软件介绍ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.软件介绍ToolStripMenuItem.Text = "软件介绍";
+            this.软件介绍ToolStripMenuItem.Click += new System.EventHandler(this.软件介绍ToolStripMenuItem_Click);
             // 
-            // navBarGroup3
+            // splitContainer1
             // 
-            this.navBarGroup3.Caption = "使用说明";
-            this.navBarGroup3.Expanded = true;
-            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
-            this.navBarGroup3.Name = "navBarGroup3";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // navBarItem4
+            // splitContainer1.Panel1
             // 
-            this.navBarItem4.Caption = "软件介绍";
-            this.navBarItem4.Name = "navBarItem4";
-            this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkClicked);
+            this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
-            // navBarItem2
+            // splitContainer1.Panel2
             // 
-            this.navBarItem2.Caption = "frmtest";
-            this.navBarItem2.Name = "navBarItem2";
-            this.navBarItem2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
+            this.splitContainer1.Panel2.Controls.Add(this.pl_container);
+            this.splitContainer1.Size = new System.Drawing.Size(882, 650);
+            this.splitContainer1.SplitterDistance = 25;
+            this.splitContainer1.TabIndex = 2;
             // 
             // pl_container
             // 
             this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_container.Location = new System.Drawing.Point(0, 0);
             this.pl_container.Name = "pl_container";
-            this.pl_container.Size = new System.Drawing.Size(453, 646);
+            this.pl_container.Size = new System.Drawing.Size(882, 621);
             this.pl_container.TabIndex = 0;
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Panel1.Controls.Add(this.navBarControl1);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            this.splitContainerControl1.Panel2.Controls.Add(this.pl_container);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(612, 650);
-            this.splitContainerControl1.SplitterPosition = 149;
-            this.splitContainerControl1.TabIndex = 1;
-            this.splitContainerControl1.Text = "splitContainerControl1";
-            // 
-            // navBarItem5
-            // 
-            this.navBarItem5.Caption = "navBarItem5";
-            this.navBarItem5.Name = "navBarItem5";
-            // 
-            // navBarItem6
-            // 
-            this.navBarItem6.Caption = "模板配置";
-            this.navBarItem6.Name = "navBarItem6";
-            this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 650);
-            this.Controls.Add(this.splitContainerControl1);
+            this.ClientSize = new System.Drawing.Size(882, 650);
+            this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoCode1.0";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 连接配置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 模板编辑ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 数据源选择ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 软件介绍ToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel pl_container;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
 
     }
 }

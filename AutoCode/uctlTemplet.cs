@@ -12,6 +12,19 @@ namespace AutoCode
 {
     public partial class uctlTemplet : UserControl
     {
+
+        private List<string> blueKeyWords = new List<string> 
+            { "using", "namespace", "public", "private", "protected","abstract",
+               "partial", "class", "new",  "this",
+               "while","foreach", "for",  "if", "else", "switch","case","null","return","try","catch","static",
+               "string","int", "float", "double", "char", "bool", "short", "void" };
+
+        private List<string> redKeyWords = new List<string> 
+            { "<%=GetClassName(SourceTable)%>","<%=InitProperty(SourceTable)%>" };
+
+        private List<string> greenKeyWords = new List<string> 
+            { "//","///", "<summary>", "</summary>","<param name=", "</param>","<returns>", "</returns>" };
+
         public uctlTemplet()
         {
             InitializeComponent();
@@ -33,6 +46,7 @@ namespace AutoCode
                 _strMess += _strLine+"\n";
             }
             richTextBox1.Text = _strMess;
+            PublicProperty.FILEPATH = openTemplet.FileName;
         }
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,5 +54,100 @@ namespace AutoCode
             saveTemplet.ShowDialog();
 
         }
+
+        /// <summary>
+        /// 设置字体颜色蓝色
+        /// </summary>
+        /// <param name="control">控件</param>
+        /// <param name="hilightString">关键字</param>
+        private void HilightRichText(RichTextBox control, string hilightString)
+        {
+            HilightRichText(control, hilightString, Color.Blue);
+        }
+
+        /// <summary>
+        /// 设置字体颜色
+        /// </summary>
+        /// <param name="control">控件</param>
+        /// <param name="hilightString">关键字</param>
+        /// <param name="color">颜色</param>
+        private void HilightRichText(RichTextBox control, string hilightString, Color color)
+        {
+            int nSelectStart = control.SelectionStart;
+            int nSelectLength = control.SelectionLength;
+            int nIndex = 0;
+            while (nIndex < control.Text.Length)
+            {
+                nIndex = control.Find(hilightString, nIndex, RichTextBoxFinds.None);
+                if (nIndex < 0)
+                {
+                    break;
+                }
+                control.Select(nIndex, hilightString.Length);
+                control.SelectionColor = color;
+                nIndex += hilightString.Length;
+            }
+            control.Select(nSelectStart, nSelectLength);
+        }
+
+        /// <summary>
+        /// 设置注释颜色
+        /// </summary>
+        /// <param name="control"></param>
+        private void HilightZSRichText(RichTextBox control)
+        {
+            int nSelectLength = 0;
+            int nIndex = 0;
+            int eIndex = 0;
+            while (nIndex < control.Text.Length)
+            {
+                if (nIndex < 0)
+                {
+                    break;
+                }
+                nIndex = control.Text.ToString().IndexOf('>', nIndex+1);
+                eIndex = control.Text.ToString().IndexOf('<', nIndex+1);
+                if (nIndex < 0)
+                {
+                    break;
+                }
+                nSelectLength=eIndex-nIndex;
+                control.Select(nIndex, nSelectLength);
+                control.SelectionColor = Color.Green;
+                nIndex += nSelectLength;
+                nSelectLength = 0;
+            }
+            //control.Select(nSelectStart, nSelectLength);
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (string item in blueKeyWords)
+            {
+                HilightRichText(richTextBox1, item);
+            }
+            //HilightZSRichText(richTextBox1);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            foreach (string item in blueKeyWords)
+            {
+                HilightRichText(richTextBox1, item);
+            }
+
+            foreach (var item in redKeyWords)
+            {
+                 HilightRichText(richTextBox1, item,Color.Red);
+            }
+
+            foreach (var item in greenKeyWords)
+            {
+                HilightRichText(richTextBox1, item, Color.Green);
+            }
+        }
+
+
     }
 }

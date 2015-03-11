@@ -25,42 +25,6 @@ namespace AutoCode {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("DaoClassPath")]
-        public string DaoClassPath {
-            get {
-                return ((string)(this["DaoClassPath"]));
-            }
-            set {
-                this["DaoClassPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("PO")]
-        public string ModelClassPath {
-            get {
-                return ((string)(this["ModelClassPath"]));
-            }
-            set {
-                this["ModelClassPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ServiceClassPath")]
-        public string ServiceClassPath {
-            get {
-                return ((string)(this["ServiceClassPath"]));
-            }
-            set {
-                this["ServiceClassPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("E:\\MyProject\\testPro\\testPro")]
         public string BasePath {
             get {
@@ -68,43 +32,6 @@ namespace AutoCode {
             }
             set {
                 this["BasePath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("AutoCode")]
-        public string NameSpace {
-            get {
-                return ((string)(this["NameSpace"]));
-            }
-            set {
-                this["NameSpace"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Reflection;
-using System.Configuration;
-using System.Threading;
-using System.Data.OleDb;
-using System.IO;
-using System.Xml;
-using System.Data.OracleClient;")]
-        public string UsingDLL {
-            get {
-                return ((string)(this["UsingDLL"]));
-            }
-            set {
-                this["UsingDLL"] = value;
             }
         }
     }
