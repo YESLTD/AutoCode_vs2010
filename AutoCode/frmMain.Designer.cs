@@ -35,6 +35,7 @@
             this.软件介绍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pl_container = new System.Windows.Forms.Panel();
+            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -50,7 +51,8 @@
             this.连接配置ToolStripMenuItem,
             this.模板编辑ToolStripMenuItem,
             this.数据源选择ToolStripMenuItem,
-            this.软件介绍ToolStripMenuItem});
+            this.软件介绍ToolStripMenuItem,
+            this.测试ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(882, 29);
@@ -64,7 +66,7 @@
             this.连接配置ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.连接配置ToolStripMenuItem.Name = "连接配置ToolStripMenuItem";
             this.连接配置ToolStripMenuItem.ShortcutKeyDisplayString = "A";
-            this.连接配置ToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
+            this.连接配置ToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.连接配置ToolStripMenuItem.Text = "连接配置";
             this.连接配置ToolStripMenuItem.Click += new System.EventHandler(this.连接配置ToolStripMenuItem_Click);
             // 
@@ -74,7 +76,7 @@
             this.模板编辑ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.模板编辑ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.模板编辑ToolStripMenuItem.Name = "模板编辑ToolStripMenuItem";
-            this.模板编辑ToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
+            this.模板编辑ToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.模板编辑ToolStripMenuItem.Text = "模板编辑";
             this.模板编辑ToolStripMenuItem.Click += new System.EventHandler(this.模板编辑ToolStripMenuItem_Click);
             // 
@@ -84,7 +86,7 @@
             this.数据源选择ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.数据源选择ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.数据源选择ToolStripMenuItem.Name = "数据源选择ToolStripMenuItem";
-            this.数据源选择ToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.数据源选择ToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
             this.数据源选择ToolStripMenuItem.Text = "数据源选择";
             this.数据源选择ToolStripMenuItem.Click += new System.EventHandler(this.数据源选择ToolStripMenuItem_Click);
             // 
@@ -94,7 +96,7 @@
             this.软件介绍ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.软件介绍ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.软件介绍ToolStripMenuItem.Name = "软件介绍ToolStripMenuItem";
-            this.软件介绍ToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
+            this.软件介绍ToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
             this.软件介绍ToolStripMenuItem.Text = "软件介绍";
             this.软件介绍ToolStripMenuItem.Click += new System.EventHandler(this.软件介绍ToolStripMenuItem_Click);
             // 
@@ -125,6 +127,13 @@
             this.pl_container.Name = "pl_container";
             this.pl_container.Size = new System.Drawing.Size(882, 617);
             this.pl_container.TabIndex = 0;
+            // 
+            // 测试ToolStripMenuItem
+            // 
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 25);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -161,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem 软件介绍ToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel pl_container;
+        private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
 
     }
 }

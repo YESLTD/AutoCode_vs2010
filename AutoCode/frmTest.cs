@@ -10,6 +10,7 @@ using System.Data.OracleClient;
 //using MongoDB.Bson;
 //using MongoDB.Driver;
 using System.Configuration;
+using AutoCode;
 
 namespace TestAutoCode
 {
@@ -117,6 +118,12 @@ namespace TestAutoCode
                 conn.Open();
             cmd.Connection = conn;
             int iresult  = cmd.ExecuteNonQuery();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BLProgram b = new BLProgram();
+            b.cc();
         }
     }
 }

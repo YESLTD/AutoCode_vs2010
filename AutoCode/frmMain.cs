@@ -96,5 +96,11 @@ namespace AutoCode
             uctlAbout ua = new uctlAbout();
             CommonFunction.AddForm3(pl_container, ua);
         }
+
+        private void ≤‚ ‘ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTest f = new frmTest();
+            f.ShowDialog();
+        }
     }
 }

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSScriptLibrary">
+      <HintPath>C:\Users\wuhailong\Desktop\cs-script\lib\CSScriptLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
       <Private>True</Private>
     </Reference>
@@ -47,6 +50,13 @@
     <Reference Include="DevExpress.XtraNavBar.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
       <Private>True</Private>
     </Reference>
+    <Reference Include="IronJS">
+      <HintPath>C:\Users\wuhailong\Desktop\IronJS.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Mono.CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -61,7 +71,6 @@
     <Compile Include="BLProgram.cs" />
     <Compile Include="CreateCode.cs" />
     <Compile Include="CreateTable.cs" />
-    <Compile Include="DynamicCoding.cs" />
     <Compile Include="GetAllColumn.cs" />
     <Compile Include="PublicProperty.cs" />
     <Compile Include="ReadProperiy.cs" />
