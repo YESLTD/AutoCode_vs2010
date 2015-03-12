@@ -65,15 +65,16 @@ namespace AutoCode
         private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             stritem = "uctlTemplet";
-            uctlTemplet ubc = new uctlTemplet();
-            CommonFunction.AddForm3(pl_container, ubc);
+            uctlTemplet ut = new uctlTemplet();
+            CommonFunction.AddForm3(pl_container, ut);
         }
 
         private void ¡¨Ω”≈‰÷√ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             stritem = "uctlBaseConfig";
             ubc = new uctlBaseConfig();
-            CommonFunction.ShowForm(ubc);
+            //CommonFunction.AddForm3(pl_container, ubc);
+            CommonFunction.ShowForm(ubc, Color.White, Color.Lavender, 4);
         }
 
         private void ƒ£∞Â±‡º≠ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,6 +96,5 @@ namespace AutoCode
             uctlAbout ua = new uctlAbout();
             CommonFunction.AddForm3(pl_container, ua);
         }
-
     }
 }

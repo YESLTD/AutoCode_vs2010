@@ -7,8 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using ToolFunction;
 using System.Data.OracleClient;
-using MongoDB.Bson;
-using MongoDB.Driver;
+//using MongoDB.Bson;
+//using MongoDB.Driver;
 using System.Configuration;
 
 namespace TestAutoCode
@@ -59,15 +59,15 @@ namespace TestAutoCode
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            BsonDocument blog = new BsonDocument 
-            {
-              {"title"," Ernest Hemingway "  },
-              {"content" , " For Whom the Bell Tolls "  },
-              {"date" ,1},
-              {"author","wuhailong"}
-            };
-            WriteConcernResult wcr = CommonFunction.InsertMongoCollection("blog", blog);
+            //DateTime now = DateTime.Now;
+            //BsonDocument blog = new BsonDocument 
+            //{
+            //  {"title"," Ernest Hemingway "  },
+            //  {"content" , " For Whom the Bell Tolls "  },
+            //  {"date" ,1},
+            //  {"author","wuhailong"}
+            //};
+            //WriteConcernResult wcr = CommonFunction.InsertMongoCollection("blog", blog);
             //if (wcr.Ok )
             //{
             //    MessageBox.Show(wcr.ToString()+wcr.Ok+"保存成功");
@@ -81,38 +81,25 @@ namespace TestAutoCode
 
         private void button4_Click(object sender, EventArgs e)
         {
-            QueryDocument query = new QueryDocument();
-            BsonDocument b = new BsonDocument();
-            //b.Add("$gt", "a");
-            //query.Add("title", b);
-            MongoCursor mc = CommonFunction.QueryMongoCollection("blog", query);
-            string mess = "";
+            //QueryDocument query = new QueryDocument();
+            //BsonDocument b = new BsonDocument();
+            //MongoCursor mc = CommonFunction.QueryMongoCollection("blog", query);
+            //string mess = "";
            
-            foreach (BsonDocument item in mc)
-            {
-                //BsonElement bv = null;
-                //item.ToJson();
-                //foreach (string name in item.Names)
-                //{
-                //    mess += name+">>";
-                //}
-                //if (item.TryGetElement("title",bv))
-                //{
-                    
-                //}
-                //GetElement("title").ToString() +"\n";
-                try
-                {
-                    mess += item["date"].ToString() + "\n";
-                }
-                catch (Exception ex)
-                {
-                    CommonFunction.WriteErrorLog(ex.ToString());
-                }
+            //foreach (BsonDocument item in mc)
+            //{
+            //    try
+            //    {
+            //        mess += item["date"].ToString() + "\n";
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        CommonFunction.WriteErrorLog(ex.ToString());
+            //    }
                 
-                //mess += item.Names.ToString() + item.ToString() + ">>>>>>>>" + item.Values.ToString();
-            }
-            richTextBox1.Text = mess;
+            //    //mess += item.Names.ToString() + item.ToString() + ">>>>>>>>" + item.Values.ToString();
+            //}
+            //richTextBox1.Text = mess;
         }
 
         private void button5_Click(object sender, EventArgs e)

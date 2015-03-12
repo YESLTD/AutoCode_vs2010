@@ -47,12 +47,6 @@
     <Reference Include="DevExpress.XtraNavBar.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
       <Private>True</Private>
     </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\ToolFunction\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\ToolFunction\MongoDB.Driver.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -64,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="blog.cs" />
+    <Compile Include="BLProgram.cs" />
     <Compile Include="CreateCode.cs" />
     <Compile Include="CreateTable.cs" />
+    <Compile Include="DynamicCoding.cs" />
     <Compile Include="GetAllColumn.cs" />
     <Compile Include="PublicProperty.cs" />
     <Compile Include="ReadProperiy.cs" />

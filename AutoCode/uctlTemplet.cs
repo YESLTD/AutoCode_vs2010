@@ -25,6 +25,9 @@ namespace AutoCode
         private List<string> greenKeyWords = new List<string> 
             { "//","///", "<summary>", "</summary>","<param name=", "</param>","<returns>", "</returns>" };
 
+
+        private List<string> magentaKeyWords = new List<string> { "<script>", "</script>" };
+
         public uctlTemplet()
         {
             InitializeComponent();
@@ -47,11 +50,39 @@ namespace AutoCode
             }
             richTextBox1.Text = _strMess;
             PublicProperty.FILEPATH = openTemplet.FileName;
+            SetTextColor();
         }
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveTemplet.ShowDialog();
+            saveTemplet.Filter = "文本文件|*.txt|C#文件|*.cs|所有文件|*.*"; 
+            try
+            {
+                //if (saveTemplet.ShowDialog() == DialogResult.OK)
+                //{
+
+                //    StreamReader sr = new StreamReader(
+                //    StreamWriter sw = new StreamWriter(saveTemplet.FileName, false, Encoding.Default);
+                //    sw.Write(richTextBox1.Text);
+                //    sw.Close();
+                //}
+                if (saveTemplet.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(saveTemplet.FileName))
+                    {
+                        File.Delete(saveTemplet.FileName);
+                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    }
+                    else
+                    {
+                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "保存文件出错！");
+            } 
 
         }
 
@@ -123,15 +154,12 @@ namespace AutoCode
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (string item in blueKeyWords)
-            {
-                HilightRichText(richTextBox1, item);
-            }
-            //HilightZSRichText(richTextBox1);
+            SetTextColor();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        public void SetTextColor()
         {
+
             foreach (string item in blueKeyWords)
             {
                 HilightRichText(richTextBox1, item);
@@ -139,15 +167,23 @@ namespace AutoCode
 
             foreach (var item in redKeyWords)
             {
-                 HilightRichText(richTextBox1, item,Color.Red);
+                HilightRichText(richTextBox1, item, Color.Red);
             }
 
             foreach (var item in greenKeyWords)
             {
                 HilightRichText(richTextBox1, item, Color.Green);
             }
+
+            foreach (var item in magentaKeyWords)
+            {
+                HilightRichText(richTextBox1, item, Color.Magenta);
+            }
         }
 
-
+        private void 刷新ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SetTextColor();
+        }
     }
 }

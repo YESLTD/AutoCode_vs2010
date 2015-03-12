@@ -29,6 +29,25 @@ namespace AutoCode
             return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
         }
 
+        /// <summary>
+        /// 更具表名获取表列的详细信息
+        /// </summary>
+        /// <param name="p_strName">表名</param>
+        /// <returns></returns>
+        public DataTable GetColumnSet(string p_strName) {
+
+            DataTable _dtTable = GetTable(p_strName);
+            DataTable _dtResult = new DataTable();
+            _dtResult.Columns.Add("表名");
+            _dtResult.Columns.Add("数据类型");
+            foreach (DataColumn item in _dtTable.Columns)
+            {
+                _dtResult.Rows.Add(item.ColumnName, item.DataType.Name);
+            }
+            return _dtResult;
+        }
+
+
         private void code_selected_Click(object sender, EventArgs e)
         {
             foreach (string s in getSelectTable())
@@ -83,11 +102,22 @@ namespace AutoCode
                 if (dr["CHK"].ToString() == "0")
                 {
                     dr["CHK"] = "1";
+                    dgv_ColumnSet.DataSource = GetColumnSet(dr["TABLE_NAME"].ToString()).DefaultView;
                 }
                 else
                 {
                     dr["CHK"] = "0";
                 }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (string s in getSelectTable())
+            {
+                CreateCode cc = new CreateCode();
+                DataTable _dtTable = GetTable(s);
+                cc.OutPutCode(_dtTable);
             }
         }
 

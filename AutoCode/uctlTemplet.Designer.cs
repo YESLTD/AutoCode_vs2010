@@ -37,16 +37,19 @@
             this.saveTemplet = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightSlateGray;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
             this.保存ToolStripMenuItem,
             this.校验ToolStripMenuItem,
-            this.关闭ToolStripMenuItem});
+            this.关闭ToolStripMenuItem,
+            this.刷新ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(710, 25);
@@ -55,6 +58,7 @@
             // 
             // 文件ToolStripMenuItem
             // 
+            this.文件ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
             this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.文件ToolStripMenuItem.Text = "打开";
@@ -62,6 +66,7 @@
             // 
             // 保存ToolStripMenuItem
             // 
+            this.保存ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.保存ToolStripMenuItem.Name = "保存ToolStripMenuItem";
             this.保存ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.保存ToolStripMenuItem.Text = "保存";
@@ -69,12 +74,14 @@
             // 
             // 校验ToolStripMenuItem
             // 
+            this.校验ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.校验ToolStripMenuItem.Name = "校验ToolStripMenuItem";
             this.校验ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.校验ToolStripMenuItem.Text = "校验";
             // 
             // 关闭ToolStripMenuItem
             // 
+            this.关闭ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
             this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.关闭ToolStripMenuItem.Text = "关闭";
@@ -88,17 +95,24 @@
             this.richTextBox1.Size = new System.Drawing.Size(710, 523);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(412, 2);
+            this.button1.Location = new System.Drawing.Point(632, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "刷新";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // 刷新ToolStripMenuItem
+            // 
+            this.刷新ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.刷新ToolStripMenuItem.Name = "刷新ToolStripMenuItem";
+            this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.刷新ToolStripMenuItem.Text = "刷新";
+            this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
             // 
             // uctlTemplet
             // 
@@ -127,5 +141,6 @@
         private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
     }
 }
