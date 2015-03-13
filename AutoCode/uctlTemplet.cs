@@ -13,20 +13,7 @@ namespace AutoCode
     public partial class uctlTemplet : UserControl
     {
 
-        private List<string> blueKeyWords = new List<string> 
-            { "using", "namespace", "public", "private", "protected","abstract",
-               "partial", "class", "new",  "this",
-               "while","foreach", "for",  "if", "else", "switch","case","null","return","try","catch","static",
-               "string","int", "float", "double", "char", "bool", "short", "void" };
-
-        private List<string> redKeyWords = new List<string> 
-            { "<%=GetClassName(SourceTable)%>","<%=InitProperty(SourceTable)%>" };
-
-        private List<string> greenKeyWords = new List<string> 
-            { "//","///", "<summary>", "</summary>","<param name=", "</param>","<returns>", "</returns>" };
-
-
-        private List<string> magentaKeyWords = new List<string> { "<script>", "</script>" };
+        
 
         public uctlTemplet()
         {
@@ -160,22 +147,22 @@ namespace AutoCode
         public void SetTextColor()
         {
 
-            foreach (string item in blueKeyWords)
+            foreach (string item in PublicProperty.blueKeyWords)
             {
                 HilightRichText(richTextBox1, item);
             }
 
-            foreach (var item in redKeyWords)
+            foreach (var item in PublicProperty.redKeyWords)
             {
                 HilightRichText(richTextBox1, item, Color.Red);
             }
 
-            foreach (var item in greenKeyWords)
+            foreach (var item in PublicProperty.greenKeyWords)
             {
                 HilightRichText(richTextBox1, item, Color.Green);
             }
 
-            foreach (var item in magentaKeyWords)
+            foreach (var item in PublicProperty.magentaKeyWords)
             {
                 HilightRichText(richTextBox1, item, Color.Magenta);
             }

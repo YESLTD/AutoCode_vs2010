@@ -9,3 +9,9 @@
 日期：2015-03-12
 版本：2.0.0.4
 内容：动态边找到入口
+
+日期：2015-03-13
+版本：3.0.0.1
+内容：开发动态编译功能,
+模板中定义方法注册区，格式如下<% Method Name="@GetCSharpVariableType"  Description="Namespace for this class" %>；
+模板中定义<spript>，</spript>区域，函数由#START:方法名 #END包围
