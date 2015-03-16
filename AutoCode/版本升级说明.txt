@@ -15,3 +15,7 @@
 内容：开发动态编译功能,
 模板中定义方法注册区，格式如下<% Method Name="@GetCSharpVariableType"  Description="Namespace for this class" %>；
 模板中定义<spript>，</spript>区域，函数由#START:方法名 #END包围
+
+日期：2015-03-16
+版本：3.0.0.2
+内容：修复无法调取函数bug；函数区的代码必须是static型，且可编译通过；代码中所涉及到的命名空间必须得到引用；

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("AutoCode")]
-[assembly: AssemblyDescription("代码生成器2.0")]
+[assembly: AssemblyDescription("代码生成器3.0")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("WuHaiLong")]
 [assembly: AssemblyProduct("AutoCode")]
@@ -30,4 +30,4 @@ using System.Runtime.InteropServices;
 //      修订号
 //
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.1")]
+[assembly: AssemblyFileVersion("3.0.0.2")]

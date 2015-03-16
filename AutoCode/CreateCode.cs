@@ -7,6 +7,7 @@ using System.Data;
 using CSScriptLibrary;
 using Microsoft.CSharp;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace AutoCode
 {
@@ -45,13 +46,25 @@ namespace AutoCode
                using System.IO;
                using System.Data;
                using System.Reflection;
+               using System.Windows.Forms;
               public class Script
-              {"
+              {
+                public void SayHello()
+                {
+                    MessageBox.Show(""Hello!"");
+                }
+                "
                     + p_strMethod +
               "}"
               );
             AsmHelper script = new AsmHelper(assembly);
+            script.Invoke("Script.SayHello");
             script.Invoke("Script." + p_strMethodName, p_strParam);
+        }
+
+        public void SayHello()
+        {
+            MessageBox.Show("Hello!");
         }
 
         /// <summary>
@@ -71,17 +84,23 @@ namespace AutoCode
                   using System.IO;
                   using System.Data;
                   using System.Reflection;
+                  using System.Windows.Forms;
                   public class Script
-                  {"
+                  {
+                    public static void SayHello(string s)
+                    {
+                        MessageBox.Show(""Hello!""+s);
+                    }"
                                + p_strMethod +
-                 "}"
+                    "}"
                      );
                 script = new AsmHelper(assembly);
                 PublicProperty.script = script;
+                //PublicProperty.script.Invoke("Script.SayHello","scott");
             }
             catch (Exception exp)
             {
-                CommonFunction.WriteLog(exp, "动态便以失败！");
+                CommonFunction.WriteLog(exp, "动态编译失败！");
             }
             return script;
         }
@@ -93,7 +112,7 @@ namespace AutoCode
         /// <param name="p_objParam">参数</param>
         public object RunDynamicCode(string p_strMethodName, object[] p_objParam)
         {
-           return PublicProperty.script.Invoke(p_strMethodName, p_objParam);
+           return PublicProperty.script.Invoke("Script."+p_strMethodName, p_objParam);
         }
 
 
@@ -125,13 +144,21 @@ namespace AutoCode
         public string CheckMethod(string _strLine)
         {
             string _strMethodName = PublicProperty.UNKNOWN;
-            foreach (var item in PublicProperty.methodNameSet)
+            try
             {
-                if (_strLine.Contains(item))
+                foreach (var item in PublicProperty.methodNameSet)
                 {
-                    _strMethodName = item;
+                    if (_strLine.Contains(item))
+                    {
+                        _strMethodName = item;
+                    }
                 }
             }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "检查方法出错！");
+            }
+
             return _strMethodName;
         }
 
@@ -323,7 +350,18 @@ namespace AutoCode
                 if (PublicProperty.UNKNOWN != _strMethodName)
                 {
                     object[] _objParam = new object[] { p_dtTable };
-                    _strLine = _strLine.Replace( _strMethodName,  RunDynamicCode(_strMethodName, _objParam).ToString());
+                    //函数头
+                    int _iMethodStart = _strLine.IndexOf("@");
+                    //函数尾部
+                    int _iMethodEnd = _strLine.IndexOf(")");
+                    //函数长度
+                    int _iLength = _iMethodEnd - _iMethodStart;
+                    //获取应替换部分
+                    string _strReplace = _strLine.Substring(_iMethodStart, _iLength);
+                    //去掉@符的函数名
+                    string _strNOa =  _strMethodName.Substring(1);
+                    object _objResult =RunDynamicCode(_strNOa, _objParam);
+                    _strLine = _strLine.Replace(_strReplace, _objResult.ToString());
                     sw.WriteLine(_strLine);
                 }
                 else
@@ -332,6 +370,27 @@ namespace AutoCode
                 }
 
             }
+        }
+
+        /// <summary>
+        /// 截取出字符串按第一个p_strStarChar 到第一个p_strEndChar中的内容
+        /// </summary>
+        /// <param name="p_strMy">输入字符串</param>
+        /// <param name="p_strStarChar">开始字符</param>
+        /// <param name="p_strEndChar">结束字符</param>
+        /// <returns></returns>
+        public string SubString(string p_strMy, string p_strStarChar, string p_strEndChar)
+        {
+
+            //函数头
+            int _iMethodStart = p_strMy.IndexOf(p_strStarChar);
+            //函数尾部
+            int _iMethodEnd = p_strMy.IndexOf(p_strEndChar);
+            //函数长度
+            int _iLength = _iMethodEnd - _iMethodStart;
+            //获取应替换部分
+            string _strReplace = p_strMy.Substring(_iMethodStart, _iLength);
+            return _strReplace;
         }
 
         #endregion

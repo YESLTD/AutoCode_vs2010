@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="GB2312"?>
+<系统错误日志>
+  <Log>
+    <Time>2015-03-16</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OracleClient.OracleException (0x80131938): ORA-12571: TNS: 包写入程序失败
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor&amp; rowidDescriptor, ArrayList&amp; resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList&amp; resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1012</StackTrace>
+    <Message>select * from PT_SETTING where 1=0</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-16</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\97691807-383f-431f-9b3c-ff0d2a22a519.tmp(11,25): error CS0103: The name 'MessageBox' does not exist in the current context
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 80</StackTrace>
+    <Message>动态编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-16</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\8d326dcc-e154-4f4e-9df4-a577b0cda71c.tmp(11,25): error CS0103: The name 'MessageBox' does not exist in the current context
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 80</StackTrace>
+    <Message>动态编译失败！</Message>
+  </Log>
+</系统错误日志>
