@@ -33,11 +33,14 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.校验ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTemplet = new System.Windows.Forms.OpenFileDialog();
             this.saveTemplet = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +55,7 @@
             this.刷新ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(710, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(882, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,26 +89,6 @@
             this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.关闭ToolStripMenuItem.Text = "关闭";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 25);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(710, 523);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(632, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "刷新";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // 刷新ToolStripMenuItem
             // 
             this.刷新ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -114,15 +97,71 @@
             this.刷新ToolStripMenuItem.Text = "刷新";
             this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.LightGray;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox1.Location = new System.Drawing.Point(0, 25);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(882, 592);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(807, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "刷新";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(653, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "生成";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(576, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "预览";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(730, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "选择数据源";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // uctlTemplet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "uctlTemplet";
-            this.Size = new System.Drawing.Size(710, 548);
+            this.Size = new System.Drawing.Size(882, 617);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -142,5 +181,8 @@
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem 刷新ToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -19,6 +19,7 @@ namespace AutoCode
         {
             InitializeComponent();
             CommonFunction.SetConnectionString();
+            //InitAllTabs();
         }
 
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -73,8 +74,8 @@ namespace AutoCode
         {
             stritem = "uctlBaseConfig";
             ubc = new uctlBaseConfig();
-            //CommonFunction.AddForm3(pl_container, ubc);
-            CommonFunction.ShowForm(ubc, Color.White, Color.Lavender, 4);
+            CommonFunction.ShowForm(ubc, Color.White, Color.LightSlateGray, 4);
+            //CommonFunction.AddTabControl(tc_contener, "连接配置", ubc);
         }
 
         private void 模板编辑ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace AutoCode
             stritem = "uctlTemplet";
             uctlTemplet ubc = new uctlTemplet();
             CommonFunction.AddForm3(pl_container, ubc);
+            //CommonFunction.AddTabControl(tc_contener, "模板编辑", ubc);
         }
 
         private void 数据源选择ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,18 +91,38 @@ namespace AutoCode
             stritem = "uctlCreateCode";
             ucc = new uctlCreateCode();
             CommonFunction.AddForm3(pl_container, ucc);
+            //CommonFunction.AddTabControl(tc_contener, "数据源选择", ucc);
         }
 
         private void 软件介绍ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             uctlAbout ua = new uctlAbout();
             CommonFunction.AddForm3(pl_container, ua);
+            //CommonFunction.AddTabControl(tc_contener, "软件介绍", ua);
         }
 
         private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTest f = new frmTest();
             f.ShowDialog();
+        }
+
+        /// <summary>
+        /// 初始化所有tab页
+        /// </summary>
+        public void InitAllTabs()
+        {
+            uctlBaseConfig ubc = new uctlBaseConfig();
+            CommonFunction.AddTabControl(tc_contener, "连接配置", ubc);
+
+            uctlTemplet utc = new uctlTemplet();
+            CommonFunction.AddTabControl(tc_contener, "模板编辑", utc);
+
+            ucc = new uctlCreateCode();
+            CommonFunction.AddTabControl(tc_contener, "数据源选择", ucc);
+
+            uctlAbout ua = new uctlAbout();
+            CommonFunction.AddTabControl(tc_contener, "软件介绍", ua);
         }
     }
 }

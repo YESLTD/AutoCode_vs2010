@@ -109,6 +109,12 @@
     <Compile Include="IBaseProperity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uctlCodePreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctlCodePreview.Designer.cs">
+      <DependentUpon>uctlCodePreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="uctlTemplet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <EmbeddedResource Include="uctlBaseConfig.resx">
       <SubType>Designer</SubType>
       <DependentUpon>uctlBaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctlCodePreview.resx">
+      <DependentUpon>uctlCodePreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uctlCreateCode.resx">
       <SubType>Designer</SubType>

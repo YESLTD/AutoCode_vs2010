@@ -33,14 +33,17 @@
             this.模板编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据源选择ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.软件介绍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pl_container = new System.Windows.Forms.Panel();
             this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pl_container = new System.Windows.Forms.Panel();
+            this.tc_contener = new System.Windows.Forms.TabControl();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.pl_container.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -100,6 +103,13 @@
             this.软件介绍ToolStripMenuItem.Text = "软件介绍";
             this.软件介绍ToolStripMenuItem.Click += new System.EventHandler(this.软件介绍ToolStripMenuItem_Click);
             // 
+            // 测试ToolStripMenuItem
+            // 
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 25);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,6 +120,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
             // splitContainer1.Panel2
@@ -119,21 +130,37 @@
             this.splitContainer1.SplitterDistance = 29;
             this.splitContainer1.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(766, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "自动代码生成3.0";
+            // 
             // pl_container
             // 
             this.pl_container.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pl_container.Controls.Add(this.tc_contener);
             this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_container.Location = new System.Drawing.Point(0, 0);
             this.pl_container.Name = "pl_container";
             this.pl_container.Size = new System.Drawing.Size(882, 617);
             this.pl_container.TabIndex = 0;
             // 
-            // 测试ToolStripMenuItem
+            // tc_contener
             // 
-            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
-            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 25);
-            this.测试ToolStripMenuItem.Text = "测试";
-            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
+            this.tc_contener.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tc_contener.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tc_contener.Location = new System.Drawing.Point(0, 0);
+            this.tc_contener.Name = "tc_contener";
+            this.tc_contener.SelectedIndex = 0;
+            this.tc_contener.Size = new System.Drawing.Size(883, 617);
+            this.tc_contener.TabIndex = 0;
+            this.tc_contener.Visible = false;
             // 
             // frmMain
             // 
@@ -148,7 +175,6 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AutoCode 2.0";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -157,6 +183,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.pl_container.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -171,6 +198,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel pl_container;
         private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
+        private System.Windows.Forms.TabControl tc_contener;
+        private System.Windows.Forms.Label label1;
 
     }
 }

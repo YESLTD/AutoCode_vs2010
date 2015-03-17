@@ -75,6 +75,6 @@ E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
 C:\Users\wuhailong\Desktop\AutoCode_vs2010\AutoCode\bin\Debug\AutoCode.exe.config
 C:\Users\wuhailong\Desktop\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.exe
 C:\Users\wuhailong\Desktop\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.pdb
-E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\CSScriptLibrary.dll
 E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Mono.CSharp.dll
 E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\CSScriptLibrary.xml
+E:\Github\AutoCode_vs2010\AutoCode\obj\Debug\AutoCode.uctlCodePreview.resources

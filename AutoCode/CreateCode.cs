@@ -186,6 +186,10 @@ namespace AutoCode
                 }
                 else if (p_strLine.Contains("#END"))
                 {//函数结束
+                    if (PublicProperty.methodSet.ContainsKey(PublicProperty.tempMethodName))
+                    {
+                        return;
+                    }
                     PublicProperty.methodSet.Add(PublicProperty.tempMethodName, PublicProperty.tempMethod);
                     PublicProperty.tempMethodName = "";
                     PublicProperty.tempMethod = "";
@@ -276,6 +280,26 @@ namespace AutoCode
             }
         }
 
+        /// <summary>
+        /// 生成属性代码
+        /// </summary>
+        /// <param name="p_dtSource">数据源</param>
+        /// <returns>字符串</returns>
+        public string InitProperty(DataTable p_dtSource)
+        {
+            string _strLine = "";
+            foreach (DataColumn item in p_dtSource.Columns)
+            {
+                _strLine += "\n private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
+                _strLine += "\n" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
+                _strLine += "\n" + "{ ";
+                _strLine += "\n" + "get { return " + item.ColumnName.ToLower() + ";}";
+                _strLine += "\n" + "set {" + item.ColumnName.ToLower() + "= value;}";
+                _strLine += "\n" + "}";
+            }
+            return _strLine;
+        }
+
 
         #endregion
 
@@ -286,15 +310,22 @@ namespace AutoCode
         /// </summary>
         public void LoadProperity()
         {
-            StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
-            string path = basepath + "\\";
-            string _strLine;
-            //装载配置信息，函数名函数体
-            while ((_strLine = sr.ReadLine()) != null)
+            try
             {
-                //模板头，注册信息不打印
-                GetRegeistMethod(_strLine);
-                GetAllMethod(_strLine);
+                StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
+                string path = basepath + "\\";
+                string _strLine;
+                //装载配置信息，函数名函数体
+                while ((_strLine = sr.ReadLine()) != null)
+                {
+                    //模板头，注册信息不打印
+                    GetRegeistMethod(_strLine);
+                    GetAllMethod(_strLine);
+                }
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "没有载入模板！");
             }
         
         }
@@ -305,10 +336,13 @@ namespace AutoCode
         /// <param name="p_dtTable"></param>
         public void OutPutCode(DataTable p_dtTable)
         {
+            if ("" == PublicProperty.FILEPATH)
+            {
+                MessageBox.Show("未选择模板！");
+                return;
+            }
             StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
-            string path = basepath + "\\";
-            string _strFileName;
-            string _strLine;
+            string path = basepath + "\\", _strLine, _strFileName;
             _strFileName = GetClassName(p_dtTable) + ".cs";
             fs = new FileStream(path + _strFileName, FileMode.Create, FileAccess.ReadWrite);
             sw = new StreamWriter(fs, Encoding.Default);
@@ -317,16 +351,6 @@ namespace AutoCode
             {
                 Directory.CreateDirectory(path);
             }
-            ////装载配置信息，函数名函数体
-            //while ((_strLine = sr.ReadLine()) != null)
-            //{
-            //    //模板头，注册信息不打印
-
-            //    GetRegeistMethod(_strLine);
-
-            //    GetAllMethod(_strLine);
-            //}
-
             string _strMethodBody = "";
             foreach (var item in PublicProperty.methodSet.Keys)
             {
@@ -350,14 +374,7 @@ namespace AutoCode
                 if (PublicProperty.UNKNOWN != _strMethodName)
                 {
                     object[] _objParam = new object[] { p_dtTable };
-                    //函数头
-                    int _iMethodStart = _strLine.IndexOf("@");
-                    //函数尾部
-                    int _iMethodEnd = _strLine.IndexOf(")");
-                    //函数长度
-                    int _iLength = _iMethodEnd - _iMethodStart;
-                    //获取应替换部分
-                    string _strReplace = _strLine.Substring(_iMethodStart, _iLength);
+                    string _strReplace = SubString(_strLine, "@", ")");
                     //去掉@符的函数名
                     string _strNOa =  _strMethodName.Substring(1);
                     object _objResult =RunDynamicCode(_strNOa, _objParam);
@@ -387,7 +404,7 @@ namespace AutoCode
             //函数尾部
             int _iMethodEnd = p_strMy.IndexOf(p_strEndChar);
             //函数长度
-            int _iLength = _iMethodEnd - _iMethodStart;
+            int _iLength = _iMethodEnd - _iMethodStart + 1;
             //获取应替换部分
             string _strReplace = p_strMy.Substring(_iMethodStart, _iLength);
             return _strReplace;

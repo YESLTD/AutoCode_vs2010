@@ -3,11 +3,22 @@
 <% Method Name="@GetCamelCaseName"  Description="Namespace for this class" %>
 <% Method Name="@GetClassName"  Description="Namespace for this class" %>
 <% Method Name="@GetPropertyName"  Description="Namespace for this class" %>
-<% Method Name="@GetLowerCaseName"  Description="Namespace for this class" %>
+<% Method Name="@InitProperty"  Description="Namespace for this class" %>
 <% Method Name="@GetCSharpVariableType"  Description="Namespace for this class" %>
 
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+using ToolFunction;
+using System.Data;
+using CSScriptLibrary;
+using Microsoft.CSharp;
+using System.Reflection;
+using System.Windows.Forms;
 
-namespace AUTOCODE 3.0
+
+namespace AUTOCODE
 {
     /// <summary>
     /// 测试类
@@ -22,26 +33,47 @@ namespace AUTOCODE 3.0
 <script>
 
 	#START@GetCamelCaseName
- 	public string GetCamelCaseName(string value)
+ 	public static string GetCamelCaseName(string value)
         {
             return value.ToLower();
         }
 	#END
 	
 	#START@ConvertFirstCharToUpper
-        public string ConvertFirstCharToUpper(string value)
+        public static string ConvertFirstCharToUpper(string value)
         {
             return value.Substring(0, 1).ToUpper() + value.Substring(1);
         }
 	#END
 
+	#START@InitProperty
+	/// <summary>
+        /// 生成属性代码
+        /// </summary>
+        /// <param name="p_dtSource">数据源</param>
+        /// <returns>字符串</returns>
+        public static string InitProperty(DataTable p_dtSource)
+        {
+            string _strLine = "";
+            foreach (DataColumn item in p_dtSource.Columns)
+            {
+                _strLine += "\n private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
+                _strLine += "\n" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
+                _strLine += "\n" + "{ ";
+                _strLine += "\n" + "get { return " + item.ColumnName.ToLower() + ";}";
+                _strLine += "\n" + "set {" + item.ColumnName.ToLower() + "= value;}";
+                _strLine += "\n" + "}";
+            }
+            return _strLine;
+        }
+	#END
 	#START@GetClassName
         /// <summary>
         /// 根据表生成类的名字
         /// </summary>
         /// <param name="p_dtTable">表</param>
         /// <returns></returns>
-        public string GetClassName(DataTable p_dtTable)
+        public static  string @GetClassName(DataTable p_dtTable)
         {
             if (p_dtTable == null)
             {
@@ -58,7 +90,7 @@ namespace AUTOCODE 3.0
         /// </summary>
         /// <param name="p_strName"></param>
         /// <returns></returns>
-        public string GetPropertyName(string p_strName)
+        public static  string GetPropertyName(string p_strName)
         {
 
             if (p_strName == null)
@@ -74,7 +106,7 @@ namespace AUTOCODE 3.0
 	#END
 
 	#START@GetLowerCaseName
-        public string GetLowerCaseName(string value)
+        public static  string GetLowerCaseName(string value)
         {
             return value.ToLower();
         }
@@ -86,7 +118,7 @@ namespace AUTOCODE 3.0
         /// </summary>
         /// <param name="p_dcColumn">表列</param>
         /// <returns></returns>
-        public string GetCSharpVariableType(DataColumn p_dcColumn)
+        public static  string GetCSharpVariableType(DataColumn p_dcColumn)
         {
             if (p_dcColumn.ColumnName.EndsWith("TypeCode")) return p_dcColumn.ColumnName;
 

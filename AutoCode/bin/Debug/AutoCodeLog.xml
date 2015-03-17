@@ -49,4 +49,121 @@
    在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 80</StackTrace>
     <Message>动态编译失败！</Message>
   </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-03-17</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 空路径名是非法的。
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 295</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
 </系统错误日志>

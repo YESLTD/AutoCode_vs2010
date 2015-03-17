@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using ToolFunction;
 
 namespace AutoCode
 {
@@ -171,6 +172,17 @@ namespace AutoCode
         private void 刷新ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetTextColor();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            uctlCreateCode ucc = new uctlCreateCode();
+            CommonFunction.ShowForm(ucc, Color.White, Color.LightSlateGray, 4);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -122,6 +122,17 @@ namespace AutoCode
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.FindForm().Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            uctlCodePreview ucp = new uctlCodePreview();
+            CommonFunction.ShowForm(ucp,PublicProperty.colorBack,PublicProperty.colorFront,PublicProperty.iBorderWidth);
+        }
+
        
     }
 }
