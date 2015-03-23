@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using ToolFunction;
+using System.Diagnostics;
 
 namespace AutoCode
 {
@@ -29,48 +30,76 @@ namespace AutoCode
         private void 文件ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openTemplet.ShowDialog();
-            StreamReader sr = new StreamReader(openTemplet.FileName, Encoding.Default);
-            String _strLine;
-            string _strMess = "";
-            while ((_strLine = sr.ReadLine()) != null)
+            if (""==openTemplet.FileName)
             {
-                _strMess += _strLine+"\n";
+                return;
             }
-            richTextBox1.Text = _strMess;
-            PublicProperty.FILEPATH = openTemplet.FileName;
-            SetTextColor();
+            else
+            {
+                PublicProperty.ExportPath = openTemplet.FileName;
+            }
+            OpenFile(openTemplet.FileName);
+        }
+
+        /// <summary>
+        /// 打开文件
+        /// </summary>
+        /// <param name="p_strPath">文件路径</param>
+        public  void OpenFile(string p_strPath)
+        {
+            StreamReader sr = null;
+            try
+            {
+                sr = new StreamReader(p_strPath, Encoding.Default);
+                String _strLine;
+                string _strMess = "";
+                while ((_strLine = sr.ReadLine()) != null)
+                {
+                    _strMess += _strLine + "\n";
+                }
+                richTextBox1.Text = _strMess;
+               
+                SetTextColor();
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "这是根节点--！该怎么办呢？");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Dispose();
+                }
+            }
         }
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveTemplet.Filter = "文本文件|*.txt|C#文件|*.cs|所有文件|*.*"; 
+            //PublicProperty.TempletString = richTextBox1.Text;
+            //uctlSaveFile usf = new uctlSaveFile();
+            //CommonFunction.ShowForm(usf, Color.White, Color.LightSlateGray, 4);
             try
             {
-                //if (saveTemplet.ShowDialog() == DialogResult.OK)
-                //{
-
-                //    StreamReader sr = new StreamReader(
-                //    StreamWriter sw = new StreamWriter(saveTemplet.FileName, false, Encoding.Default);
-                //    sw.Write(richTextBox1.Text);
-                //    sw.Close();
-                //}
-                if (saveTemplet.ShowDialog() == DialogResult.OK)
+                string path = PublicProperty.TempletPath +PublicProperty.TempletName;
+                if (File.Exists(path))
                 {
-                    if (File.Exists(saveTemplet.FileName))
-                    {
-                        File.Delete(saveTemplet.FileName);
-                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
-                    }
-                    else
-                    {
-                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
-                    }
+                    //File.Delete(path);
+                    File.AppendAllText(path, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    uctlMessageBox.Show("保存成功！");
+                }
+                else
+                {
+                    Directory.CreateDirectory(Application.StartupPath + "\\Templet\\");
+                    File.AppendAllText(path, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    uctlMessageBox.Show("保存成功！");
+
                 }
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message, "保存文件出错！");
-            } 
+            }
 
         }
 
@@ -97,7 +126,7 @@ namespace AutoCode
             int nIndex = 0;
             while (nIndex < control.Text.Length)
             {
-                nIndex = control.Find(hilightString, nIndex, RichTextBoxFinds.None);
+                nIndex = control.Find(hilightString, nIndex, RichTextBoxFinds.WholeWord);
                 if (nIndex < 0)
                 {
                     break;
@@ -142,36 +171,40 @@ namespace AutoCode
 
         private void button1_Click(object sender, EventArgs e)
         {
+            uctlCreateCode ucc = new uctlCreateCode();
+            CommonFunction.ShowForm(ucc, Color.White, Color.LightSlateGray, 4);
             SetTextColor();
         }
 
-        public void SetTextColor()
+        public  void SetTextColor()
         {
+            //文本框关键字添加颜色的确很好看，但是效果不好。
+            //foreach (string item in PublicProperty.blueKeyWords)
+            //{
+            //    HilightRichText(richTextBox1, item);
+            //}
 
-            foreach (string item in PublicProperty.blueKeyWords)
-            {
-                HilightRichText(richTextBox1, item);
-            }
+            //foreach (var item in PublicProperty.redKeyWords)
+            //{
+            //    HilightRichText(richTextBox1, item, Color.Red);
+            //}
 
-            foreach (var item in PublicProperty.redKeyWords)
-            {
-                HilightRichText(richTextBox1, item, Color.Red);
-            }
+            //foreach (var item in PublicProperty.greenKeyWords)
+            //{
+            //    HilightRichText(richTextBox1, item, Color.Green);
+            //}
 
-            foreach (var item in PublicProperty.greenKeyWords)
-            {
-                HilightRichText(richTextBox1, item, Color.Green);
-            }
-
-            foreach (var item in PublicProperty.magentaKeyWords)
-            {
-                HilightRichText(richTextBox1, item, Color.Magenta);
-            }
+            //foreach (var item in PublicProperty.magentaKeyWords)
+            //{
+            //    HilightRichText(richTextBox1, item, Color.Magenta);
+            //}
         }
 
         private void 刷新ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetTextColor();
+            frmMain fm = new frmMain();
+            fm.LoadTreeViewProperty();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -183,6 +216,45 @@ namespace AutoCode
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveTemplet.Filter = "文本文件|*.txt|C#文件|*.cs|所有文件|*.*";
+            try
+            {
+                if (saveTemplet.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(saveTemplet.FileName))
+                    {
+                        File.Delete(saveTemplet.FileName);
+                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    }
+                    else
+                    {
+                        File.AppendAllText(saveTemplet.FileName, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
+                    }
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message, "保存文件出错！");
+            } 
+        }
+
+        private void readmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //打开一个txt文档展示说明
+            try
+            {
+                Process Pnotepad = new Process();
+                Pnotepad.StartInfo.FileName = PublicProperty.ReadMe;
+                Pnotepad.Start();
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "应该是没找到文件readme");
+            }
         }
     }
 }

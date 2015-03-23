@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using CSScriptLibrary;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace AutoCode
 {
@@ -13,8 +14,17 @@ namespace AutoCode
         #region 文件导出设置
 
         //导出文件路径
-        public static string FILEPATH = ""; 
-
+        public static string ExportPath = "";
+        //模板内容
+        public static string TempletString = "";
+        //模板路径
+        public static string TempletPath = Application.StartupPath + "\\Templet\\";
+        //模板对象
+        public static uctlTemplet UcTemplet= null;
+        //模板名
+        public static string TempletName = "";
+        //readme 路径
+        public static string ReadMe = Application.StartupPath + "\\readme.txt";
         #endregion
 
         #region 关键字颜色设置

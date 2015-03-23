@@ -115,6 +115,12 @@
     <Compile Include="uctlCodePreview.Designer.cs">
       <DependentUpon>uctlCodePreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="uctlSaveFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctlSaveFile.Designer.cs">
+      <DependentUpon>uctlSaveFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="uctlTemplet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="uctlSaveFile.resx">
+      <DependentUpon>uctlSaveFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uctlTemplet.resx">
       <DependentUpon>uctlTemplet.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0495a93885b68131830dbe575addcf3f_128.ico" />
+    <Content Include="readme.txt" />
     <Content Include="SelectItem.xml" />
     <Content Include="TEMPLET.txt" />
     <Content Include="版本升级说明.txt" />

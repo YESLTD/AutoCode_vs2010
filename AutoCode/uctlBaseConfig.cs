@@ -29,13 +29,26 @@ namespace AutoCode
         public void initControls()
         {
             te_basepath.Text = Settings.Default.BasePath;
-          
+            txt_ds.Text = Settings.Default.DataSource;
+            txt_ui.Text = Settings.Default.UserID;
+            txt_pd.Text = Settings.Default.Password;
         }
         public void savefile()
         {
-            Settings.Default.BasePath = te_basepath.Text.Trim();
-            Settings.Default.Save();
-            CommonFunction.SetConnectionString();
+            try
+            {
+                Settings.Default.BasePath = te_basepath.Text;
+                Settings.Default.DataSource = txt_ds.Text;
+                Settings.Default.UserID = txt_ui.Text;
+                Settings.Default.Password = txt_pd.Text;
+                Settings.Default.Save();
+                CommonFunction.SetConnectionString(txt_ds.Text, txt_ui.Text, txt_pd.Text);
+                uctlMessageBox.Show("保存成功！");
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "基础配置保存错误！");
+            }
         }
         private void btn_save_Click(object sender, EventArgs e)
         {
@@ -47,9 +60,7 @@ namespace AutoCode
         {
             if (e.Control&&e.KeyCode==Keys.S)
             {
-                Settings.Default.BasePath = te_basepath.Text.Trim();
-                Settings.Default.Save();
-                CommonFunction.SetConnectionString();
+                savefile();
             }
             if (e.KeyCode==Keys.Escape)
             {
@@ -76,6 +87,11 @@ namespace AutoCode
         private void button3_Click(object sender, EventArgs e)
         {
             this.FindForm().Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

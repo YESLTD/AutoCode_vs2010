@@ -220,7 +220,7 @@ namespace AutoCode
         /// <param name="p_dtTable">数据表</param>
         public void DynamicOutPutCode(DataTable p_dtTable)
         {
-            StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
+            StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default);
             string path = basepath + "\\";
             string _strFileName;
             string _strLine;
@@ -312,7 +312,7 @@ namespace AutoCode
         {
             try
             {
-                StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
+                StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default);
                 string path = basepath + "\\";
                 string _strLine;
                 //装载配置信息，函数名函数体
@@ -336,12 +336,12 @@ namespace AutoCode
         /// <param name="p_dtTable"></param>
         public void OutPutCode(DataTable p_dtTable)
         {
-            if ("" == PublicProperty.FILEPATH)
+            if ("" == PublicProperty.ExportPath)
             {
-                MessageBox.Show("未选择模板！");
+                MessageBox.Show(null,"未选择模板！","error");
                 return;
             }
-            StreamReader sr = new StreamReader(PublicProperty.FILEPATH, Encoding.Default);
+            StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default);
             string path = basepath + "\\", _strLine, _strFileName;
             _strFileName = GetClassName(p_dtTable) + ".cs";
             fs = new FileStream(path + _strFileName, FileMode.Create, FileAccess.ReadWrite);
