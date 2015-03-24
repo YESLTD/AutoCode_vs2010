@@ -15,7 +15,6 @@ namespace AutoCode
     public partial class uctlTemplet : UserControl
     {
 
-        
 
         public uctlTemplet()
         {
@@ -39,6 +38,9 @@ namespace AutoCode
                 PublicProperty.ExportPath = openTemplet.FileName;
             }
             OpenFile(openTemplet.FileName);
+            CreateCode cc = new CreateCode();
+            cc.LoadTempletProperity();
+            //LoadTempletDetail();
         }
 
         /// <summary>
@@ -76,15 +78,12 @@ namespace AutoCode
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //PublicProperty.TempletString = richTextBox1.Text;
-            //uctlSaveFile usf = new uctlSaveFile();
-            //CommonFunction.ShowForm(usf, Color.White, Color.LightSlateGray, 4);
             try
             {
                 string path = PublicProperty.TempletPath +PublicProperty.TempletName;
                 if (File.Exists(path))
                 {
-                    //File.Delete(path);
+                    File.Delete(path);
                     File.AppendAllText(path, richTextBox1.Text.Replace("\n", "\r\n"), Encoding.Default);
                     uctlMessageBox.Show("保存成功！");
                 }
@@ -204,7 +203,7 @@ namespace AutoCode
         {
             SetTextColor();
             frmMain fm = new frmMain();
-            fm.LoadTreeViewProperty();
+            fm.LoadTempletList();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -255,6 +254,43 @@ namespace AutoCode
             {
                 CommonFunction.WriteLog(exp, "应该是没找到文件readme");
             }
+        }
+
+    
+
+
+        
+
+        private void 生成ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (string s in PublicProperty.getSelectTable())
+                {
+                    CreateCode cc = new CreateCode();
+                    PublicProperty.TableProperty = PublicProperty.GetTable(s);
+                    cc.OutPutCode(PublicProperty.TableProperty);
+                }
+                uctlMessageBox.Show("生成成功！");
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "生成代码时出错！");
+            }
+        }
+
+        private void 校验ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+              string path = PublicProperty.TempletPath +PublicProperty.TempletName;
+              if (File.Exists(path))
+              {
+                  File.Delete(path);
+              }
         }
     }
 }

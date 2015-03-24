@@ -117,7 +117,7 @@ namespace AutoCode
             {
                 CreateCode cc = new CreateCode();
                 DataTable _dtTable = GetTable(s);
-                cc.LoadProperity();
+                cc.LoadTempletProperity();
                 cc.OutPutCode(_dtTable);
             }
         }

@@ -31,9 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.生成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.校验ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.readmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTemplet = new System.Windows.Forms.OpenFileDialog();
             this.saveTemplet = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -41,8 +44,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.readmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +55,8 @@
             this.文件ToolStripMenuItem,
             this.保存ToolStripMenuItem,
             this.另存为ToolStripMenuItem,
+            this.删除ToolStripMenuItem,
+            this.生成ToolStripMenuItem,
             this.校验ToolStripMenuItem,
             this.关闭ToolStripMenuItem,
             this.刷新ToolStripMenuItem,
@@ -79,6 +83,22 @@
             this.保存ToolStripMenuItem.Text = "保存";
             this.保存ToolStripMenuItem.Click += new System.EventHandler(this.保存ToolStripMenuItem_Click);
             // 
+            // 另存为ToolStripMenuItem
+            // 
+            this.另存为ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
+            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.另存为ToolStripMenuItem.Text = "另存为";
+            this.另存为ToolStripMenuItem.Click += new System.EventHandler(this.另存为ToolStripMenuItem_Click);
+            // 
+            // 生成ToolStripMenuItem
+            // 
+            this.生成ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.生成ToolStripMenuItem.Name = "生成ToolStripMenuItem";
+            this.生成ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.生成ToolStripMenuItem.Text = "生成";
+            this.生成ToolStripMenuItem.Click += new System.EventHandler(this.生成ToolStripMenuItem_Click);
+            // 
             // 校验ToolStripMenuItem
             // 
             this.校验ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -86,6 +106,7 @@
             this.校验ToolStripMenuItem.Name = "校验ToolStripMenuItem";
             this.校验ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.校验ToolStripMenuItem.Text = "校验";
+            this.校验ToolStripMenuItem.Click += new System.EventHandler(this.校验ToolStripMenuItem_Click);
             // 
             // 关闭ToolStripMenuItem
             // 
@@ -101,6 +122,14 @@
             this.刷新ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.刷新ToolStripMenuItem.Text = "刷新";
             this.刷新ToolStripMenuItem.Click += new System.EventHandler(this.刷新ToolStripMenuItem_Click);
+            // 
+            // readmeToolStripMenuItem
+            // 
+            this.readmeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.readmeToolStripMenuItem.Name = "readmeToolStripMenuItem";
+            this.readmeToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.readmeToolStripMenuItem.Text = "readme";
+            this.readmeToolStripMenuItem.Click += new System.EventHandler(this.readmeToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
@@ -156,21 +185,13 @@
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // 另存为ToolStripMenuItem
+            // 删除ToolStripMenuItem
             // 
-            this.另存为ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
-            this.另存为ToolStripMenuItem.Text = "另存为";
-            this.另存为ToolStripMenuItem.Click += new System.EventHandler(this.另存为ToolStripMenuItem_Click);
-            // 
-            // readmeToolStripMenuItem
-            // 
-            this.readmeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.readmeToolStripMenuItem.Name = "readmeToolStripMenuItem";
-            this.readmeToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.readmeToolStripMenuItem.Text = "readme";
-            this.readmeToolStripMenuItem.Click += new System.EventHandler(this.readmeToolStripMenuItem_Click);
+            this.删除ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.删除ToolStripMenuItem.Text = "删除";
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
             // uctlTemplet
             // 
@@ -208,5 +229,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readmeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 生成ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
     }
 }

@@ -5,6 +5,8 @@ using System.Text;
 using CSScriptLibrary;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data;
+using ToolFunction;
 
 namespace AutoCode
 {
@@ -23,8 +25,40 @@ namespace AutoCode
         public static uctlTemplet UcTemplet= null;
         //模板名
         public static string TempletName = "";
+        //数据导出数据源
+        public static DataTable Source = null;
+        //表属性
+        public static DataTable TableProperty = null;
         //readme 路径
         public static string ReadMe = Application.StartupPath + "\\readme.txt";
+
+        /// <summary>
+        /// 根据表名返回表结构
+        /// </summary>
+        /// <param name="p_strTableName">表名</param>
+        /// <returns>表</returns>
+        public static DataTable GetTable(string p_strTableName)
+        {
+            string _strSQL = "select * from " + p_strTableName + " where 1=0";
+            return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+        }
+
+        /// <summary>
+        /// 获取勾选的数据源
+        /// </summary>
+        /// <returns></returns>
+        public static List<string> getSelectTable()
+        {
+            List<string> tablelist = new List<string>();
+            foreach (DataRow dr in PublicProperty.Source.Rows)
+            {
+                if (dr["CHK"].ToString() == "1")
+                {
+                    tablelist.Add(dr["TABLE_NAME"].ToString());
+                }
+            }
+            return tablelist;
+        }
         #endregion
 
         #region 关键字颜色设置

@@ -308,19 +308,22 @@ namespace AutoCode
         /// <summary>
         /// 装载配置信息，注册的表名&方法体
         /// </summary>
-        public void LoadProperity()
+        public void LoadTempletProperity()
         {
             try
             {
-                StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default);
-                string path = basepath + "\\";
-                string _strLine;
-                //装载配置信息，函数名函数体
-                while ((_strLine = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default))
                 {
-                    //模板头，注册信息不打印
-                    GetRegeistMethod(_strLine);
-                    GetAllMethod(_strLine);
+                    string path = basepath + "\\";
+                    string _strLine;
+                    PublicProperty.methodNameSet.Clear();
+                    //装载配置信息，函数名函数体
+                    while ((_strLine = sr.ReadLine()) != null)
+                    {
+                        //模板头，注册信息不打印
+                        GetRegeistMethod(_strLine);
+                        GetAllMethod(_strLine);
+                    }
                 }
             }
             catch (Exception exp)
@@ -338,54 +341,73 @@ namespace AutoCode
         {
             if ("" == PublicProperty.ExportPath)
             {
-                MessageBox.Show(null,"未选择模板！","error");
+                MessageBox.Show(null, "未选择模板！", "error");
                 return;
             }
             StreamReader sr = new StreamReader(PublicProperty.ExportPath, Encoding.Default);
-            string path = basepath + "\\", _strLine, _strFileName;
-            _strFileName = GetClassName(p_dtTable) + ".cs";
-            fs = new FileStream(path + _strFileName, FileMode.Create, FileAccess.ReadWrite);
-            sw = new StreamWriter(fs, Encoding.Default);
-            sw.AutoFlush = true;
-            if (!Directory.Exists(path))
+            try
             {
-                Directory.CreateDirectory(path);
-            }
-            string _strMethodBody = "";
-            foreach (var item in PublicProperty.methodSet.Keys)
-            {
-                _strMethodBody += PublicProperty.methodSet[item].ToString() + "\n";
-            }
-            ComplieClass(_strMethodBody);
+                string path = basepath + "\\", _strLine, _strFileName;
+                _strFileName = GetClassName(p_dtTable) + ".cs";
+                fs = new FileStream(path + _strFileName, FileMode.Create, FileAccess.ReadWrite);
+                sw = new StreamWriter(fs, Encoding.Default);
+                sw.AutoFlush = true;
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                string _strMethodBody = "";
+                foreach (var item in PublicProperty.methodSet.Keys)
+                {
+                    _strMethodBody += PublicProperty.methodSet[item].ToString() + "\n";
+                }
+                ComplieClass(_strMethodBody);
 
-            while ((_strLine = sr.ReadLine()) != null)
+                while ((_strLine = sr.ReadLine()) != null)
+                {
+                    //模板头，注册信息不打印
+                    if (_strLine.StartsWith("<%") || _strLine.Contains("<%"))
+                    {
+                        continue;
+                    }
+                    //模板尾，外部脚本区终止打印
+                    if (_strLine.StartsWith("<script>") || _strLine.Contains("<script>"))
+                    {
+                        break;
+                    }
+                    string _strMethodName = CheckMethod(_strLine);
+                    if (PublicProperty.UNKNOWN != _strMethodName)
+                    {
+                        object[] _objParam = new object[] { p_dtTable };
+                        string _strReplace = SubString(_strLine, "@", ")");
+                        //去掉@符的函数名
+                        string _strNOa = _strMethodName.Substring(1);
+                        object _objResult = RunDynamicCode(_strNOa, _objParam);
+                        _strLine = _strLine.Replace(_strReplace, _objResult.ToString());
+                        sw.WriteLine(_strLine);
+                    }
+                    else
+                    {
+                        sw.WriteLine(_strLine);
+                    }
+                }
+            }
+            catch (Exception exp)
             {
-                //模板头，注册信息不打印
-                if (_strLine.StartsWith("<%") || _strLine.Contains("<%"))
+                MessageBox.Show(exp.Message);
+                CommonFunction.WriteLog(exp, "生成文件报错了在CreateCode里");
+            }
+            finally
+            {//流要释放啊
+                if (sr != null)
                 {
-                    continue;
+                    sr.Dispose();
                 }
-                //模板尾，外部脚本区终止打印
-                if (_strLine.StartsWith("<script>") || _strLine.Contains("<script>"))
+                if (fs != null)
                 {
-                    break;
+                    fs.Dispose();
                 }
-                string _strMethodName = CheckMethod(_strLine);
-                if (PublicProperty.UNKNOWN != _strMethodName)
-                {
-                    object[] _objParam = new object[] { p_dtTable };
-                    string _strReplace = SubString(_strLine, "@", ")");
-                    //去掉@符的函数名
-                    string _strNOa =  _strMethodName.Substring(1);
-                    object _objResult =RunDynamicCode(_strNOa, _objParam);
-                    _strLine = _strLine.Replace(_strReplace, _objResult.ToString());
-                    sw.WriteLine(_strLine);
-                }
-                else
-                {
-                    sw.WriteLine(_strLine);
-                }
-
+               
             }
         }
 

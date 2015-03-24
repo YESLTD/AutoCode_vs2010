@@ -14,7 +14,7 @@ namespace AutoCode
 {
     public partial class frmMain : Form
     {
-        private DataTable source = new DataTable();
+        //private DataTable source = new DataTable();
         uctlBaseConfig ubc = null;
         uctlCreateCode ucc = null;
         public frmMain()
@@ -30,27 +30,62 @@ namespace AutoCode
         /// </summary>
         public void InitControls()
         {
-            uctlTemplet ut = new uctlTemplet();
-            PublicProperty.UcTemplet = ut;
-            CommonFunction.AddForm3(pl_container, ut);
+           
+            LoadTempletPanel();
+            LoadBaseSetting();
+            LoadTables();
+            LoadTempletList();
+        }
 
+        /// <summary>
+        /// 载入基础设置
+        /// </summary>
+        public void LoadBaseSetting() {
             te_basepath.Text = Settings.Default.BasePath;
             txt_ds.Text = Settings.Default.DataSource;
             txt_ui.Text = Settings.Default.UserID;
             txt_pd.Text = Settings.Default.Password;
+        }
 
-            //uctlBaseConfig ubc = new uctlBaseConfig();
-            //tabPage2.Controls.Add(ubc);
-            source = GetAllColumn.getTable();
-            gc_talbelist.DataSource = source.DefaultView;
+        /// <summary>
+        /// 载入模板用户控件
+        /// </summary>
+        public void LoadTempletPanel()
+        {
+            uctlTemplet ut = new uctlTemplet();
+            PublicProperty.UcTemplet = ut;
+            CommonFunction.AddForm3(pl_container, ut);
+        }
 
-            LoadTreeViewProperty();
+        /// <summary>
+        /// 载入模板属性
+        /// </summary>
+        public void LoadTempletDetail()
+        {
+            dgv_function.DataSource = null;
+        //PublicProperty.methodNameSet.Add
+            DataTable _dtFunction = new DataTable();
+            _dtFunction.Columns.Add("FUNCTION");
+            foreach (var item in PublicProperty.methodNameSet)
+            {
+                _dtFunction.Rows.Add(item);
+            }
+            dgv_function.DataSource = _dtFunction.DefaultView;
+        }
+
+        /// <summary>
+        /// 载入数据源
+        /// </summary>
+        public void LoadTables()
+        {
+            PublicProperty.Source = GetAllColumn.getTable();
+            gc_talbelist.DataSource = PublicProperty.Source.DefaultView;
         }
 
         /// <summary>
         /// 载入左侧treeview数据信息
         /// </summary>
-        public void LoadTreeViewProperty()
+        public void LoadTempletList()
         {
             TreeNode root = new TreeNode("模板列表");//创建节点
             root.Name = "模板列表";//为节点取个名字,这儿创建的是根节点
@@ -167,6 +202,9 @@ namespace AutoCode
             PublicProperty.TempletName = tv_templet.SelectedNode.Name;
             PublicProperty.ExportPath = PublicProperty.TempletPath + tv_templet.SelectedNode.Name;
             PublicProperty.UcTemplet.OpenFile(PublicProperty.TempletPath + tv_templet.SelectedNode.Name);
+            CreateCode cc = new CreateCode();
+            cc.LoadTempletProperity();
+            LoadTempletDetail();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -219,7 +257,7 @@ namespace AutoCode
         {
             if (e.Column.Name.ToString() == "gridColumn1" & e.IsGetData)
             {
-                if (source != null && source.Rows.Count > 0 && source.DefaultView[e.ListSourceRowIndex]["CHK"].ToString() == "1")
+                if (PublicProperty.Source != null && PublicProperty.Source.Rows.Count > 0 && PublicProperty.Source.DefaultView[e.ListSourceRowIndex]["CHK"].ToString() == "1")
                 {
                     e.Value = true;
                 }
@@ -230,41 +268,41 @@ namespace AutoCode
             }
         }
 
-        /// <summary>
-        /// 获取勾选的数据源
-        /// </summary>
-        /// <returns></returns>
-        public List<string> getSelectTable()
-        {
-            List<string> tablelist = new List<string>();
-            foreach (DataRow dr in source.Rows)
-            {
-                if (dr["CHK"].ToString() == "1")
-                {
-                    tablelist.Add(dr["TABLE_NAME"].ToString());
-                }
-            }
-            return tablelist;
-        }
+        ///// <summary>
+        ///// 获取勾选的数据源
+        ///// </summary>
+        ///// <returns></returns>
+        //public List<string> getSelectTable()
+        //{
+        //    List<string> tablelist = new List<string>();
+        //    foreach (DataRow dr in PublicProperty.Source.Rows)
+        //    {
+        //        if (dr["CHK"].ToString() == "1")
+        //        {
+        //            tablelist.Add(dr["TABLE_NAME"].ToString());
+        //        }
+        //    }
+        //    return tablelist;
+        //}
 
-        /// <summary>
-        /// 根据表名返回表结构
-        /// </summary>
-        /// <param name="p_strTableName">表名</param>
-        /// <returns>表</returns>
-        public DataTable GetTable(string p_strTableName)
-        {
-            string _strSQL = "select * from " + p_strTableName + " where 1=0";
-            return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
-        }
+        ///// <summary>
+        ///// 根据表名返回表结构
+        ///// </summary>
+        ///// <param name="p_strTableName">表名</param>
+        ///// <returns>表</returns>
+        //public DataTable GetTable(string p_strTableName)
+        //{
+        //    string _strSQL = "select * from " + p_strTableName + " where 1=0";
+        //    return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach (string s in getSelectTable())
+            foreach (string s in PublicProperty.getSelectTable())
             {
                 CreateCode cc = new CreateCode();
-                DataTable _dtTable = GetTable(s);
-                cc.LoadProperity();
+                //cc.LoadProperity();
+                DataTable _dtTable = PublicProperty.GetTable(s);
                 cc.OutPutCode(_dtTable);
             }
         }
