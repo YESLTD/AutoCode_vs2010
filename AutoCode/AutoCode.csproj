@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoCodeEnentArgs.cs" />
     <Compile Include="blog.cs" />
     <Compile Include="BLProgram.cs" />
     <Compile Include="CreateCode.cs" />

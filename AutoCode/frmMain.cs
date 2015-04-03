@@ -12,9 +12,9 @@ using System.Diagnostics;
 
 namespace AutoCode
 {
+    
     public partial class frmMain : Form
     {
-        //private DataTable source = new DataTable();
         uctlBaseConfig ubc = null;
         uctlCreateCode ucc = null;
         public frmMain()
@@ -24,6 +24,10 @@ namespace AutoCode
             CommonFunction.SetConnectionString(Settings.Default.DataSource, Settings.Default.UserID, Settings.Default.Password);
             InitControls();
         }
+
+        public void SetText()
+        { }
+
 
         /// <summary>
         /// ³õÊ¼»¯¿Ø¼þ

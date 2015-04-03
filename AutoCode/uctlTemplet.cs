@@ -286,11 +286,24 @@ namespace AutoCode
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-              string path = PublicProperty.TempletPath +PublicProperty.TempletName;
-              if (File.Exists(path))
-              {
-                  File.Delete(path);
-              }
+            try
+            {
+                string path = PublicProperty.TempletPath + PublicProperty.TempletName;
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "无法删除文件");
+            }
+              
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
