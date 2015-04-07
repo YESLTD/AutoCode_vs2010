@@ -110,6 +110,7 @@
     <Compile Include="IBaseProperity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="uctlCodePreview.cs">
       <SubType>UserControl</SubType>
     </Compile>

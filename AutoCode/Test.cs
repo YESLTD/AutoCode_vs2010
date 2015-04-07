@@ -1,69 +1,14 @@
-<% Property Name="SourceTable" Type="System.Data.DataTable" Category="Context" Description="Table that the object is based on." %>
-<% Property Name="NameSpace" Type="System.String" Default="AutoCode" Category="Text" Description="Namespace for this class" %>
-<% Method Name="@GetCamelCaseName"  Description="Namespace for this class" %>
-<% Method Name="@GetClassName"  Description="Namespace for this class" %>
-<% Method Name="@InitSQL"  Description="Namespace for this class" %>
-
-
-
-using System;
+ï»¿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.IO;
-using ToolFunction;
 using System.Data;
-using CSScriptLibrary;
-using Microsoft.CSharp;
-using System.Reflection;
-using System.Windows.Forms;
 
-
-namespace AUTOCODE
+namespace AutoCode
 {
-    /// <summary>
-    /// ²âÊÔÀà
-    /// </summary>
-    public class @GetClassName(SourceTable)
+    class Test
     {
-        /// <summary>
-        /// ¸üĞÂ
-        /// </summary>
-        /// <param name="model">Êı¾İÔ´</param>
-        /// <returns>Ó°ÏìĞĞÊı</returns>
-        public int Update(@GetClassName(SourceTable) model)
-        {
-            @InitSQL(SourceTable);
-                  
-
-        }
-
-        /// <summary>
-        /// Ôö¼Ó
-        /// </summary>
-        /// <param name="model">Êı¾İÔ´</param>
-        /// <returns>Ó°ÏìĞĞÊı</returns>
-        public int Add(@GetClassName(SourceTable) model){}
-
-        /// <summary>
-        /// É¾³ı
-        /// </summary>
-        /// <param name="model">Êı¾İÔ´</param>
-        /// <returns>Ó°ÏìĞĞÊı</returns>
-        public int Delete(@GetClassName(SourceTable) model){}
-
-
-        /// <summary>
-        /// ²éÑ¯
-        /// </summary>
-        /// <param name="model">Êı¾İÔ´</param>
-        /// <returns>Ó°ÏìĞĞÊı</returns>
-        public @GetClassName(SourceTable) Query(String id){}
-
-    }
-}
-<script>
-
-	 #region @GetCamelCaseName
+        #region @GetCamelCaseName
         public static string GetCamelCaseName(string value)
         {
             return value.ToLower();
@@ -79,10 +24,10 @@ namespace AUTOCODE
 
         #region@InitProperty
         /// <summary>
-        /// Éú³ÉÊôĞÔ´úÂë
+        /// ç”Ÿæˆå±æ€§ä»£ç 
         /// </summary>
-        /// <param name="p_dtSource">Êı¾İÔ´</param>
-        /// <returns>×Ö·û´®</returns>
+        /// <param name="p_dtSource">æ•°æ®æº</param>
+        /// <returns>å­—ç¬¦ä¸²</returns>
         public static string InitProperty(DataTable p_dtSource)
         {
             string _strLine = "";
@@ -101,13 +46,13 @@ namespace AUTOCODE
 
         #region@InitSQL
         /// <summary>
-        /// Éú³ÉSQLÓï¾ä
+        /// ç”ŸæˆSQLè¯­å¥
         /// </summary>
-        /// <param name="p_dtSource">Êı¾İÔ´</param>
-        /// <returns>×Ö·û´®</returns>
+        /// <param name="p_dtSource">æ•°æ®æº</param>
+        /// <returns>å­—ç¬¦ä¸²</returns>
         public static string InitSQL(DataTable p_dtSource)
         {
-            string _strLine = "update ¡°+GetClassName(p_dtSource)+" set ";
+            string _strLine = "update @GetClassName(SourceTable) set ";
             foreach (DataColumn item in p_dtSource.Columns)
             {
                 _strLine += item.ColumnName = item.ColumnName;
@@ -119,9 +64,9 @@ namespace AUTOCODE
 
         #region@GetClassName
         /// <summary>
-        /// ¸ù¾İ±íÉú³ÉÀàµÄÃû×Ö
+        /// æ ¹æ®è¡¨ç”Ÿæˆç±»çš„åå­—
         /// </summary>
-        /// <param name="p_dtTable">±í</param>
+        /// <param name="p_dtTable">è¡¨</param>
         /// <returns></returns>
         public static string @GetClassName(DataTable p_dtTable)
         {
@@ -136,7 +81,7 @@ namespace AUTOCODE
 
         #region@GetPropertyName
         /// <summary>
-        /// ¸ù¾İ±íÃûÉú³ÉÀà
+        /// æ ¹æ®è¡¨åç”Ÿæˆç±»
         /// </summary>
         /// <param name="p_strName"></param>
         /// <returns></returns>
@@ -164,9 +109,9 @@ namespace AUTOCODE
 
         #region@GetCSharpVariableType
         /// <summary>
-        /// ¸ù¾İ±íµÄÁĞ×ª»¯´úÂëÖĞµÄÊı¾İÀàĞÍ
+        /// æ ¹æ®è¡¨çš„åˆ—è½¬åŒ–ä»£ç ä¸­çš„æ•°æ®ç±»å‹
         /// </summary>
-        /// <param name="p_dcColumn">±íÁĞ</param>
+        /// <param name="p_dcColumn">è¡¨åˆ—</param>
         /// <returns></returns>
         public static string GetCSharpVariableType(DataColumn p_dcColumn)
         {
@@ -204,4 +149,5 @@ namespace AUTOCODE
             }
         }
         #endregion
-</script>
+    }
+}

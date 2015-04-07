@@ -178,13 +178,13 @@ namespace AutoCode
             }
             if ("<script>" != p_strLine.Trim() && "</script>" != p_strLine.Trim() && PublicProperty.functionFlag)
             {
-                if (p_strLine.Contains("#START"))
+                if (p_strLine.Contains("#region"))
                 {//函数开始
                     int _iStart = p_strLine.IndexOf("@");
                     string _strName = p_strLine.Substring(_iStart);
                     PublicProperty.tempMethodName = _strName;
                 }
-                else if (p_strLine.Contains("#END"))
+                else if (p_strLine.Contains("#endregion"))
                 {//函数结束
                     if (PublicProperty.methodSet.ContainsKey(PublicProperty.tempMethodName))
                     {

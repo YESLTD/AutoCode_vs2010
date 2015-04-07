@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -57,10 +58,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgv_function = new System.Windows.Forms.DataGridView();
-            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
-            this.label6 = new System.Windows.Forms.Label();
+            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -106,6 +106,18 @@
             this.splitContainer1.SplitterDistance = 29;
             this.splitContainer1.TabIndex = 2;
             this.splitContainer1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.ForeColor = System.Drawing.Color.GreenYellow;
+            this.label6.Location = new System.Drawing.Point(342, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "label6";
             // 
             // label1
             // 
@@ -450,23 +462,14 @@
             this.dgv_function.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_function.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FUNCTION});
-            this.dgv_function.Location = new System.Drawing.Point(3, 6);
+            this.dgv_function.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_function.Location = new System.Drawing.Point(3, 3);
             this.dgv_function.Name = "dgv_function";
             this.dgv_function.ReadOnly = true;
             this.dgv_function.RowHeadersWidth = 10;
             this.dgv_function.RowTemplate.Height = 23;
-            this.dgv_function.Size = new System.Drawing.Size(266, 256);
+            this.dgv_function.Size = new System.Drawing.Size(269, 578);
             this.dgv_function.TabIndex = 1;
-            // 
-            // FUNCTION
-            // 
-            this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FUNCTION.DataPropertyName = "FUNCTION";
-            this.FUNCTION.HeaderText = "方法列表";
-            this.FUNCTION.MinimumWidth = 250;
-            this.FUNCTION.Name = "FUNCTION";
-            this.FUNCTION.ReadOnly = true;
-            this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // pl_container
             // 
@@ -477,17 +480,15 @@
             this.pl_container.Size = new System.Drawing.Size(821, 617);
             this.pl_container.TabIndex = 0;
             // 
-            // label6
+            // FUNCTION
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.ForeColor = System.Drawing.Color.GreenYellow;
-            this.label6.Location = new System.Drawing.Point(342, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "label6";
+            this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FUNCTION.DataPropertyName = "FUNCTION";
+            this.FUNCTION.HeaderText = "方法列表";
+            this.FUNCTION.MinimumWidth = 400;
+            this.FUNCTION.Name = "FUNCTION";
+            this.FUNCTION.ReadOnly = true;
+            this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // frmMain
             // 
@@ -562,8 +563,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dgv_function;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
 
     }
 }
