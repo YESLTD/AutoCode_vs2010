@@ -37,6 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tv_templet = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmb_type = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txt_pd = new System.Windows.Forms.TextBox();
             this.txt_ui = new System.Windows.Forms.TextBox();
             this.txt_ds = new System.Windows.Forms.TextBox();
@@ -58,9 +60,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgv_function = new System.Windows.Forms.DataGridView();
+            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
-            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -189,15 +191,20 @@
             this.tv_templet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tv_templet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tv_templet.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tv_templet.LabelEdit = true;
             this.tv_templet.Location = new System.Drawing.Point(0, 0);
             this.tv_templet.Name = "tv_templet";
             this.tv_templet.Size = new System.Drawing.Size(269, 578);
             this.tv_templet.TabIndex = 0;
             this.tv_templet.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_templet_AfterSelect);
+            this.tv_templet.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_templet_NodeMouseDoubleClick);
+            this.tv_templet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tv_templet_KeyPress);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage2.Controls.Add(this.cmb_type);
+            this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.txt_pd);
             this.tabPage2.Controls.Add(this.txt_ui);
             this.tabPage2.Controls.Add(this.txt_ds);
@@ -216,38 +223,65 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "设置";
             // 
+            // cmb_type
+            // 
+            this.cmb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_type.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmb_type.FormattingEnabled = true;
+            this.cmb_type.Items.AddRange(new object[] {
+            ".cs",
+            ".cshtml",
+            ".html",
+            ".java",
+            ".jsp",
+            ".php"});
+            this.cmb_type.Location = new System.Drawing.Point(10, 271);
+            this.cmb_type.Name = "cmb_type";
+            this.cmb_type.Size = new System.Drawing.Size(255, 25);
+            this.cmb_type.TabIndex = 21;
+            this.cmb_type.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 251);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "导出类型";
+            // 
             // txt_pd
             // 
             this.txt_pd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_pd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_pd.Location = new System.Drawing.Point(11, 208);
+            this.txt_pd.Location = new System.Drawing.Point(10, 208);
             this.txt_pd.Name = "txt_pd";
-            this.txt_pd.Size = new System.Drawing.Size(258, 23);
+            this.txt_pd.Size = new System.Drawing.Size(255, 23);
             this.txt_pd.TabIndex = 12;
             // 
             // txt_ui
             // 
             this.txt_ui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ui.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_ui.Location = new System.Drawing.Point(11, 153);
+            this.txt_ui.Location = new System.Drawing.Point(10, 153);
             this.txt_ui.Name = "txt_ui";
-            this.txt_ui.Size = new System.Drawing.Size(258, 23);
+            this.txt_ui.Size = new System.Drawing.Size(255, 23);
             this.txt_ui.TabIndex = 11;
             // 
             // txt_ds
             // 
             this.txt_ds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ds.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_ds.Location = new System.Drawing.Point(11, 99);
+            this.txt_ds.Location = new System.Drawing.Point(10, 99);
             this.txt_ds.Name = "txt_ds";
-            this.txt_ds.Size = new System.Drawing.Size(258, 23);
+            this.txt_ds.Size = new System.Drawing.Size(255, 23);
             this.txt_ds.TabIndex = 10;
             // 
             // te_basepath
             // 
             this.te_basepath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.te_basepath.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.te_basepath.Location = new System.Drawing.Point(11, 46);
+            this.te_basepath.Location = new System.Drawing.Point(10, 46);
             this.te_basepath.Name = "te_basepath";
             this.te_basepath.Size = new System.Drawing.Size(220, 23);
             this.te_basepath.TabIndex = 8;
@@ -258,7 +292,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(194, 267);
+            this.button4.Location = new System.Drawing.Point(191, 330);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 14;
@@ -271,7 +305,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(14, 267);
+            this.button2.Location = new System.Drawing.Point(11, 330);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -286,7 +320,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(237, 45);
+            this.button1.Location = new System.Drawing.Point(233, 45);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(32, 25);
             this.button1.TabIndex = 9;
@@ -300,7 +334,7 @@
             this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(11, 189);
+            this.label4.Location = new System.Drawing.Point(10, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 19;
@@ -312,7 +346,7 @@
             this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(11, 135);
+            this.label3.Location = new System.Drawing.Point(10, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 17;
@@ -324,7 +358,7 @@
             this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(11, 81);
+            this.label2.Location = new System.Drawing.Point(10, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 15;
@@ -336,7 +370,7 @@
             this.label5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(11, 27);
+            this.label5.Location = new System.Drawing.Point(10, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 16;
@@ -471,15 +505,6 @@
             this.dgv_function.Size = new System.Drawing.Size(269, 578);
             this.dgv_function.TabIndex = 1;
             // 
-            // pl_container
-            // 
-            this.pl_container.BackColor = System.Drawing.Color.LightSlateGray;
-            this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_container.Location = new System.Drawing.Point(0, 0);
-            this.pl_container.Name = "pl_container";
-            this.pl_container.Size = new System.Drawing.Size(821, 617);
-            this.pl_container.TabIndex = 0;
-            // 
             // FUNCTION
             // 
             this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -489,6 +514,15 @@
             this.FUNCTION.Name = "FUNCTION";
             this.FUNCTION.ReadOnly = true;
             this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // pl_container
+            // 
+            this.pl_container.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_container.Location = new System.Drawing.Point(0, 0);
+            this.pl_container.Name = "pl_container";
+            this.pl_container.Size = new System.Drawing.Size(821, 617);
+            this.pl_container.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -502,6 +536,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tv_templet_KeyPress);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -565,6 +600,8 @@
         private System.Windows.Forms.DataGridView dgv_function;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
+        private System.Windows.Forms.ComboBox cmb_type;
+        private System.Windows.Forms.Label label7;
 
     }
 }

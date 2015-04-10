@@ -281,7 +281,13 @@ namespace AutoCode
 
         private void 校验ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            string _strMethodBody = "";
+            foreach (var item in PublicProperty.methodSet.Keys)
+            {
+                _strMethodBody += PublicProperty.methodSet[item].ToString() + "\n";
+            }
+            CreateCode cc = new CreateCode();
+            cc.ComplieClass(_strMethodBody);
         }
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)

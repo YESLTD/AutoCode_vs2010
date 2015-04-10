@@ -17,6 +17,7 @@ namespace AutoCode
     {
         uctlBaseConfig ubc = null;
         uctlCreateCode ucc = null;
+        TreeNode tv = null;
         public frmMain()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace AutoCode
         /// </summary>
         public void InitControls()
         {
-           
+            cmb_type.SelectedIndex = 0;
             LoadTempletPanel();
             LoadBaseSetting();
             LoadTables();
@@ -310,5 +311,54 @@ namespace AutoCode
                 cc.OutPutCode(_dtTable);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PublicProperty.ExportType = cmb_type.Text;
+        }
+
+
+        /// <summary>
+        /// 重命名文件
+        /// </summary>
+        public void ReNameFile()
+        {
+            try
+            {
+                if (tv != null)
+                {
+                    string newName = tv.Text;
+                    FileInfo f = new FileInfo(PublicProperty.TempletPath + "\\" + tv.Name);
+                    f.MoveTo(PublicProperty.TempletPath + "\\" + newName);
+                }
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp,"重命名文件出错！");
+            }
+        }
+
+        private void tv_templet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (13 == e.KeyChar)
+            {
+                ReNameFile();
+            }
+        }
+
+        private void tv_templet_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Keys.Enter == e.KeyCode)
+            {
+                ReNameFile();
+            }
+        }
+
+        private void tv_templet_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            tv = e.Node;
+            tv.BeginEdit();
+        }
+
     }
 }

@@ -101,7 +101,9 @@
             // 
             // 生成ToolStripMenuItem
             // 
-            this.生成ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.生成ToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.生成ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.生成ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.生成ToolStripMenuItem.Name = "生成ToolStripMenuItem";
             this.生成ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.生成ToolStripMenuItem.Text = "生成";
@@ -109,8 +111,9 @@
             // 
             // 校验ToolStripMenuItem
             // 
-            this.校验ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.校验ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.校验ToolStripMenuItem.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.校验ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.校验ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.校验ToolStripMenuItem.Name = "校验ToolStripMenuItem";
             this.校验ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.校验ToolStripMenuItem.Text = "校验";

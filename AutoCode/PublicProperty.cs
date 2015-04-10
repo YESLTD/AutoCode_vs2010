@@ -31,6 +31,8 @@ namespace AutoCode
         public static DataTable TableProperty = null;
         //readme 路径
         public static string ReadMe = Application.StartupPath + "\\readme.txt";
+        //导出文件类型
+        public static string ExportType = ".cs";
 
         /// <summary>
         /// 根据表名返回表结构
