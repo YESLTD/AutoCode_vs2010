@@ -33,7 +33,8 @@ namespace AutoCode
         public static string ReadMe = Application.StartupPath + "\\readme.txt";
         //导出文件类型
         public static string ExportType = ".cs";
-
+        //数据库类型
+        public static string DBType = "";
         /// <summary>
         /// 根据表名返回表结构
         /// </summary>

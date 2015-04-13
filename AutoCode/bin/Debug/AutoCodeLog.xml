@@ -251,4 +251,340 @@ c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\73007618-3c90-4056-bd97-2b5281b2c
    在 AutoCode.frmMain.ReNameFile() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 332</StackTrace>
     <Message>重命名文件出错！</Message>
   </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1331</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 90</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.uctlTemplet.OpenFile(String p_strPath) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 55</StackTrace>
+    <Message>这是根节点--！该怎么办呢？</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 318</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\bc809173-39d4-4880-9436-140664b1f949.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\12af042a-f13e-412f-95ff-be24f066821c.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\030d48e8-f51b-4776-9d29-ba838e1fdb61.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e6b23190-7021-4173-b46d-23625f1cfae6.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\5751ab1a-a555-4af5-a0f9-c0b661608741.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\fefc8992-65fc-47a4-bf1d-2b5c36578aaa.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\8ca14a75-6549-4891-814d-9fdd81d2e092.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\43167231-2e14-427d-bbfe-93405b3c7b98.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\bdef53b8-da10-4237-9596-353581a70971.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\9fbc1534-46f5-4f11-b7ce-8c4431e2dc0e.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d462b8d4-8a3b-4c68-bde0-883673ee84b0.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\70d444be-a995-445d-ac89-adb5bd6e449e.tmp(54,72): error CS1010: Newline in constant
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E0C): 没有为命令对象设置命令。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>
+    </Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E0C): 没有为命令对象设置命令。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>
+    </Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E0C): 没有为命令对象设置命令。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>
+    </Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E0C): 没有为命令对象设置命令。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>
+    </Message>
+  </Log>
+  <Log>
+    <Time>2015-04-13</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E0C): 没有为命令对象设置命令。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>
+    </Message>
+  </Log>
 </系统日志>

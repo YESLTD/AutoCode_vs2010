@@ -97,12 +97,13 @@ namespace AutoCode
                   );
                 script = new AsmHelper(assembly);
                 PublicProperty.script = script;
+                uctlMessageBox.Show("编译通过，无语法错误！");
                 //PublicProperty.script.Invoke("Script.SayHello","scott");
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.Message);
-                CommonFunction.WriteLog(exp, "动态编译失败！");
+                MessageBox.Show(null,"模板编译失败，请检查代码语法是否正确！","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                CommonFunction.WriteLog(exp, "模板编译失败！");
             }
             return script;
         }

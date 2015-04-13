@@ -22,7 +22,8 @@ namespace AutoCode
         {
             InitializeComponent();
             //初始化连接字符串
-            CommonFunction.SetConnectionString(Settings.Default.DataSource, Settings.Default.UserID, Settings.Default.Password);
+            string conn = CommonFunction.GetConnectionString(Settings.Default.DBType);
+            //CommonFunction.SetConnectionString(Settings.Default.DataSource, Settings.Default.UserID, Settings.Default.Password);
             InitControls();
         }
 
@@ -50,6 +51,7 @@ namespace AutoCode
             txt_ds.Text = Settings.Default.DataSource;
             txt_ui.Text = Settings.Default.UserID;
             txt_pd.Text = Settings.Default.Password;
+            cmb_DBType.Text = Settings.Default.DBType;
         }
 
         /// <summary>
@@ -83,8 +85,17 @@ namespace AutoCode
         /// </summary>
         public void LoadTables()
         {
-            PublicProperty.Source = GetAllColumn.getTable();
-            gc_talbelist.DataSource = PublicProperty.Source.DefaultView;
+            try
+            {
+                PublicProperty.DBType = Settings.Default.DBType;
+                PublicProperty.Source = GetAllColumn.getTable();
+                gc_talbelist.DataSource = PublicProperty.Source.DefaultView;
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "没有获取到数据源");
+            }
+
         }
 
         /// <summary>
@@ -226,8 +237,11 @@ namespace AutoCode
                 Settings.Default.DataSource = txt_ds.Text;
                 Settings.Default.UserID = txt_ui.Text;
                 Settings.Default.Password = txt_pd.Text;
+                Settings.Default.DBType = cmb_DBType.Text;
+                PublicProperty.DBType = cmb_DBType.Text;
                 Settings.Default.Save();
-                CommonFunction.SetConnectionString(txt_ds.Text, txt_ui.Text, txt_pd.Text);
+                CommonFunction.GetConnectionString( cmb_DBType.Text);
+                //CommonFunction.SetConnectionString(txt_ds.Text, txt_ui.Text, txt_pd.Text);
                 uctlMessageBox.Show("保存成功！");
             }
             catch (Exception exp)
@@ -358,6 +372,16 @@ namespace AutoCode
         {
             tv = e.Node;
             tv.BeginEdit();
+        }
+
+        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        {
+            LoadTables();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadTables();
         }
 
     }

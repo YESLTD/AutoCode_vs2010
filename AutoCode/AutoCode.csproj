@@ -202,7 +202,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0495a93885b68131830dbe575addcf3f_128.ico" />
-    <Content Include="readme.txt" />
     <Content Include="SelectItem.xml" />
     <Content Include="TEMPLET.txt" />
     <Content Include="版本升级说明.txt" />

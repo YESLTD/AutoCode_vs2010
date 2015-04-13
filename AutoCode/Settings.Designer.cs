@@ -70,5 +70,17 @@ namespace AutoCode {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DBType {
+            get {
+                return ((string)(this["DBType"]));
+            }
+            set {
+                this["DBType"] = value;
+            }
+        }
     }
 }

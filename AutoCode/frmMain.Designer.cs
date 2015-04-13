@@ -37,6 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tv_templet = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmb_DBType = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmb_type = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_pd = new System.Windows.Forms.TextBox();
@@ -164,6 +166,8 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(283, 617);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
             // tabPage1
             // 
@@ -203,6 +207,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage2.Controls.Add(this.cmb_DBType);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.cmb_type);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.txt_pd);
@@ -222,6 +228,30 @@
             this.tabPage2.Size = new System.Drawing.Size(275, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "设置";
+            // 
+            // cmb_DBType
+            // 
+            this.cmb_DBType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_DBType.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmb_DBType.FormattingEnabled = true;
+            this.cmb_DBType.Items.AddRange(new object[] {
+            "Oracle",
+            "SQLServer",
+            "MySQL"});
+            this.cmb_DBType.Location = new System.Drawing.Point(10, 337);
+            this.cmb_DBType.Name = "cmb_DBType";
+            this.cmb_DBType.Size = new System.Drawing.Size(255, 25);
+            this.cmb_DBType.TabIndex = 21;
+            this.cmb_DBType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 317);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 17);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "DBType";
             // 
             // cmb_type
             // 
@@ -292,7 +322,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(191, 330);
+            this.button4.Location = new System.Drawing.Point(190, 379);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 14;
@@ -305,7 +335,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(11, 330);
+            this.button2.Location = new System.Drawing.Point(10, 379);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -602,6 +632,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
         private System.Windows.Forms.ComboBox cmb_type;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_DBType;
+        private System.Windows.Forms.Label label8;
 
     }
 }

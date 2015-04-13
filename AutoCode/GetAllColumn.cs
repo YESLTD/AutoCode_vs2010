@@ -15,9 +15,23 @@ namespace AutoCode
         public static DataTable getTable()
         {
             DataTable tablename = new DataTable();
-            string sqlGetTable = "SELECT distinct 0 CHK,T.* FROM USER_TABLES T";
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            tablename = CommonFunction.OraExecuteBySQL(sqlGetTable, dic, "");
+            string sql = "";
+            if ("Oracle" == PublicProperty.DBType)
+            {
+                sql = "SELECT distinct 0 CHK,T.* FROM USER_TABLES T";
+            }
+            else if ("SQLServer" == PublicProperty.DBType)
+            {
+                sql = "select 0 as CHK, [name] as TABLE_NAME from [sysobjects] where [type] = 'u' order by [name]";
+            }
+            else if ("MySQL" == PublicProperty.DBType)
+            {
+
+            }
+            SortedDictionary<string, string> dic = new SortedDictionary<string, string>();
+            //tablename = CommonFunction.OraExecuteBySQL(sqlGetTable, dic, "");
+            tablename = CommonFunction.OleExecuteBySQL(sql, dic, "");
+
             return tablename;
         }
         /// <summary>
