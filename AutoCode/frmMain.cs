@@ -384,5 +384,11 @@ namespace AutoCode
             LoadTables();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ToolFunction.uctlTimeAxis uc = new uctlTimeAxis();
+            CommonFunction.ShowForm(uc);
+        }
+
     }
 }

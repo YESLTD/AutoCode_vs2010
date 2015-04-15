@@ -25,8 +25,27 @@ namespace AutoCode
         /// <returns>表</returns>
         public DataTable GetTable(string p_strTableName)
         {
-            string _strSQL = "select * from " + p_strTableName + " where 1=0";
-            return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+            //string _strSQL = "select * from " + p_strTableName + " where 1=0";
+            //return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+            string sql = "";
+            //if ("Oracle" == PublicProperty.DBType)
+            //{
+            sql = "select * from " + p_strTableName + " where 1=0";
+            //}
+            //else if ("SQLServer" == PublicProperty.DBType)
+            //{
+            //    sql = "";
+            //}
+            //else if ("MySQL" == PublicProperty.DBType)
+            //{
+            //    sql = " SELECT syscolumns.name,systypes.name,syscolumns.isnullable," +
+            //          " syscolumns.length" +
+            //          " FROMsyscolumns, systypes" +
+            //          " WHERE syscolumns.xusertype = systypes.xusertype" +
+            //          " AND syscolumns.id=" +
+            //          " object_id('你的表名')";
+            //}
+            return CommonFunction.OleExecuteBySQL(sql, new SortedDictionary<string, string>(), p_strTableName);
         }
 
         /// <summary>
