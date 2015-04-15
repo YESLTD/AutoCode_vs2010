@@ -36,6 +36,10 @@ namespace AutoCode
         //数据库类型
         public static string DBType = "";
         /// <summary>
+        /// 画笔
+        /// </summary>
+        public static Graphics graphics = null;
+        /// <summary>
         /// 根据表名返回表结构
         /// </summary>
         /// <param name="p_strTableName">表名</param>

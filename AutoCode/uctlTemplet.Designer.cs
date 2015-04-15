@@ -45,6 +45,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,8 @@
             this.校验ToolStripMenuItem,
             this.关闭ToolStripMenuItem,
             this.刷新ToolStripMenuItem,
-            this.readmeToolStripMenuItem});
+            this.readmeToolStripMenuItem,
+            this.测试ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(882, 25);
@@ -197,6 +199,13 @@
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // 测试ToolStripMenuItem
+            // 
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
+            // 
             // uctlTemplet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -235,5 +244,6 @@
         private System.Windows.Forms.ToolStripMenuItem readmeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 生成ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
     }
 }

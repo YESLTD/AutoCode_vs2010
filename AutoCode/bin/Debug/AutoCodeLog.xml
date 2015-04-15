@@ -587,4 +587,151 @@ c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\73007618-3c90-4056-bd97-2b5281b2c
     <Message>
     </Message>
   </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 ToolFunction.CommonFunction.GetConnectionString(String p_strDbtype) 位置 D:\GitHub\ToolFunction\CommonFunction.cs:行号 1338</StackTrace>
+    <Message>没有此DBType！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-15</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
 </系统日志>

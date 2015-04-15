@@ -398,6 +398,7 @@ namespace AutoCode
             ToolFunction.uctlTimeAxis.sdict.Add("2", "选择模板");
             ToolFunction.uctlTimeAxis.sdict.Add("3", "确认数据");
             ToolFunction.uctlTimeAxis.sdict.Add("4", "生成代码");
+            PublicProperty.graphics = e.Graphics;
             ToolFunction.uctlTimeAxis.InitTimeAxis(e.Graphics);
         }
 

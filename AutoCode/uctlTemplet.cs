@@ -15,7 +15,6 @@ namespace AutoCode
     public partial class uctlTemplet : UserControl
     {
 
-
         public uctlTemplet()
         {
             InitializeComponent();
@@ -310,6 +309,11 @@ namespace AutoCode
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToolFunction.uctlTimeAxis.SetStep(PublicProperty.graphics,"3");
         }
     }
 }
