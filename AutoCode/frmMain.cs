@@ -387,7 +387,18 @@ namespace AutoCode
         private void button5_Click(object sender, EventArgs e)
         {
             ToolFunction.uctlTimeAxis uc = new uctlTimeAxis();
-            CommonFunction.ShowForm(uc);
+            uc.Refresh();
+            CommonFunction.ShowForm(uc,Color.Green,Color.White,4);
+            uc.SetStep("4");
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+            ToolFunction.uctlTimeAxis.sdict.Add("1", "读取配置");
+            ToolFunction.uctlTimeAxis.sdict.Add("2", "选择模板");
+            ToolFunction.uctlTimeAxis.sdict.Add("3", "确认数据");
+            ToolFunction.uctlTimeAxis.sdict.Add("4", "生成代码");
+            ToolFunction.uctlTimeAxis.InitTimeAxis(e.Graphics);
         }
 
     }

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -65,9 +64,7 @@
             this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
-            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -101,41 +98,15 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer1.Panel1.Controls.Add(this.button5);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1108, 650);
-            this.splitContainer1.SplitterDistance = 29;
+            this.splitContainer1.SplitterDistance = 70;
             this.splitContainer1.TabIndex = 2;
             this.splitContainer1.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.ForeColor = System.Drawing.Color.GreenYellow;
-            this.label6.Location = new System.Drawing.Point(342, 8);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "label6";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "自动代码生成3.0";
             // 
             // splitContainer2
             // 
@@ -150,7 +121,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.pl_container);
-            this.splitContainer2.Size = new System.Drawing.Size(1108, 617);
+            this.splitContainer2.Size = new System.Drawing.Size(1108, 576);
             this.splitContainer2.SplitterDistance = 283;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -166,7 +137,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(283, 617);
+            this.tabControl1.Size = new System.Drawing.Size(283, 576);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
@@ -177,7 +148,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(275, 584);
+            this.tabPage1.Size = new System.Drawing.Size(275, 543);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "模板";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -188,7 +159,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 578);
+            this.panel1.Size = new System.Drawing.Size(269, 537);
             this.panel1.TabIndex = 1;
             // 
             // tv_templet
@@ -200,7 +171,7 @@
             this.tv_templet.LabelEdit = true;
             this.tv_templet.Location = new System.Drawing.Point(0, 0);
             this.tv_templet.Name = "tv_templet";
-            this.tv_templet.Size = new System.Drawing.Size(269, 578);
+            this.tv_templet.Size = new System.Drawing.Size(269, 537);
             this.tv_templet.TabIndex = 0;
             this.tv_templet.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_templet_AfterSelect);
             this.tv_templet.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_templet_NodeMouseDoubleClick);
@@ -553,18 +524,8 @@
             this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_container.Location = new System.Drawing.Point(0, 0);
             this.pl_container.Name = "pl_container";
-            this.pl_container.Size = new System.Drawing.Size(821, 617);
+            this.pl_container.Size = new System.Drawing.Size(821, 576);
             this.pl_container.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(407, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "测试";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmMain
             // 
@@ -574,13 +535,13 @@
             this.ClientSize = new System.Drawing.Size(1108, 650);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "自动代码生成3.0";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tv_templet_KeyPress);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -611,7 +572,6 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel pl_container;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TreeView tv_templet;
         private System.Windows.Forms.TabControl tabControl1;
@@ -640,13 +600,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dgv_function;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
         private System.Windows.Forms.ComboBox cmb_type;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmb_DBType;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button5;
 
     }
 }

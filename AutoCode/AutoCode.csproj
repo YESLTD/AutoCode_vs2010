@@ -201,7 +201,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="0495a93885b68131830dbe575addcf3f_128.ico" />
     <Content Include="SelectItem.xml" />
     <Content Include="temp.ico" />
     <Content Include="TEMPLET.txt" />
