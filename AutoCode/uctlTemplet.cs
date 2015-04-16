@@ -270,7 +270,14 @@ namespace AutoCode
                     PublicProperty.TableProperty = PublicProperty.GetTable(s);
                     cc.OutPutCode(PublicProperty.TableProperty);
                 }
-                uctlMessageBox.Show("生成成功！");
+                if (PublicProperty.SuccessFlag)
+                {
+                    uctlMessageBox.Show("生成成功！");
+                }
+                else
+                {
+                    uctlMessageBox.Show("生成失败，详情查看错误日志！");
+                }
             }
             catch (Exception exp)
             {

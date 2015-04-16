@@ -734,4 +734,99 @@ c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\73007618-3c90-4056-bd97-2b5281b2c
    在 AutoCode.frmMain.LoadTables() 位置 D:\GitHub\AutoCode_vs2010\AutoCode\frmMain.cs:行号 92</StackTrace>
     <Message>没有获取到数据源</Message>
   </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 不支持关键字: “provider”。
+   在 System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   在 System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   在 System.Data.OracleClient.OracleConnectionString..ctor(String connectionString)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnectionOptions(String connectionOptions, DbConnectionOptions previous)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions&amp; userConnectionOptions)
+   在 System.Data.OracleClient.OracleConnection.ConnectionString_Set(String value)
+   在 System.Data.OracleClient.OracleConnection.set_ConnectionString(String value)
+   在 System.Data.OracleClient.OracleConnection..ctor(String connectionString)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1008
+   在 AutoCode.PublicProperty.GetTable(String p_strTableName) 位置 E:\Github\AutoCode_vs2010\AutoCode\PublicProperty.cs:行号 50
+   在 AutoCode.uctlTemplet.生成ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 270</StackTrace>
+    <Message>生成代码时出错！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 不支持关键字: “provider”。
+   在 System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   在 System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   在 System.Data.OracleClient.OracleConnectionString..ctor(String connectionString)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnectionOptions(String connectionOptions, DbConnectionOptions previous)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions&amp; userConnectionOptions)
+   在 System.Data.OracleClient.OracleConnection.ConnectionString_Set(String value)
+   在 System.Data.OracleClient.OracleConnection.set_ConnectionString(String value)
+   在 System.Data.OracleClient.OracleConnection..ctor(String connectionString)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1008
+   在 AutoCode.PublicProperty.GetTable(String p_strTableName) 位置 E:\Github\AutoCode_vs2010\AutoCode\PublicProperty.cs:行号 50
+   在 AutoCode.uctlTemplet.生成ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 270</StackTrace>
+    <Message>生成代码时出错！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 不支持关键字: “provider”。
+   在 System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   在 System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   在 System.Data.OracleClient.OracleConnectionString..ctor(String connectionString)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnectionOptions(String connectionOptions, DbConnectionOptions previous)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions&amp; userConnectionOptions)
+   在 System.Data.OracleClient.OracleConnection.ConnectionString_Set(String value)
+   在 System.Data.OracleClient.OracleConnection.set_ConnectionString(String value)
+   在 System.Data.OracleClient.OracleConnection..ctor(String connectionString)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1008
+   在 AutoCode.PublicProperty.GetTable(String p_strTableName) 位置 E:\Github\AutoCode_vs2010\AutoCode\PublicProperty.cs:行号 50
+   在 AutoCode.uctlTemplet.生成ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 270</StackTrace>
+    <Message>生成代码时出错！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 不支持关键字: “provider”。
+   在 System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   在 System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   在 System.Data.OracleClient.OracleConnectionString..ctor(String connectionString)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnectionOptions(String connectionOptions, DbConnectionOptions previous)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions&amp; userConnectionOptions)
+   在 System.Data.OracleClient.OracleConnection.ConnectionString_Set(String value)
+   在 System.Data.OracleClient.OracleConnection.set_ConnectionString(String value)
+   在 System.Data.OracleClient.OracleConnection..ctor(String connectionString)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1008
+   在 AutoCode.PublicProperty.GetTable(String p_strTableName) 位置 E:\Github\AutoCode_vs2010\AutoCode\PublicProperty.cs:行号 50
+   在 AutoCode.uctlTemplet.生成ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 270</StackTrace>
+    <Message>生成代码时出错！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 不支持关键字: “provider”。
+   在 System.Data.Common.DbConnectionOptions.ParseInternal(Hashtable parsetable, String connectionString, Boolean buildChain, Hashtable synonyms, Boolean firstKey)
+   在 System.Data.Common.DbConnectionOptions..ctor(String connectionString, Hashtable synonyms, Boolean useOdbcRules)
+   在 System.Data.OracleClient.OracleConnectionString..ctor(String connectionString)
+   在 System.Data.OracleClient.OracleConnectionFactory.CreateConnectionOptions(String connectionOptions, DbConnectionOptions previous)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnectionPoolGroup(String connectionString, DbConnectionPoolGroupOptions poolOptions, DbConnectionOptions&amp; userConnectionOptions)
+   在 System.Data.OracleClient.OracleConnection.ConnectionString_Set(String value)
+   在 System.Data.OracleClient.OracleConnection.set_ConnectionString(String value)
+   在 System.Data.OracleClient.OracleConnection..ctor(String connectionString)
+   在 ToolFunction.CommonFunction.OraExecuteBySQL(String p_strSql, Dictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 1008
+   在 AutoCode.PublicProperty.GetTable(String p_strTableName) 位置 E:\Github\AutoCode_vs2010\AutoCode\PublicProperty.cs:行号 50
+   在 AutoCode.uctlTemplet.生成ToolStripMenuItem_Click(Object sender, EventArgs e) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 270</StackTrace>
+    <Message>生成代码时出错！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-16</Time>
+    <User>User</User>
+    <StackTrace>System.IO.DirectoryNotFoundException: 未能找到路径“C:\Users\wuhailong\Desktop\新建文件夹 (3)\Abak.cs”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 356</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
 </系统日志>

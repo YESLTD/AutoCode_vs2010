@@ -402,7 +402,7 @@ namespace AutoCode
             }
             catch (Exception exp)
             {
-                MessageBox.Show(exp.Message);
+                PublicProperty.SuccessFlag = false;
                 CommonFunction.WriteLog(exp, "生成文件报错了在CreateCode里");
             }
         }

@@ -14,7 +14,8 @@ namespace AutoCode
     {
 
         #region 文件导出设置
-
+        //导出是否成功标志
+        public static bool SuccessFlag = true;
         //导出文件路径
         public static string ExportPath = "";
         //模板内容
@@ -47,7 +48,7 @@ namespace AutoCode
         public static DataTable GetTable(string p_strTableName)
         {
             string _strSQL = "select * from " + p_strTableName + " where 1=0";
-            return CommonFunction.OraExecuteBySQL(_strSQL, new Dictionary<string, string>(), p_strTableName);
+            return CommonFunction.OleExecuteBySQL(_strSQL, new SortedDictionary<string, string>(), p_strTableName);
         }
 
         /// <summary>
