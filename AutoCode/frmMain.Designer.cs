@@ -55,15 +55,16 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.gc_talbelist = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgv_function = new System.Windows.Forms.DataGridView();
             this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.btn_done = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -85,6 +86,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_function)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -98,13 +103,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1108, 650);
-            this.splitContainer1.SplitterDistance = 70;
+            this.splitContainer1.SplitterDistance = 78;
             this.splitContainer1.TabIndex = 2;
             this.splitContainer1.TabStop = false;
             // 
@@ -121,7 +125,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.pl_container);
-            this.splitContainer2.Size = new System.Drawing.Size(1108, 576);
+            this.splitContainer2.Size = new System.Drawing.Size(1108, 568);
             this.splitContainer2.SplitterDistance = 283;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -132,12 +136,13 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(283, 576);
+            this.tabControl1.Size = new System.Drawing.Size(283, 568);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
@@ -148,7 +153,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(275, 543);
+            this.tabPage1.Size = new System.Drawing.Size(275, 535);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "模板";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -159,7 +164,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 537);
+            this.panel1.Size = new System.Drawing.Size(269, 529);
             this.panel1.TabIndex = 1;
             // 
             // tv_templet
@@ -171,7 +176,7 @@
             this.tv_templet.LabelEdit = true;
             this.tv_templet.Location = new System.Drawing.Point(0, 0);
             this.tv_templet.Name = "tv_templet";
-            this.tv_templet.Size = new System.Drawing.Size(269, 537);
+            this.tv_templet.Size = new System.Drawing.Size(269, 529);
             this.tv_templet.TabIndex = 0;
             this.tv_templet.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_templet_AfterSelect);
             this.tv_templet.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_templet_NodeMouseDoubleClick);
@@ -198,7 +203,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(275, 584);
+            this.tabPage2.Size = new System.Drawing.Size(275, 535);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "设置";
             // 
@@ -385,7 +390,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(275, 584);
+            this.tabPage3.Size = new System.Drawing.Size(275, 535);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "数据";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -404,8 +409,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.button3);
-            this.splitContainer3.Size = new System.Drawing.Size(269, 578);
-            this.splitContainer3.SplitterDistance = 540;
+            this.splitContainer3.Size = new System.Drawing.Size(269, 529);
+            this.splitContainer3.SplitterDistance = 491;
             this.splitContainer3.TabIndex = 2;
             // 
             // gc_talbelist
@@ -417,7 +422,7 @@
             this.gc_talbelist.Name = "gc_talbelist";
             this.gc_talbelist.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gc_talbelist.Size = new System.Drawing.Size(269, 540);
+            this.gc_talbelist.Size = new System.Drawing.Size(269, 491);
             this.gc_talbelist.TabIndex = 1;
             this.gc_talbelist.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -425,50 +430,13 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.MintCream;
-            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.OddRow.BackColor = System.Drawing.Color.AliceBlue;
-            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
             this.gridView1.GridControl = this.gc_talbelist;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
-            this.gridView1.OptionsCustomization.AllowColumnResizing = false;
-            this.gridView1.OptionsCustomization.AllowFilter = false;
-            this.gridView1.OptionsCustomization.AllowGroup = false;
-            this.gridView1.OptionsCustomization.AllowSort = false;
-            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
-            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "CHK";
-            this.gridColumn1.ColumnEdit = this.repositoryItemCheckEdit1;
-            this.gridColumn1.FieldName = "CHKA";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 40;
             // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "表名";
-            this.gridColumn2.FieldName = "TABLE_NAME";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 448;
             // 
             // button3
             // 
@@ -487,7 +455,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(275, 584);
+            this.tabPage4.Size = new System.Drawing.Size(275, 535);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "方法";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -505,7 +473,7 @@
             this.dgv_function.ReadOnly = true;
             this.dgv_function.RowHeadersWidth = 10;
             this.dgv_function.RowTemplate.Height = 23;
-            this.dgv_function.Size = new System.Drawing.Size(269, 578);
+            this.dgv_function.Size = new System.Drawing.Size(269, 529);
             this.dgv_function.TabIndex = 1;
             // 
             // FUNCTION
@@ -524,8 +492,44 @@
             this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl_container.Location = new System.Drawing.Point(0, 0);
             this.pl_container.Name = "pl_container";
-            this.pl_container.Size = new System.Drawing.Size(821, 576);
+            this.pl_container.Size = new System.Drawing.Size(821, 568);
             this.pl_container.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.splitContainer4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(275, 535);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "生成";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // btn_done
+            // 
+            this.btn_done.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_done.Location = new System.Drawing.Point(0, 0);
+            this.btn_done.Name = "btn_done";
+            this.btn_done.Size = new System.Drawing.Size(269, 38);
+            this.btn_done.TabIndex = 0;
+            this.btn_done.Text = "执行";
+            this.btn_done.UseVisualStyleBackColor = true;
+            this.btn_done.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.btn_done);
+            this.splitContainer4.Size = new System.Drawing.Size(269, 529);
+            this.splitContainer4.SplitterDistance = 38;
+            this.splitContainer4.TabIndex = 1;
             // 
             // frmMain
             // 
@@ -564,6 +568,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_function)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -573,11 +581,16 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel pl_container;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TreeView tv_templet;
+        private System.Windows.Forms.FolderBrowserDialog fbd_path;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TreeView tv_templet;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.FolderBrowserDialog fbd_path;
+        private System.Windows.Forms.ComboBox cmb_DBType;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmb_type;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_pd;
         private System.Windows.Forms.TextBox txt_ui;
         private System.Windows.Forms.TextBox txt_ds;
@@ -590,21 +603,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.SplitContainer splitContainer3;
         private DevExpress.XtraGrid.GridControl gc_talbelist;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dgv_function;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
-        private System.Windows.Forms.ComboBox cmb_type;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmb_DBType;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button btn_done;
+        private System.Windows.Forms.SplitContainer splitContainer4;
 
     }
 }

@@ -320,7 +320,8 @@ namespace AutoCode
 
         private void 测试ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToolFunction.uctlTimeAxis.SetStep(PublicProperty.graphics,"3");
+            frmMain fm = new frmMain();
+            fm.ProxySetStep();
         }
     }
 }

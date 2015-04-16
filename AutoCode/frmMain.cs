@@ -17,6 +17,7 @@ namespace AutoCode
     {
         uctlBaseConfig ubc = null;
         uctlCreateCode ucc = null;
+        uctlTimeAxis uta = null;
         TreeNode tv = null;
         public frmMain()
         {
@@ -37,10 +38,27 @@ namespace AutoCode
         public void InitControls()
         {
             cmb_type.SelectedIndex = 0;
+            LoadTimeAxis();
             LoadTempletPanel();
             LoadBaseSetting();
             LoadTables();
             LoadTempletList();
+        }
+
+        /// <summary>
+        /// 载入时间轴控件
+        /// 2015-04-16
+        /// 吴海龙
+        /// </summary>
+        public void LoadTimeAxis()
+        {
+            SortedDictionary<string, string> sdict = new SortedDictionary<string, string>();
+            sdict.Add("1", "读取配置");
+            sdict.Add("2", "选择模板");
+            sdict.Add("3", "确认数据");
+            sdict.Add("4", "生成代码");
+            uta = new uctlTimeAxis(sdict);
+            CommonFunction.AddForm3(splitContainer1.Panel1, uta);
         }
 
         /// <summary>
@@ -392,15 +410,47 @@ namespace AutoCode
             uc.SetStep("4");
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        //private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        //{
+        //    ToolFunction.uctlTimeAxis.sdict.Add("1", "读取配置");
+        //    ToolFunction.uctlTimeAxis.sdict.Add("2", "选择模板");
+        //    ToolFunction.uctlTimeAxis.sdict.Add("3", "确认数据");
+        //    ToolFunction.uctlTimeAxis.sdict.Add("4", "生成代码");
+        //    PublicProperty.graphics = e.Graphics;
+        //    ToolFunction.uctlTimeAxis.InitTimeAxis(e.Graphics);
+        //}
+
+        public void ProxySetStep()
         {
-            ToolFunction.uctlTimeAxis.sdict.Add("1", "读取配置");
-            ToolFunction.uctlTimeAxis.sdict.Add("2", "选择模板");
-            ToolFunction.uctlTimeAxis.sdict.Add("3", "确认数据");
-            ToolFunction.uctlTimeAxis.sdict.Add("4", "生成代码");
-            PublicProperty.graphics = e.Graphics;
-            ToolFunction.uctlTimeAxis.InitTimeAxis(e.Graphics);
+
+            //ToolFunction.uctlTimeAxis.Key = "2";
+            //uta.Dock = DockStyle.Left;
+            //uta.Size = new Size(uta.Width - 1, uta.Height);
+            ManageKeyValue mkv = new ManageKeyValue();
+            mkv.KeyValueChange += new EventHandler<uctlTimeAxis.KeyValueEventArgs>(uta.SetStep);
+            mkv.SetKeyValue("2");
         }
 
+
+        /// <summary>
+        /// 相当于杂志社的角色
+        /// </summary>
+        class ManageKeyValue
+        {
+            public event EventHandler<ToolFunction.uctlTimeAxis.KeyValueEventArgs> KeyValueChange;
+            public void SetKeyValue(string s)
+            {
+                EventHandler<ToolFunction.uctlTimeAxis.KeyValueEventArgs> l = KeyValueChange;
+                if (l != null)
+                {
+                    l(this, new ToolFunction.uctlTimeAxis.KeyValueEventArgs(s));
+                }
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            ProxySetStep();
+        }
     }
 }
