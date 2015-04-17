@@ -9,6 +9,7 @@ using ToolFunction;
 using TestAutoCode;
 using System.IO;
 using System.Diagnostics;
+using System.Threading;
 
 namespace AutoCode
 {
@@ -57,8 +58,9 @@ namespace AutoCode
             sdict.Add("2", "选择模板");
             sdict.Add("3", "确认数据");
             sdict.Add("4", "生成代码");
-            uta = new uctlTimeAxis(sdict);
-            CommonFunction.AddForm3(splitContainer1.Panel1, uta);
+            uta = new uctlTimeAxis(sdict,0);
+            CommonFunction.AddForm3(splitContainer4.Panel2, uta);
+
         }
 
         /// <summary>
@@ -402,50 +404,17 @@ namespace AutoCode
             LoadTables();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            ToolFunction.uctlTimeAxis uc = new uctlTimeAxis();
-            uc.Refresh();
-            CommonFunction.ShowForm(uc,Color.Green,Color.White,4);
-            uc.SetStep("4");
-        }
 
-        //private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        //{
-        //    ToolFunction.uctlTimeAxis.sdict.Add("1", "读取配置");
-        //    ToolFunction.uctlTimeAxis.sdict.Add("2", "选择模板");
-        //    ToolFunction.uctlTimeAxis.sdict.Add("3", "确认数据");
-        //    ToolFunction.uctlTimeAxis.sdict.Add("4", "生成代码");
-        //    PublicProperty.graphics = e.Graphics;
-        //    ToolFunction.uctlTimeAxis.InitTimeAxis(e.Graphics);
-        //}
 
         public void ProxySetStep()
         {
+            //Thread.Sleep(1000);
+            //uta.SetKeyValue("1");
+            //Thread.Sleep(1000);
+            //uta.SetKeyValue("2");
+            //Thread.Sleep(1000);
+            uta.SetKeyValue("3");
 
-            //ToolFunction.uctlTimeAxis.Key = "2";
-            //uta.Dock = DockStyle.Left;
-            //uta.Size = new Size(uta.Width - 1, uta.Height);
-            ManageKeyValue mkv = new ManageKeyValue();
-            mkv.KeyValueChange += new EventHandler<uctlTimeAxis.KeyValueEventArgs>(uta.SetStep);
-            mkv.SetKeyValue("2");
-        }
-
-
-        /// <summary>
-        /// 相当于杂志社的角色
-        /// </summary>
-        class ManageKeyValue
-        {
-            public event EventHandler<ToolFunction.uctlTimeAxis.KeyValueEventArgs> KeyValueChange;
-            public void SetKeyValue(string s)
-            {
-                EventHandler<ToolFunction.uctlTimeAxis.KeyValueEventArgs> l = KeyValueChange;
-                if (l != null)
-                {
-                    l(this, new ToolFunction.uctlTimeAxis.KeyValueEventArgs(s));
-                }
-            }
         }
 
         private void button5_Click_1(object sender, EventArgs e)

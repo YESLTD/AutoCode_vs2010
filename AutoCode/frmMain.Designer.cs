@@ -60,11 +60,11 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgv_function = new System.Windows.Forms.DataGridView();
             this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.btn_done = new System.Windows.Forms.Button();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btn_done = new System.Windows.Forms.Button();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -486,15 +486,6 @@
             this.FUNCTION.ReadOnly = true;
             this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // pl_container
-            // 
-            this.pl_container.BackColor = System.Drawing.Color.LightSlateGray;
-            this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pl_container.Location = new System.Drawing.Point(0, 0);
-            this.pl_container.Name = "pl_container";
-            this.pl_container.Size = new System.Drawing.Size(821, 568);
-            this.pl_container.TabIndex = 0;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.splitContainer4);
@@ -505,17 +496,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "生成";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // btn_done
-            // 
-            this.btn_done.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_done.Location = new System.Drawing.Point(0, 0);
-            this.btn_done.Name = "btn_done";
-            this.btn_done.Size = new System.Drawing.Size(269, 38);
-            this.btn_done.TabIndex = 0;
-            this.btn_done.Text = "执行";
-            this.btn_done.UseVisualStyleBackColor = true;
-            this.btn_done.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // splitContainer4
             // 
@@ -531,6 +511,26 @@
             this.splitContainer4.SplitterDistance = 38;
             this.splitContainer4.TabIndex = 1;
             // 
+            // btn_done
+            // 
+            this.btn_done.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_done.Location = new System.Drawing.Point(0, 0);
+            this.btn_done.Name = "btn_done";
+            this.btn_done.Size = new System.Drawing.Size(269, 38);
+            this.btn_done.TabIndex = 0;
+            this.btn_done.Text = "执行";
+            this.btn_done.UseVisualStyleBackColor = true;
+            this.btn_done.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // pl_container
+            // 
+            this.pl_container.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pl_container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pl_container.Location = new System.Drawing.Point(0, 0);
+            this.pl_container.Name = "pl_container";
+            this.pl_container.Size = new System.Drawing.Size(821, 568);
+            this.pl_container.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -544,7 +544,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "自动代码生成3.0";
+            this.Text = "AutoCode3.0";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tv_templet_KeyPress);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
