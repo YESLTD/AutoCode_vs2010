@@ -58,7 +58,7 @@ namespace AutoCode
             sdict.Add("2", "选择模板");
             sdict.Add("3", "确认数据");
             sdict.Add("4", "生成代码");
-            uta = new uctlTimeAxis(sdict,0);
+            uta = new uctlTimeAxis(sdict,1);
             CommonFunction.AddForm3(splitContainer4.Panel2, uta);
 
         }
@@ -109,7 +109,8 @@ namespace AutoCode
             {
                 PublicProperty.DBType = Settings.Default.DBType;
                 PublicProperty.Source = GetAllColumn.getTable();
-                gc_talbelist.DataSource = PublicProperty.Source.DefaultView;
+                //gc_talbelist.DataSource = PublicProperty.Source.DefaultView;
+                dgv_tables.DataSource = PublicProperty.Source.DefaultView;
             }
             catch (Exception exp)
             {
@@ -117,6 +118,8 @@ namespace AutoCode
             }
 
         }
+
+        
 
         /// <summary>
         /// 载入左侧treeview数据信息
@@ -275,22 +278,22 @@ namespace AutoCode
             savefile();
         }
 
-        private void gc_talbelist_Click(object sender, EventArgs e)
-        {
-            if (gridView1.FocusedRowHandle >= 0)
-            {
-                DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-                if (dr["CHK"].ToString() == "0")
-                {
-                    dr["CHK"] = "1";
-                    //dgv_ColumnSet.DataSource = GetColumnSet(dr["TABLE_NAME"].ToString()).DefaultView;
-                }
-                else
-                {
-                    dr["CHK"] = "0";
-                }
-            }
-        }
+        //private void gc_talbelist_Click(object sender, EventArgs e)
+        //{
+        //    if (gridView1.FocusedRowHandle >= 0)
+        //    {
+        //        DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+        //        if (dr["CHK"].ToString() == "0")
+        //        {
+        //            dr["CHK"] = "1";
+        //            //dgv_ColumnSet.DataSource = GetColumnSet(dr["TABLE_NAME"].ToString()).DefaultView;
+        //        }
+        //        else
+        //        {
+        //            dr["CHK"] = "0";
+        //        }
+        //    }
+        //}
 
         private void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
@@ -337,13 +340,14 @@ namespace AutoCode
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach (string s in PublicProperty.getSelectTable())
-            {
-                CreateCode cc = new CreateCode();
-                //cc.LoadProperity();
-                DataTable _dtTable = PublicProperty.GetTable(s);
-                cc.OutPutCode(_dtTable);
-            }
+            LoadTables();
+            //foreach (string s in PublicProperty.getSelectTable())
+            //{
+            //    CreateCode cc = new CreateCode();
+            //    //cc.LoadProperity();
+            //    DataTable _dtTable = PublicProperty.GetTable(s);
+            //    cc.OutPutCode(_dtTable);
+            //}
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -394,15 +398,15 @@ namespace AutoCode
             tv.BeginEdit();
         }
 
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
-        {
-            LoadTables();
-        }
+        //private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        //{
+        //    LoadTables();
+        //}
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadTables();
-        }
+        //private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    //LoadTables();
+        //}
 
 
 
@@ -419,7 +423,53 @@ namespace AutoCode
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            ProxySetStep();
+            try
+            {
+                foreach (string s in PublicProperty.getSelectTable())
+                {
+                    CreateCode cc = new CreateCode();
+                    PublicProperty.TableProperty = PublicProperty.GetTable(s);
+                    uta.SetKeyValue("2");
+                    cc.OutPutCode(PublicProperty.TableProperty);
+                    uta.SetKeyValue("4");
+                }
+                if (PublicProperty.SuccessFlag)
+                {
+                    uctlMessageBox.Show("生成成功！");
+                }
+                else
+                {
+                    uctlMessageBox.Show("生成失败，详情查看错误日志！");
+                }
+            }
+            catch (Exception exp)
+            {
+                CommonFunction.WriteLog(exp, "生成代码时出错！");
+            }
+        }
+
+        private void btn_check_Click(object sender, EventArgs e)
+        {
+            string _strMethodBody = "";
+            foreach (var item in PublicProperty.methodSet.Keys)
+            {
+                _strMethodBody += PublicProperty.methodSet[item].ToString() + "\n";
+            }
+            CreateCode cc = new CreateCode();
+            cc.ComplieClass(_strMethodBody);
+        }
+
+        private void dgv_tables_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string s = dgv_tables[0, e.RowIndex].Value.ToString();
+            if ("False" == dgv_tables[0, e.RowIndex].Value.ToString())
+            {
+                dgv_tables[0, e.RowIndex].Value = true;
+            }
+            else
+            {
+                dgv_tables[0, e.RowIndex].Value = false;
+            }
         }
     }
 }

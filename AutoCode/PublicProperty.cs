@@ -15,7 +15,7 @@ namespace AutoCode
 
         #region 文件导出设置
         //导出是否成功标志
-        public static bool SuccessFlag = true;
+        public static bool SuccessFlag = false;
         //导出文件路径
         public static string ExportPath = "";
         //模板内容
@@ -51,6 +51,7 @@ namespace AutoCode
             return CommonFunction.OleExecuteBySQL(_strSQL, new SortedDictionary<string, string>(), p_strTableName);
         }
 
+
         /// <summary>
         /// 获取勾选的数据源
         /// </summary>
@@ -60,7 +61,7 @@ namespace AutoCode
             List<string> tablelist = new List<string>();
             foreach (DataRow dr in PublicProperty.Source.Rows)
             {
-                if (dr["CHK"].ToString() == "1")
+                if (dr["CHK"].ToString() == "True")
                 {
                     tablelist.Add(dr["TABLE_NAME"].ToString());
                 }

@@ -97,7 +97,6 @@ namespace AutoCode
                   );
                 script = new AsmHelper(assembly);
                 PublicProperty.script = script;
-                uctlMessageBox.Show("编译通过，无语法错误！");
                 //PublicProperty.script.Invoke("Script.SayHello","scott");
             }
             catch (Exception exp)

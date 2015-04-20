@@ -33,11 +33,10 @@
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.生成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.校验ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.刷新ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.readmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTemplet = new System.Windows.Forms.OpenFileDialog();
             this.saveTemplet = new System.Windows.Forms.SaveFileDialog();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -45,7 +44,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,8 +55,6 @@
             this.保存ToolStripMenuItem,
             this.另存为ToolStripMenuItem,
             this.删除ToolStripMenuItem,
-            this.生成ToolStripMenuItem,
-            this.校验ToolStripMenuItem,
             this.关闭ToolStripMenuItem,
             this.刷新ToolStripMenuItem,
             this.readmeToolStripMenuItem,
@@ -101,26 +97,6 @@
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
-            // 生成ToolStripMenuItem
-            // 
-            this.生成ToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
-            this.生成ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.生成ToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.生成ToolStripMenuItem.Name = "生成ToolStripMenuItem";
-            this.生成ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.生成ToolStripMenuItem.Text = "生成";
-            this.生成ToolStripMenuItem.Click += new System.EventHandler(this.生成ToolStripMenuItem_Click);
-            // 
-            // 校验ToolStripMenuItem
-            // 
-            this.校验ToolStripMenuItem.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.校验ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.校验ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.校验ToolStripMenuItem.Name = "校验ToolStripMenuItem";
-            this.校验ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.校验ToolStripMenuItem.Text = "校验";
-            this.校验ToolStripMenuItem.Click += new System.EventHandler(this.校验ToolStripMenuItem_Click);
-            // 
             // 关闭ToolStripMenuItem
             // 
             this.关闭ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -143,6 +119,13 @@
             this.readmeToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
             this.readmeToolStripMenuItem.Text = "readme";
             this.readmeToolStripMenuItem.Click += new System.EventHandler(this.readmeToolStripMenuItem_Click);
+            // 
+            // 测试ToolStripMenuItem
+            // 
+            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
+            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.测试ToolStripMenuItem.Text = "测试";
+            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
@@ -199,13 +182,6 @@
             this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // 测试ToolStripMenuItem
-            // 
-            this.测试ToolStripMenuItem.Name = "测试ToolStripMenuItem";
-            this.测试ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.测试ToolStripMenuItem.Text = "测试";
-            this.测试ToolStripMenuItem.Click += new System.EventHandler(this.测试ToolStripMenuItem_Click);
-            // 
             // uctlTemplet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -231,7 +207,6 @@
         private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openTemplet;
         private System.Windows.Forms.SaveFileDialog saveTemplet;
-        private System.Windows.Forms.ToolStripMenuItem 校验ToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem 保存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
@@ -242,7 +217,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem readmeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 生成ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 测试ToolStripMenuItem;
     }

@@ -18,11 +18,11 @@ namespace AutoCode
             string sql = "";
             if ("Oracle" == PublicProperty.DBType)
             {
-                sql = "SELECT distinct 0 CHK,T.* FROM USER_TABLES T";
+                sql = "SELECT 'false'  CHK,T.TABLE_NAME FROM USER_TABLES T";
             }
             else if ("SQLServer" == PublicProperty.DBType)
             {
-                sql = "select 0 as CHK, [name] as TABLE_NAME from [sysobjects] where [type] = 'u' order by [name]";
+                sql = "select 'false' as CHK, [name] as TABLE_NAME from [sysobjects] where [type] = 'u' order by [name]";
             }
             else if ("MySQL" == PublicProperty.DBType)
             {
@@ -31,9 +31,29 @@ namespace AutoCode
             SortedDictionary<string, string> dic = new SortedDictionary<string, string>();
             //tablename = CommonFunction.OraExecuteBySQL(sqlGetTable, dic, "");
             tablename = CommonFunction.OleExecuteBySQL(sql, dic, "");
-
-            return tablename;
+            DataTable dt = ConvertTable(tablename);
+            return dt;
         }
+
+        /// <summary>
+        /// 绑定datagridview 列要为bool值
+        /// 2015-04-20
+        /// wuhailong
+        /// </summary>
+        /// <param name="p_dt"></param>
+        /// <returns></returns>
+        public static DataTable ConvertTable(DataTable p_dt)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CHK", typeof(bool));
+            dt.Columns.Add("TABLE_NAME", typeof(string));
+            foreach (DataRow item in p_dt.Rows)
+            {
+                dt.Rows.Add(bool.Parse(item["CHK"].ToString()), item["TABLE_NAME"].ToString());
+            }
+            return dt;
+        }
+
         /// <summary>
         /// 获取表的所有列，表名，列名，数据类型，长度
         /// </summary>

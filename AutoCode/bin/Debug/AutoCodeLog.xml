@@ -829,4 +829,108 @@ c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\73007618-3c90-4056-bd97-2b5281b2c
    在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 356</StackTrace>
     <Message>生成文件报错了在CreateCode里</Message>
   </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E14): 列名 'false' 无效。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>select false as CHK, [name] as TABLE_NAME from [sysobjects] where [type] = 'u' order by [name]</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80040E14): 列名 'false' 无效。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object&amp; executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 862</StackTrace>
+    <Message>select false as CHK, [name] as TABLE_NAME from [sysobjects] where [type] = 'u' order by [name]</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 52
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 52
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 52
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 52
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 52
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 53
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-20</Time>
+    <User>User</User>
+    <StackTrace>System.FormatException: 该字符串未被识别为有效的布尔值。
+   在 System.Boolean.Parse(String value)
+   在 AutoCode.GetAllColumn.ConvertTable(DataTable p_dt) 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 53
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 35
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 111</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
 </系统日志>
