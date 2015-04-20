@@ -397,6 +397,7 @@ namespace AutoCode
                             }
                         }
                     }
+                    PublicProperty.SuccessFlag = true;
                 }
             }
             catch (Exception exp)
