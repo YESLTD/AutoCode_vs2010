@@ -59,9 +59,14 @@ namespace AutoCode
             sdict.Add("3", "确认数据");
             sdict.Add("4", "生成代码");
             uta = new uctlTimeAxis(sdict,1);
+            uta.lc = new ToolFunction.uctlTimeAxis.TimeAxisClick(SayHello);
             CommonFunction.AddForm3(splitContainer4.Panel2, uta);
-
         }
+
+        public void SayHello()
+        {
+            MessageBox.Show("Hello");
+        } 
 
         /// <summary>
         /// 载入基础设置

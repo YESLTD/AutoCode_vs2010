@@ -53,12 +53,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.button3 = new System.Windows.Forms.Button();
             this.dgv_tables = new System.Windows.Forms.DataGridView();
             this.CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tablename = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgv_function = new System.Windows.Forms.DataGridView();
+            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -66,7 +67,6 @@
             this.btn_done = new System.Windows.Forms.Button();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
-            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -156,7 +156,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(275, 535);
+            this.tabPage1.Size = new System.Drawing.Size(275, 588);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "模板";
             // 
@@ -166,7 +166,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 529);
+            this.panel1.Size = new System.Drawing.Size(269, 582);
             this.panel1.TabIndex = 1;
             // 
             // tv_templet
@@ -178,7 +178,7 @@
             this.tv_templet.LabelEdit = true;
             this.tv_templet.Location = new System.Drawing.Point(0, 0);
             this.tv_templet.Name = "tv_templet";
-            this.tv_templet.Size = new System.Drawing.Size(269, 529);
+            this.tv_templet.Size = new System.Drawing.Size(269, 582);
             this.tv_templet.TabIndex = 0;
             this.tv_templet.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_templet_AfterSelect);
             this.tv_templet.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tv_templet_NodeMouseDoubleClick);
@@ -205,7 +205,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(275, 535);
+            this.tabPage2.Size = new System.Drawing.Size(275, 588);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "设置";
             // 
@@ -218,7 +218,7 @@
             "Oracle",
             "SQLServer",
             "MySQL"});
-            this.cmb_DBType.Location = new System.Drawing.Point(10, 337);
+            this.cmb_DBType.Location = new System.Drawing.Point(10, 174);
             this.cmb_DBType.Name = "cmb_DBType";
             this.cmb_DBType.Size = new System.Drawing.Size(255, 25);
             this.cmb_DBType.TabIndex = 21;
@@ -227,7 +227,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 317);
+            this.label8.Location = new System.Drawing.Point(10, 154);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 17);
             this.label8.TabIndex = 20;
@@ -245,7 +245,7 @@
             ".java",
             ".jsp",
             ".php"});
-            this.cmb_type.Location = new System.Drawing.Point(10, 271);
+            this.cmb_type.Location = new System.Drawing.Point(10, 108);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(255, 25);
             this.cmb_type.TabIndex = 21;
@@ -254,7 +254,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 251);
+            this.label7.Location = new System.Drawing.Point(10, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 20;
@@ -264,28 +264,31 @@
             // 
             this.txt_pd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_pd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_pd.Location = new System.Drawing.Point(10, 208);
+            this.txt_pd.Location = new System.Drawing.Point(10, 532);
             this.txt_pd.Name = "txt_pd";
             this.txt_pd.Size = new System.Drawing.Size(255, 23);
             this.txt_pd.TabIndex = 12;
+            this.txt_pd.Visible = false;
             // 
             // txt_ui
             // 
             this.txt_ui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ui.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_ui.Location = new System.Drawing.Point(10, 153);
+            this.txt_ui.Location = new System.Drawing.Point(10, 477);
             this.txt_ui.Name = "txt_ui";
             this.txt_ui.Size = new System.Drawing.Size(255, 23);
             this.txt_ui.TabIndex = 11;
+            this.txt_ui.Visible = false;
             // 
             // txt_ds
             // 
             this.txt_ds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ds.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txt_ds.Location = new System.Drawing.Point(10, 99);
+            this.txt_ds.Location = new System.Drawing.Point(10, 423);
             this.txt_ds.Name = "txt_ds";
             this.txt_ds.Size = new System.Drawing.Size(255, 23);
             this.txt_ds.TabIndex = 10;
+            this.txt_ds.Visible = false;
             // 
             // te_basepath
             // 
@@ -302,7 +305,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(190, 379);
+            this.button4.Location = new System.Drawing.Point(190, 216);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 14;
@@ -315,7 +318,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(10, 379);
+            this.button2.Location = new System.Drawing.Point(10, 216);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -344,11 +347,12 @@
             this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(10, 189);
+            this.label4.Location = new System.Drawing.Point(10, 513);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "Password：";
+            this.label4.Visible = false;
             // 
             // label3
             // 
@@ -356,11 +360,12 @@
             this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(10, 135);
+            this.label3.Location = new System.Drawing.Point(10, 459);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 17;
             this.label3.Text = "User ID：";
+            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -368,11 +373,12 @@
             this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(10, 81);
+            this.label2.Location = new System.Drawing.Point(10, 405);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 15;
             this.label2.Text = "Data Source：";
+            this.label2.Visible = false;
             // 
             // label5
             // 
@@ -393,7 +399,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(275, 535);
+            this.tabPage3.Size = new System.Drawing.Size(275, 588);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "数据";
             // 
@@ -411,9 +417,21 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dgv_tables);
-            this.splitContainer3.Size = new System.Drawing.Size(269, 529);
-            this.splitContainer3.SplitterDistance = 35;
+            this.splitContainer3.Size = new System.Drawing.Size(269, 582);
+            this.splitContainer3.SplitterDistance = 38;
             this.splitContainer3.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(269, 38);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "刷新";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgv_tables
             // 
@@ -431,7 +449,7 @@
             this.dgv_tables.ReadOnly = true;
             this.dgv_tables.RowHeadersWidth = 5;
             this.dgv_tables.RowTemplate.Height = 23;
-            this.dgv_tables.Size = new System.Drawing.Size(269, 490);
+            this.dgv_tables.Size = new System.Drawing.Size(269, 540);
             this.dgv_tables.TabIndex = 2;
             this.dgv_tables.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tables_CellClick);
             // 
@@ -455,18 +473,6 @@
             this.tablename.ReadOnly = true;
             this.tablename.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.tablename.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(269, 35);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "刷新";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage4
             // 
@@ -496,6 +502,16 @@
             this.dgv_function.Size = new System.Drawing.Size(269, 582);
             this.dgv_function.TabIndex = 1;
             // 
+            // FUNCTION
+            // 
+            this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FUNCTION.DataPropertyName = "FUNCTION";
+            this.FUNCTION.HeaderText = "方法列表";
+            this.FUNCTION.MinimumWidth = 200;
+            this.FUNCTION.Name = "FUNCTION";
+            this.FUNCTION.ReadOnly = true;
+            this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -503,7 +519,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(275, 535);
+            this.tabPage5.Size = new System.Drawing.Size(275, 588);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "生成";
             // 
@@ -521,8 +537,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.splitContainer4.Size = new System.Drawing.Size(269, 529);
-            this.splitContainer4.SplitterDistance = 34;
+            this.splitContainer4.Size = new System.Drawing.Size(269, 582);
+            this.splitContainer4.SplitterDistance = 37;
             this.splitContainer4.TabIndex = 1;
             // 
             // splitContainer5
@@ -538,7 +554,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.btn_done);
-            this.splitContainer5.Size = new System.Drawing.Size(269, 34);
+            this.splitContainer5.Size = new System.Drawing.Size(269, 37);
             this.splitContainer5.SplitterDistance = 127;
             this.splitContainer5.TabIndex = 1;
             // 
@@ -548,7 +564,7 @@
             this.btn_check.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_check.Location = new System.Drawing.Point(0, 0);
             this.btn_check.Name = "btn_check";
-            this.btn_check.Size = new System.Drawing.Size(127, 34);
+            this.btn_check.Size = new System.Drawing.Size(127, 37);
             this.btn_check.TabIndex = 0;
             this.btn_check.Text = "校验";
             this.btn_check.UseVisualStyleBackColor = false;
@@ -560,7 +576,7 @@
             this.btn_done.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_done.Location = new System.Drawing.Point(0, 0);
             this.btn_done.Name = "btn_done";
-            this.btn_done.Size = new System.Drawing.Size(138, 34);
+            this.btn_done.Size = new System.Drawing.Size(138, 37);
             this.btn_done.TabIndex = 0;
             this.btn_done.Text = "执行";
             this.btn_done.UseVisualStyleBackColor = false;
@@ -574,16 +590,6 @@
             this.pl_container.Name = "pl_container";
             this.pl_container.Size = new System.Drawing.Size(821, 621);
             this.pl_container.TabIndex = 0;
-            // 
-            // FUNCTION
-            // 
-            this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FUNCTION.DataPropertyName = "FUNCTION";
-            this.FUNCTION.HeaderText = "方法列表";
-            this.FUNCTION.MinimumWidth = 200;
-            this.FUNCTION.Name = "FUNCTION";
-            this.FUNCTION.ReadOnly = true;
-            this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // frmMain
             // 
