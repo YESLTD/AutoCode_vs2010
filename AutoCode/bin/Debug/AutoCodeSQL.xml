@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Root>
+  <sql name="113" value="select * from pt_dict" />
+</Root>

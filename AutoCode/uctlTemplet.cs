@@ -304,6 +304,7 @@ namespace AutoCode
                 if (File.Exists(path))
                 {
                     File.Delete(path);
+                    frmMain.LoadTempletList(frmMain.tv_temp);
                 }
             }
             catch (Exception exp)

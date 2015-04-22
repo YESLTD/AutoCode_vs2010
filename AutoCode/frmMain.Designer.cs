@@ -58,8 +58,15 @@
             this.CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tablename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dgv_function = new System.Windows.Forms.DataGridView();
-            this.FUNCTION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.rtb_name = new System.Windows.Forms.RichTextBox();
+            this.btn_exeSQL = new System.Windows.Forms.Button();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.rtb_sql = new System.Windows.Forms.RichTextBox();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.dgv_sql = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -67,6 +74,12 @@
             this.btn_done = new System.Windows.Forms.Button();
             this.pl_container = new System.Windows.Forms.Panel();
             this.fbd_path = new System.Windows.Forms.FolderBrowserDialog();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.dgv_columns = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -85,7 +98,23 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tables)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_function)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.Panel2.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sql)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -94,6 +123,11 @@
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
+            this.splitContainer10.Panel1.SuspendLayout();
+            this.splitContainer10.Panel2.SuspendLayout();
+            this.splitContainer10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_columns)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -305,12 +339,14 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(190, 216);
+            this.button4.Location = new System.Drawing.Point(10, 214);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 14;
             this.button4.Text = "测试";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -318,7 +354,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(10, 216);
+            this.button2.Location = new System.Drawing.Point(190, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -477,40 +513,148 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage4.Controls.Add(this.dgv_function);
+            this.tabPage4.Controls.Add(this.splitContainer6);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(275, 588);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "方法";
+            this.tabPage4.Text = "自定义数据";
             // 
-            // dgv_function
+            // splitContainer6
             // 
-            this.dgv_function.AllowUserToAddRows = false;
-            this.dgv_function.AllowUserToDeleteRows = false;
-            this.dgv_function.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dgv_function.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_function.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FUNCTION});
-            this.dgv_function.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_function.Location = new System.Drawing.Point(3, 3);
-            this.dgv_function.Name = "dgv_function";
-            this.dgv_function.ReadOnly = true;
-            this.dgv_function.RowHeadersWidth = 10;
-            this.dgv_function.RowTemplate.Height = 23;
-            this.dgv_function.Size = new System.Drawing.Size(269, 582);
-            this.dgv_function.TabIndex = 1;
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // FUNCTION
+            // splitContainer6.Panel1
             // 
-            this.FUNCTION.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FUNCTION.DataPropertyName = "FUNCTION";
-            this.FUNCTION.HeaderText = "方法列表";
-            this.FUNCTION.MinimumWidth = 200;
-            this.FUNCTION.Name = "FUNCTION";
-            this.FUNCTION.ReadOnly = true;
-            this.FUNCTION.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.splitContainer6.Panel1.Controls.Add(this.splitContainer8);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.Controls.Add(this.splitContainer7);
+            this.splitContainer6.Size = new System.Drawing.Size(269, 582);
+            this.splitContainer6.SplitterDistance = 37;
+            this.splitContainer6.TabIndex = 0;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.rtb_name);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.btn_exeSQL);
+            this.splitContainer8.Size = new System.Drawing.Size(269, 37);
+            this.splitContainer8.SplitterDistance = 132;
+            this.splitContainer8.TabIndex = 1;
+            // 
+            // rtb_name
+            // 
+            this.rtb_name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtb_name.Location = new System.Drawing.Point(0, 0);
+            this.rtb_name.Name = "rtb_name";
+            this.rtb_name.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.rtb_name.Size = new System.Drawing.Size(132, 37);
+            this.rtb_name.TabIndex = 0;
+            this.rtb_name.Text = "";
+            // 
+            // btn_exeSQL
+            // 
+            this.btn_exeSQL.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_exeSQL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_exeSQL.Location = new System.Drawing.Point(0, 0);
+            this.btn_exeSQL.Name = "btn_exeSQL";
+            this.btn_exeSQL.Size = new System.Drawing.Size(133, 37);
+            this.btn_exeSQL.TabIndex = 0;
+            this.btn_exeSQL.Text = "执行SQL";
+            this.btn_exeSQL.UseVisualStyleBackColor = false;
+            this.btn_exeSQL.Click += new System.EventHandler(this.btn_exeSQL_Click);
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Name = "splitContainer7";
+            this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.rtb_sql);
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.splitContainer9);
+            this.splitContainer7.Size = new System.Drawing.Size(269, 541);
+            this.splitContainer7.SplitterDistance = 229;
+            this.splitContainer7.TabIndex = 0;
+            // 
+            // rtb_sql
+            // 
+            this.rtb_sql.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtb_sql.Location = new System.Drawing.Point(0, 0);
+            this.rtb_sql.Name = "rtb_sql";
+            this.rtb_sql.Size = new System.Drawing.Size(269, 229);
+            this.rtb_sql.TabIndex = 0;
+            this.rtb_sql.Text = "";
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.btn_save);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.splitContainer10);
+            this.splitContainer9.Size = new System.Drawing.Size(269, 308);
+            this.splitContainer9.SplitterDistance = 41;
+            this.splitContainer9.TabIndex = 4;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BackColor = System.Drawing.SystemColors.Control;
+            this.btn_save.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_save.Location = new System.Drawing.Point(0, 0);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(269, 41);
+            this.btn_save.TabIndex = 0;
+            this.btn_save.Text = "保存SQL";
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // dgv_sql
+            // 
+            this.dgv_sql.AllowUserToAddRows = false;
+            this.dgv_sql.AllowUserToDeleteRows = false;
+            this.dgv_sql.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgv_sql.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_sql.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1,
+            this.value,
+            this.NAME});
+            this.dgv_sql.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_sql.GridColor = System.Drawing.Color.Silver;
+            this.dgv_sql.Location = new System.Drawing.Point(0, 0);
+            this.dgv_sql.Name = "dgv_sql";
+            this.dgv_sql.ReadOnly = true;
+            this.dgv_sql.RowHeadersWidth = 5;
+            this.dgv_sql.RowTemplate.Height = 23;
+            this.dgv_sql.Size = new System.Drawing.Size(131, 263);
+            this.dgv_sql.TabIndex = 4;
+            this.dgv_sql.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_sql_CellClick);
             // 
             // tabPage5
             // 
@@ -591,6 +735,77 @@
             this.pl_container.Size = new System.Drawing.Size(821, 621);
             this.pl_container.TabIndex = 0;
             // 
+            // splitContainer10
+            // 
+            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer10.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer10.Name = "splitContainer10";
+            // 
+            // splitContainer10.Panel1
+            // 
+            this.splitContainer10.Panel1.Controls.Add(this.dgv_columns);
+            // 
+            // splitContainer10.Panel2
+            // 
+            this.splitContainer10.Panel2.Controls.Add(this.dgv_sql);
+            this.splitContainer10.Size = new System.Drawing.Size(269, 263);
+            this.splitContainer10.SplitterDistance = 134;
+            this.splitContainer10.TabIndex = 5;
+            // 
+            // dgv_columns
+            // 
+            this.dgv_columns.AllowUserToAddRows = false;
+            this.dgv_columns.AllowUserToDeleteRows = false;
+            this.dgv_columns.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dgv_columns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_columns.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dgv_columns.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_columns.GridColor = System.Drawing.Color.Silver;
+            this.dgv_columns.Location = new System.Drawing.Point(0, 0);
+            this.dgv_columns.Name = "dgv_columns";
+            this.dgv_columns.ReadOnly = true;
+            this.dgv_columns.RowHeadersWidth = 5;
+            this.dgv_columns.RowTemplate.Height = 23;
+            this.dgv_columns.Size = new System.Drawing.Size(134, 263);
+            this.dgv_columns.TabIndex = 5;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "column";
+            this.Column1.HeaderText = "Columns";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "...";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewCheckBoxColumn1.Visible = false;
+            this.dataGridViewCheckBoxColumn1.Width = 25;
+            // 
+            // value
+            // 
+            this.value.DataPropertyName = "value";
+            this.value.HeaderText = "SQL";
+            this.value.Name = "value";
+            this.value.ReadOnly = true;
+            this.value.Width = 80;
+            // 
+            // NAME
+            // 
+            this.NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NAME.DataPropertyName = "NAME";
+            this.NAME.FillWeight = 61.85569F;
+            this.NAME.HeaderText = "删除";
+            this.NAME.Name = "NAME";
+            this.NAME.ReadOnly = true;
+            this.NAME.Text = "删除";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -625,7 +840,23 @@
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tables)).EndInit();
             this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_function)).EndInit();
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sql)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
@@ -634,6 +865,11 @@
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.splitContainer10.Panel1.ResumeLayout(false);
+            this.splitContainer10.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
+            this.splitContainer10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_columns)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,7 +904,6 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.DataGridView dgv_function;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button btn_done;
         private System.Windows.Forms.SplitContainer splitContainer4;
@@ -677,7 +912,21 @@
         private System.Windows.Forms.DataGridView dgv_tables;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn tablename;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FUNCTION;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.Button btn_exeSQL;
+        private System.Windows.Forms.SplitContainer splitContainer7;
+        private System.Windows.Forms.RichTextBox rtb_sql;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private System.Windows.Forms.RichTextBox rtb_name;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.DataGridView dgv_sql;
+        private System.Windows.Forms.SplitContainer splitContainer10;
+        private System.Windows.Forms.DataGridView dgv_columns;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn value;
+        private System.Windows.Forms.DataGridViewButtonColumn NAME;
 
     }
 }

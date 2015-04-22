@@ -31,11 +31,13 @@ namespace AutoCode
         //表属性
         public static DataTable TableProperty = null;
         //readme 路径
-        public static string ReadMe = Application.StartupPath + "\\readme.txt";
+        public static string ReadMe = Application.StartupPath + "\\readme.html";
         //导出文件类型
         public static string ExportType = ".cs";
         //数据库类型
         public static string DBType = "";
+        //自定义数据
+        public static DataTable SelfDefiTable = null;
         /// <summary>
         /// 画笔
         /// </summary>

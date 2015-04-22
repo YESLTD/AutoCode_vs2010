@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AutoCode &#8250; 说明</title>
+
+    <style type="text/css">
+        html {
+            background: none repeat scroll 0% 0% #F1F1F1;
+            margin: 0px 20px;
+        }
+
+        body {
+            background: none repeat scroll 0% 0% #FFF;
+            color: #444;
+            font-family: "微软雅黑","黑体";
+            margin: 100px auto 25px;
+            padding: 20px 20px 10px;
+            max-width: 700px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.13);
+        }
+
+        #logo {
+            margin: 6px 0px 14px;
+            border-bottom: medium none;
+            text-align: center;
+        }
+
+        #logo a {
+            background-image: none, url("../images/");
+            background-size: 84px auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            color: #999;
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 1.3em;
+            margin: -130px auto 25px;
+            padding: 0px;
+            text-decoration: none;
+            height: 84px;
+            width: 84px;
+            text-indent: -9999px;
+            outline: medium none;
+            overflow: hidden;
+            display: block;
+        }
+
+        #logo_text {
+            margin: 6px 0px 14px;
+            border-bottom: medium none;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #logo_text a {
+            font-family: "微软雅黑","黑体";
+            color: #999;
+            font-size: 50px;
+            font-weight: normal;
+            line-height: 1.3em;
+            margin: -100px auto 5px;
+            padding: 0px;
+            text-decoration: none;
+            height: 70px;
+            width: 200px;
+            outline: medium none;
+            display: block;
+        }
+
+        #version_txet {
+            text-align: center;
+        }
+
+        h1 {
+            border-bottom: 1px solid #DEDEDE;
+            clear: both;
+            color: #666;
+            font-size: 24px;
+            margin: 30px 0px;
+            padding: 0px 0px 7px;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p, li, dd, dt {
+            padding-bottom: 2px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #20C4FF;
+            text-decoration: none;
+        }
+
+        ul, ol, dl {
+            padding: 5px 5px 5px 22px;
+        }
+
+        ul, ol, dl {
+            padding: 5px 5px 5px 22px;
+        }
+    </style>
+
+</head>
+
+<body>
+<!--<h1 id="logo">
+	<a href="http://demila.org/"><img alt="Demila" src="" /></a>
+</h1>-->
+<h1 id="logo_text">
+    <a href="http://demila.org/">AutoCode</a>
+</h1>
+<p id="version_txet">版本3.0</p>
+<p style="text-align: center">C#代码生成器</p>
+
+<h1>写在前面：</h1>
+<p>感谢使用C#代码生成器。C#代码生成器由<a href="http://my.oschina.net/u/2004005">喜爱糖葫芦</a>原创。目的是在面向对象开发中做一些围绕数据的规律性代码生成。在面向对象mvc开发中很多代码都是具有规律性的，例如Model层代码、针对数据表的增删改查操作、前台界面的报表显示等。这些工作枯燥乏味，完全是简单的代码堆砌，容易让人产生疲劳，犯一些小的错误。AutoCode3.0 可以帮您完成这些枯燥的工作，让你更加专心于业务流程，减少人工编写代码的bug，提高您的工作效率。</p>
+<p style="text-align: right">&#8212; <a href="http://my.oschina.net/u/2004005">喜爱糖葫芦</a></p>
+
+<h1>系统需求：</h1>
+<h2>Windows</h2>
+<ul>
+    <li>Windows<strong> 64 </strong>位，可连接到数据库即可，目前支持Oracle、SqlServer。连接方式为Oledb!</li> 
+</ul>
+
+<h2>开发软件:</h2>
+<ul>
+    <li>VS2010 + .net 4.0 + Oracle | SqlServer <strong> </strong></li>
+</ul>
+
+<h1>安装：</h1>
+<ol>
+    <li>用VS2010打开项目AutoCode_vs2010,并加入<strong>Toolfunction</strong>项目进行编译（你可以选择生成release或debug版本）</li>
+    <li>进入bin目录点开点击<strong>AutoCode.exe</strong>运行软件</li>   
+    <li>安装过程中遇到任何问题，请访问<a href="http://my.oschina.net/u/2004005" title="喜爱糖葫芦">@喜爱糖葫芦</a>留言寻求帮助</li>
+</ol>
+
+<h1>使用：</h1>
+<ol>
+    <li><strong>配置数据库连接字符串：</strong>在项目中找到app.config文件配置connectionStrings节点下的Oracle项、SQLServer项或MySQL项（具体由你本地数据库而定，数据库驱动是Oledb方式，配置时请注意！）</li>
+    <li><strong>模板管理：</strong>模板类型为txt纯文本，左侧列表会读取bin目录下的Temple文件加下所有文件，双击条目可对模板进行重命名；右侧为模板编辑区模板详细介绍如下</li>
+	<ul>
+        <li><strong>方法注册区：</strong>静态文本区所引用的代码都必须在模板头注册；格式为<strong> <% Method Name="@方法名"  Description="方法描述" %></strong></li>
+	    <li><strong>静态文本区：</strong>静态文本区可引用模板头所注册的方法，因为所生成的代码是数据驱动（围绕表生成代码），所传参数为<strong>SourceTable</strong>
+		格式为<strong>@GetClassName(SourceTable)</strong></li>
+		<li><strong>动态脚本区：</strong>脚本区由&lt;script&gt;&lt;/script&gt;标签包裹；每个方法必须由#region+@+方法名、#endregion标签包裹;且每个方法必须为<strong>静态公有</strong>方法 </li>
+    </ul>
+    <li><strong>基本设置：</strong>本界面可设置代码导出路径、导出文件类型（.cs、.cshtml、.php、.html等）、数据库类型（对应第一节所配置的数据库连接字符串）点击保存完成操作</li>
+	<li><strong>数据源选择：</strong>假如第一节的数据库配置正确，切你所运行软件的电脑能连接到数据库，那么本列表将会显示连接数据库中所有表；您可对想生成的数据表进行勾选，当生成代码时将会对这些勾选对象进行代码生成。</li>
+	<li><strong>代码生成：</strong>点击校验可验证动态脚本区的代码是否有误，点击生成即可完成围绕数据表依靠模板的代码生成。</li>
+	<li><strong>错误排查：</strong>AutoCodeLog.xml文档中可排查代码生成中的错误。</li>
+</ol>
+
+<h1>互动：</h1>
+<p>对AutoCode有任何建议、想法、评论或发现了bug，欢迎邮件<strong>13126506430@163.com</strong> 或 加Q<strong>1255246777</strong></p>
+</body>
+</html>
