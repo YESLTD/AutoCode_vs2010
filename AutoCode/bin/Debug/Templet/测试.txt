@@ -32,21 +32,21 @@ namespace AUTOCODE
 }
 <script>
 
-	#region@GetCamelCaseName
+	#START@GetCamelCaseName
  	public static string GetCamelCaseName(string value)
         {
             return value.ToLower();
         }
-	#endregion
+	#END
 	
-	#region@ConvertFirstCharToUpper
+	#START@ConvertFirstCharToUpper
         public static string ConvertFirstCharToUpper(string value)
         {
             return value.Substring(0, 1).ToUpper() + value.Substring(1);
         }
-	#endregion
+	#END
 
-	#region@InitProperty
+	#START@InitProperty
 	/// <summary>
         /// 生成属性代码
         /// </summary>
@@ -66,8 +66,8 @@ namespace AUTOCODE
             }
             return _strLine;
         }
-	#endregion
-	#region@GetClassName
+	#END
+	#START@GetClassName
         /// <summary>
         /// 根据表生成类的名字
         /// </summary>
@@ -82,9 +82,9 @@ namespace AUTOCODE
             string _strTemp =  p_dtTable.TableName.Substring(0, 1).ToUpper() + p_dtTable.TableName.Substring(1).ToLower();
             return _strTemp;
         }
-	#endregion
+	#END
 
-	#region@GetPropertyName
+	#START@GetPropertyName
         /// <summary>
         /// 根据表名生成类
         /// </summary>
@@ -103,16 +103,16 @@ namespace AUTOCODE
             }
             return p_strName.Substring(0, 1).ToUpper() + p_strName.Substring(1).ToLower();
         }
-	#endregion
+	#END
 
-	#region@GetLowerCaseName
+	#START@GetLowerCaseName
         public static  string GetLowerCaseName(string value)
         {
             return value.ToLower();
         }
-	#endregion
+	#END
 
-	#region@GetCSharpVariableType
+	#START@GetCSharpVariableType
 	/// <summary>
         /// 根据表的列转化代码中的数据类型
         /// </summary>
@@ -154,6 +154,6 @@ namespace AUTOCODE
                     }
             }
         }
-	#endregion
+	#END
 
 </script>

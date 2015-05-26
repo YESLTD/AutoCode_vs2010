@@ -1,11 +1,3 @@
-<% Property Name="SourceTable" Type="System.Data.DataTable" Category="Context" Description="Table that the object is based on." %>
-<% Property Name="NameSpace" Type="System.String" Default="AutoCode" Category="Text" Description="Namespace for this class" %>
-<% Method Name="@GetCamelCaseName"  Description="Namespace for this class" %>
-<% Method Name="@GetClassName"  Description="Namespace for this class" %>
-<% Method Name="@GetPropertyName"  Description="Namespace for this class" %>
-<% Method Name="@InitProperty"  Description="Namespace for this class" %>
-<% Method Name="@GetCSharpVariableType"  Description="Namespace for this class" %>
-
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -57,12 +49,13 @@ namespace AUTOCODE
             string _strLine = "";
             foreach (DataColumn item in p_dtSource.Columns)
             {
-                _strLine += "\n private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
-                _strLine += "\n" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
-                _strLine += "\n" + "{ ";
-                _strLine += "\n" + "get { return " + item.ColumnName.ToLower() + ";}";
-                _strLine += "\n" + "set {" + item.ColumnName.ToLower() + "= value;}";
-                _strLine += "\n" + "}";
+                _strLine += "\n\t\t" + "private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
+                _strLine += "\n\t\t" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
+                _strLine += "\n\t\t" + "{ ";
+                _strLine += "\n\t\t\t" + "get { return " + item.ColumnName.ToLower() + "; }";
+                _strLine += "\n\t\t\t" + "set { " + item.ColumnName.ToLower() + "= value; }";
+                _strLine += "\n\t\t" + "}";
+
             }
             return _strLine;
         }

@@ -82,5 +82,17 @@ namespace AutoCode {
                 this["DBType"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".cs")]
+        public string ExportType {
+            get {
+                return ((string)(this["ExportType"]));
+            }
+            set {
+                this["ExportType"] = value;
+            }
+        }
     }
 }

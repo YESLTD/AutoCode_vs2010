@@ -17,5 +17,8 @@
     <Setting Name="DBType" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="ExportType" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.cs</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

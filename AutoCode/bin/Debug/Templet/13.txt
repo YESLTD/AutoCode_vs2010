@@ -1,52 +1,20 @@
-<% Property Name="SourceTable" Type="System.Data.DataTable" Category="Context" Description="Table that the object is based on." %>
-<% Property Name="NameSpace" Type="System.String" Default="AutoCode" Category="Text" Description="Namespace for this class" %>
-<% Method Name="@GetCamelCaseName"  Description="Namespace for this class" %>
-<% Method Name="@GetClassName"  Description="Namespace for this class" %>
-<% Method Name="@GetPropertyName"  Description="Namespace for this class" %>
-<% Method Name="@InitProperty"  Description="Namespace for this class" %>
-<% Method Name="@GetCSharpVariableType"  Description="Namespace for this class" %>
-
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using ToolFunction;
-using System.Data;
-using CSScriptLibrary;
-using Microsoft.CSharp;
-using System.Reflection;
-using System.Windows.Forms;
-
-
-namespace AUTOCODE
-{
-    /// <summary>
-    /// 测试类
-    /// </summary>
-    public class @GetClassName(SourceTable)
-    {
-
-        @InitProperty(SourceTable)
-        
-    }
-}
 <script>
 
-	#START@GetCamelCaseName
+	#region@GetCamelCaseName
  	public static string GetCamelCaseName(string value)
         {
             return value.ToLower();
         }
-	#END
+	#endregion
 	
-	#START@ConvertFirstCharToUpper
+	#region@ConvertFirstCharToUpper
         public static string ConvertFirstCharToUpper(string value)
         {
             return value.Substring(0, 1).ToUpper() + value.Substring(1);
         }
-	#END
+	#endregion
 
-	#START@InitProperty
+	#region@InitProperty
 	/// <summary>
         /// 生成属性代码
         /// </summary>
@@ -57,17 +25,17 @@ namespace AUTOCODE
             string _strLine = "";
             foreach (DataColumn item in p_dtSource.Columns)
             {
-                _strLine += "\n private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
-                _strLine += "\n" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
-                _strLine += "\n" + "{ ";
-                _strLine += "\n" + "get { return " + item.ColumnName.ToLower() + ";}";
-                _strLine += "\n" + "set {" + item.ColumnName.ToLower() + "= value;}";
-                _strLine += "\n" + "}";
+                _strLine += "\n\t\t" + "private " + GetCSharpVariableType(item) + " " + item.ColumnName.ToLower() + ";";
+                _strLine += "\n\t\t" + "public " + GetCSharpVariableType(item) + " " + GetPropertyName(item.ColumnName);
+                _strLine += "\n\t\t" + "{ ";
+                _strLine += "\n\t\t\t" + "get { return " + item.ColumnName.ToLower() + "; }";
+                _strLine += "\n\t\t\t" + "set { " + item.ColumnName.ToLower() + "= value; }";
+                _strLine += "\n\t\t" + "}";
             }
             return _strLine;
         }
-	#END
-	#START@GetClassName
+	#endregion
+	#region@GetClassName
         /// <summary>
         /// 根据表生成类的名字
         /// </summary>
@@ -82,9 +50,9 @@ namespace AUTOCODE
             string _strTemp =  p_dtTable.TableName.Substring(0, 1).ToUpper() + p_dtTable.TableName.Substring(1).ToLower();
             return _strTemp;
         }
-	#END
+	#endregion
 
-	#START@GetPropertyName
+	#region@GetPropertyName
         /// <summary>
         /// 根据表名生成类
         /// </summary>
@@ -103,16 +71,16 @@ namespace AUTOCODE
             }
             return p_strName.Substring(0, 1).ToUpper() + p_strName.Substring(1).ToLower();
         }
-	#END
+	#endregion
 
-	#START@GetLowerCaseName
+	#region@GetLowerCaseName
         public static  string GetLowerCaseName(string value)
         {
             return value.ToLower();
         }
-	#END
+	#endregion
 
-	#START@GetCSharpVariableType
+	#region@GetCSharpVariableType
 	/// <summary>
         /// 根据表的列转化代码中的数据类型
         /// </summary>
@@ -154,6 +122,6 @@ namespace AUTOCODE
                     }
             }
         }
-	#END
+	#endregion
 
 </script>

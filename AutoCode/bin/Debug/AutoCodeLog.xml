@@ -1173,4 +1173,824 @@ c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\73007618-3c90-4056-bd97-2b5281b2c
    在 AutoCode.CreateCode.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 317</StackTrace>
     <Message>没有载入模板！</Message>
   </Log>
+  <Log>
+    <Time>2015-04-22 20:28:20</Time>
+    <User>User</User>
+    <StackTrace>System.Data.OleDb.OleDbException (0x80004005): ORA-01033: ORACLE initialization or shutdown in progress
+   在 System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   在 System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal&amp; connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.OleDb.OleDbConnection.Open()
+   在 ToolFunction.CommonFunction.OleExecuteBySQL(String p_strSql, SortedDictionary`2 p_dicDictionary, String p_strTablename) 位置 E:\Github\ToolFunction\CommonFunction.cs:行号 864
+   在 AutoCode.GetAllColumn.getTable() 位置 E:\Github\AutoCode_vs2010\AutoCode\GetAllColumn.cs:行号 33
+   在 AutoCode.frmMain.LoadTables() 位置 E:\Github\AutoCode_vs2010\AutoCode\frmMain.cs:行号 119</StackTrace>
+    <Message>没有获取到数据源</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:35</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\327547a2-4d3d-4d2b-b835-070afbc4a0b1.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\327547a2-4d3d-4d2b-b835-070afbc4a0b1.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:35</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:35</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\42414392-b3ff-4e64-8327-158fcebb3214.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\42414392-b3ff-4e64-8327-158fcebb3214.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:35</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:36</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\c458edf2-60e4-4871-b313-772a8e080ab8.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\c458edf2-60e4-4871-b313-772a8e080ab8.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:36</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\7d7daafe-20f7-4e9b-b982-139db935ebf6.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\7d7daafe-20f7-4e9b-b982-139db935ebf6.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\427bf265-65d3-4f11-8ede-15258101ce06.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\427bf265-65d3-4f11-8ede-15258101ce06.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\0739e160-d475-4df6-8beb-334f523fad32.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\0739e160-d475-4df6-8beb-334f523fad32.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:49:58</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:12</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\8d336996-707e-4bec-a00b-ec68c8ae781d.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\8d336996-707e-4bec-a00b-ec68c8ae781d.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:12</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\5366c190-b9a6-4f42-b45c-228193be3002.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\5366c190-b9a6-4f42-b45c-228193be3002.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eae720ba-a2cd-4a17-b118-0846d3104398.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eae720ba-a2cd-4a17-b118-0846d3104398.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:50:13</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:51:13</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f766d986-103d-4f9b-8c38-0b0e09be837d.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f766d986-103d-4f9b-8c38-0b0e09be837d.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:51:22</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:51:22</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d5b51f9c-9452-4fe7-ad2e-1640b2f7c33e.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d5b51f9c-9452-4fe7-ad2e-1640b2f7c33e.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:51:24</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:51:45</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\97cdc297-5f48-4523-91bf-1b4fdbefc249.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\97cdc297-5f48-4523-91bf-1b4fdbefc249.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:53:40</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\a9fe1114-2adb-4a9c-a95e-5fbd05fe3078.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\a9fe1114-2adb-4a9c-a95e-5fbd05fe3078.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:53:41</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 20:54:00</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\071054a6-4157-41be-b2e5-1785005e8625.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\071054a6-4157-41be-b2e5-1785005e8625.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:51</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\af7e5546-3553-4172-9e99-881fc8ddec7e.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\af7e5546-3553-4172-9e99-881fc8ddec7e.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:51</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:52</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e9d0a7eb-9316-42c8-8b45-83958633cb8c.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e9d0a7eb-9316-42c8-8b45-83958633cb8c.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:52</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:52</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\9e399df8-f695-4a9e-a36b-9d8433fe37c3.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\9e399df8-f695-4a9e-a36b-9d8433fe37c3.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:52</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:59</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\44527e3f-9a13-46c3-b0ce-b8f2ab3018fd.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\44527e3f-9a13-46c3-b0ce-b8f2ab3018fd.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:01:59</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:02:00</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eea75976-084f-4fed-9ec0-f80a14b3f58f.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eea75976-084f-4fed-9ec0-f80a14b3f58f.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:02:00</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:02:00</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\0f63d3bd-fcfd-4df4-ab77-f8613fa905a8.tmp(20,54): error CS0246: The type or namespace name 'string啊' could not be found (are you missing a using directive or an assembly reference?)
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\0f63d3bd-fcfd-4df4-ab77-f8613fa905a8.tmp(51,45): error CS0246: The type or namespace name 'DataTab啊le' could not be found (are you missing a using directive or an assembly reference?)
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-04-22 21:02:00</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:43:42</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(14,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(14,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(19,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(21,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(21,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(26,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(28,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(28,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(48,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(49,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(49,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(64,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(66,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(66,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(85,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(87,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(87,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(92,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(94,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(94,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\eb2db535-0beb-4096-829f-ddaa912fb558.tmp(136,3): error CS1024: Preprocessor directive expected
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:43:42</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:45:08</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(14,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(14,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(19,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(21,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(21,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(26,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(28,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(28,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(48,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(49,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(49,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(64,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(66,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(66,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(85,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(87,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(87,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(92,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(94,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(94,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\f237639c-0c97-47b9-aaab-2fc9b0d95599.tmp(136,3): error CS1024: Preprocessor directive expected
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:45:08</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:45:08</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(14,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(14,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(19,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(21,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(21,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(26,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(28,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(28,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(48,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(49,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(49,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(64,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(66,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(66,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(85,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(87,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(87,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(92,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(94,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(94,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\d7c27c03-e648-4650-8bd1-c406deb44efe.tmp(136,3): error CS1024: Preprocessor directive expected
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:45:08</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:45:48</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(14,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(14,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(19,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(21,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(21,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(26,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(28,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(28,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(48,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(49,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(49,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(64,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(66,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(66,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(85,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(87,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(87,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(92,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(94,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(94,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\e350912a-6904-4d06-8bea-caf0b2f75f0c.tmp(136,3): error CS1024: Preprocessor directive expected
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:46:12</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:46:12</Time>
+    <User>User</User>
+    <StackTrace>csscript.CompilerException: c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(14,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(14,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(19,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(21,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(21,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(26,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(28,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(28,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(48,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(49,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(49,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(64,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(66,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(66,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(85,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(87,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(87,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(92,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(94,3): error CS1024: Preprocessor directive expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(94,8): error CS1025: Single-line comment or end-of-line expected
+c:\Users\wuhailong\AppData\Local\Temp\CSSCRIPT\ad7ad7a4-caaa-4657-91e4-f7befe6b4bb1.tmp(136,3): error CS1024: Preprocessor directive expected
+
+   在 csscript.CSExecutor.ProcessCompilingResult(CompilerResults results, CompilerParameters compilerParams, ScriptParser parser, String scriptFileName, String assemblyFileName, String[] additionalDependencies)
+   在 csscript.CSExecutor.Compile(String scriptFileName)
+   在 csscript.CSExecutor.Compile(String scriptFile, String assemblyFile, Boolean debugBuild)
+   在 CSScriptLibrary.CSScript.LoadWithConfig(String scriptFile, String assemblyFile, Boolean debugBuild, Settings scriptSettings, String compilerOptions, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.Load(String scriptFile, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String tempFileExtension, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String assemblyFile, Boolean debugBuild, String[] refAssemblies)
+   在 CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   在 AutoCode.CreateCode.ComplieClass(String p_strMethod) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 81</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 10:46:32</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 116
+   在 AutoCode.CreateCode.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 389</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 11:04:51</Time>
+    <User>User</User>
+    <StackTrace>System.TypeInitializationException: The type initializer for 'CSScriptLibrary.CSScript' threw an exception. ---&gt; System.Runtime.InteropServices.COMException: 没有注册类 (异常来自 HRESULT:0x80040154 (REGDB_E_CLASSNOTREG))
+   at CSScriptLibrary.CSScript..cctor()
+   --- End of inner exception stack trace ---
+   at CSScriptLibrary.CSScript.LoadCode(String scriptText, String[] refAssemblies)
+   at AutoCode.CreateCode.ComplieClass(String p_strMethod)</StackTrace>
+    <Message>模板编译失败！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 11:04:53</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: Object reference not set to an instance of an object.
+   at AutoCode.CreateCode.RunDynamicCode(String p_strMethodName, Object[] p_objParam)
+   at AutoCode.CreateCode.OutPutCode(DataTable p_dtTable)</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 14:08:43</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.Templet.GetAllMethod(String p_strLine) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 127
+   在 AutoCode.Templet.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 80</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 14:09:50</Time>
+    <User>User</User>
+    <StackTrace>System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 AutoCode.Templet.GetAllMethod(String p_strLine) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 127
+   在 AutoCode.Templet.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 80</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 14:58:07</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   在 AutoCode.Templet.GetAllMethod(String p_strLine) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 125</StackTrace>
+    <Message>GetAllMethod方法读取函数错误！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:38:00</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.Templet.OpenFile(String p_strPath) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 61</StackTrace>
+    <Message>这是根节点--！该怎么办呢？</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:38:03</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.Templet.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 90</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:38:05</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.uctlTemplet.OpenFile(String p_strPath) 位置 E:\Github\AutoCode_vs2010\AutoCode\uctlTemplet.cs:行号 54</StackTrace>
+    <Message>这是根节点--！该怎么办呢？</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:38:05</Time>
+    <User>User</User>
+    <StackTrace>System.IO.FileNotFoundException: 未能找到文件“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”。
+文件名:“E:\Github\AutoCode_vs2010\AutoCode\bin\Debug\Templet\模板列表”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding)
+   在 AutoCode.CreateCode.LoadTempletProperity() 位置 E:\Github\AutoCode_vs2010\AutoCode\CreateCode.cs:行号 316</StackTrace>
+    <Message>没有载入模板！</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:57:35</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentOutOfRangeException: 长度不能小于 0。
+参数名: length
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 AutoCode.Templet.SubString(String p_strMy, String p_strStarChar, String p_strEndChar) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 261
+   在 AutoCode.Code.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\Code.cs:行号 78</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
+  <Log>
+    <Time>2015-05-26 17:58:26</Time>
+    <User>User</User>
+    <StackTrace>System.ArgumentOutOfRangeException: 长度不能小于 0。
+参数名: length
+   在 System.String.Substring(Int32 startIndex, Int32 length)
+   在 AutoCode.Templet.SubString(String p_strMy, String p_strStarChar, String p_strEndChar) 位置 E:\Github\AutoCode_vs2010\AutoCode\Templet.cs:行号 261
+   在 AutoCode.Code.OutPutCode(DataTable p_dtTable) 位置 E:\Github\AutoCode_vs2010\AutoCode\Code.cs:行号 78</StackTrace>
+    <Message>生成文件报错了在CreateCode里</Message>
+  </Log>
 </系统日志>

@@ -14,6 +14,8 @@ namespace AutoCode
     {
 
         #region 文件导出设置
+        //模板对象
+        public static Templet templet = null;
         //导出是否成功标志
         public static bool SuccessFlag = false;
         //导出文件路径
@@ -42,6 +44,7 @@ namespace AutoCode
         /// 画笔
         /// </summary>
         public static Graphics graphics = null;
+
         /// <summary>
         /// 根据表名返回表结构
         /// </summary>

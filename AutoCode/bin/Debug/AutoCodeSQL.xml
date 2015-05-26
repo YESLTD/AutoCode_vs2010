@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="GB2312"?>
 <Root>
-  <sql name="113" value="select * from pt_dict" />
+  <sql name="guanlian" value="select * from pt_dict ,pt_sql where 1=0" />
 </Root>

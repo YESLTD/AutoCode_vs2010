@@ -324,5 +324,14 @@ namespace AutoCode
             frmMain fm = new frmMain();
             fm.ProxySetStep();
         }
+
+        /// <summary>
+        /// 显示所选模板的文本文件
+        /// </summary>
+        public void ShowTemplet()
+        {
+            richTextBox1.Text = Templet.GetInstance().strTempletText;
+        }
+
     }
 }

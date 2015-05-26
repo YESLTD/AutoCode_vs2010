@@ -122,8 +122,8 @@ namespace TestAutoCode
 
         private void button6_Click(object sender, EventArgs e)
         {
-            BLProgram b = new BLProgram();
-            b.cc();
+            //BLProgram b = new BLProgram();
+            //b.cc();
         }
     }
 }

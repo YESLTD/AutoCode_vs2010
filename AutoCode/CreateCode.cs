@@ -159,7 +159,6 @@ namespace AutoCode
             {
                 CommonFunction.WriteLog(exp, "检查方法出错！");
             }
-
             return _strMethodName;
         }
 
@@ -415,7 +414,6 @@ namespace AutoCode
         /// <returns></returns>
         public string SubString(string p_strMy, string p_strStarChar, string p_strEndChar)
         {
-
             //函数头
             int _iMethodStart = p_strMy.IndexOf(p_strStarChar);
             //函数尾部

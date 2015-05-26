@@ -17,6 +17,7 @@ namespace AutoCode
     
     public partial class frmMain : Form
     {
+        uctlTemplet ut = null;
         uctlBaseConfig ubc = null;
         uctlCreateCode ucc = null;
         uctlTimeAxis uta = null;
@@ -87,7 +88,7 @@ namespace AutoCode
         /// </summary>
         public void LoadTempletPanel()
         {
-            uctlTemplet ut = new uctlTemplet();
+            ut = new uctlTemplet();
             PublicProperty.UcTemplet = ut;
             CommonFunction.AddForm3(pl_container, ut);
         }
@@ -268,6 +269,18 @@ namespace AutoCode
 
         private void tv_templet_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            #region oo改造 将模板的名称、文本、路径、方法集载入
+            Templet templet = Templet.GetInstance();
+            templet.strTempletName = tv_templet.SelectedNode.Name;
+            templet.strTempletPath = Application.StartupPath + "\\Templet\\" + tv_templet.SelectedNode.Name;
+            templet.OpenFile(templet.strTempletPath);
+            templet.LoadTempletProperity();
+            templet.ComplieClass();
+            //Dictionary<string, string> dd = new Dictionary<string, string>();
+            //dd = templet.dictMethodSet;
+            ut.ShowTemplet();
+            #endregion
+            return;
             PublicProperty.TempletName = tv_templet.SelectedNode.Name;
             PublicProperty.ExportPath = PublicProperty.TempletPath + tv_templet.SelectedNode.Name;
             PublicProperty.UcTemplet.OpenFile(PublicProperty.TempletPath + tv_templet.SelectedNode.Name);
@@ -291,6 +304,7 @@ namespace AutoCode
                 Settings.Default.UserID = txt_ui.Text;
                 Settings.Default.Password = txt_pd.Text;
                 Settings.Default.DBType = cmb_DBType.Text;
+                Settings.Default.ExportType = cmb_type.Text;
                 PublicProperty.DBType = cmb_DBType.Text;
                 Settings.Default.Save();
                 CommonFunction.GetConnectionString( cmb_DBType.Text);
@@ -453,6 +467,25 @@ namespace AutoCode
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            #region oo改造代码生成
+
+            List<string> ModelList = DBModel.GetSelectTable();
+            uta.SetKeyValue("2");
+            if (ModelList.Count>0)
+            {
+                foreach (string item in ModelList)
+                {
+                    DBModel dbm = new DBModel();
+                    dbm.dtModelTable = DBModel.GetTable(item);
+                    Code code = Code.GetInstance();
+                    code.OutPutCode(dbm.dtModelTable);
+                }
+                uta.SetKeyValue("4");
+            }
+
+
+            #endregion
+            return;
             try
             {
                 List<string> tablelist = PublicProperty.getSelectTable();
@@ -703,20 +736,26 @@ namespace AutoCode
 
         private void dgv_sql_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (1 == e.ColumnIndex)
+            if (e.RowIndex<0)
             {
-                string sqlname = dgv_sql["name", e.RowIndex].Value.ToString();
-                DeleteNode(sqlname);
-                LoadSql();
+                return;
             }
             else
             {
-                string sql = dgv_sql[e.ColumnIndex, e.RowIndex].Value.ToString();
-                rtb_sql.Text = sql;
-                rtb_name.Text = dgv_sql["name", e.RowIndex].Value.ToString();
-                ExeSql(rtb_sql.Text);
+                if (1 == e.ColumnIndex)
+                {
+                    string sqlname = dgv_sql["name", e.RowIndex].Value.ToString();
+                    DeleteNode(sqlname);
+                    LoadSql();
+                }
+                else
+                {
+                    string sql = dgv_sql[e.ColumnIndex, e.RowIndex].Value.ToString();
+                    rtb_sql.Text = sql;
+                    rtb_name.Text = dgv_sql["name", e.RowIndex].Value.ToString();
+                    ExeSql(rtb_sql.Text);
+                }
             }
-           
         }
     }
 }
